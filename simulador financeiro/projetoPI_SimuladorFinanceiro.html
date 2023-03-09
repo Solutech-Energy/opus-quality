@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1><div>Energia <span style="color: orange;">Futura</span> </div></h1>
+
+    <br>
+    <h2>Nome da empresa: <input id="input_nome_empresa"><br> <br>
+
+    <h2>Horario de abertura: </h2> <input id="inp_abre" type="text"><br>
+    <h2>Horario de fechamento: </h2> <input id="inp_fechamento" type="text"><br>
+    
+    <h2>Quantidade de lâmpadas instaladas:</h2> <input id="input_quantidade_lampadas">
+    
+    <h2>Área da empresa (escritórios):</h2> <input id="inp_area">
+
+    <center>
+    <img src="https://static.vecteezy.com/ti/vetor-gratis/p3/8547005-icone-de-lampada-de-isolado-gratis-vetor.jpg" alt="logo energia futura" width="97xp" img style="margin: 0 0 0 0px">
+
+    <br><button style="background-color: rgba(255, 68, 0, 0.409);" onclick="orcamento()"><h1>Simular</h1> </button></center>
+
+    <div id="apresentar_orcamento"></div>
+
+       
+</body>
+</html>
+<script>
+    function orcamento() {
+        var nome = input_nome_empresa.value
+        var horarioAbertura = Number(inp_abre.value)
+        var horarioFechamento = Number(inp_fechamento.value)
+        var horarioAberto= horarioFechamento - horarioAbertura
+        var qntdLamp = Number(input_quantidade_lampadas.value)
+        var area = Number(inp_area.value)
+        var frase = `<h1>Dados empresa ${nome}: <br> ${horarioAberto} horas cormercial; <br>
+        ${qntdLamp} lampadas;<br>
+        ${area} m²</h1>`;
+
+
+
+        apresentar_orcamento.innerHTML = frase
+    }
+    
+
+</script>

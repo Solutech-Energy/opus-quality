@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+</head>
+<body>
+    <h1>Simulação Energy Tech</h1>
+
+    Digite o nome da empresa <br>
+    <input type="text" id="input_nome_empresa"> <br><br>
+
+    Digite a quantidade de lampadas no escritório <br>
+    <input type="text" id="input_quantidade_lampadas"> <br>
+
+    <h4>Horário de funcionamento</h4>
+    <b>1 </b>Funcionamento 24H
+    <br>
+    <b>2 </b>Funcionamento Horário Comercial (8h - 18h)
+    <br><br>
+
+    Digite o número que indica o horário da sua empresa <br>
+    <input type="number" id="input_horario" min="1" max="2"> <br><br>
+
+    <button onclick="simular()">Simular</button>
+    <div id="resultado"></div>
+
+
+</body>
+</html>
+<script>
+    function simular()
+    {
+        var nome_empresa = input_nome_empresa.value;
+        var quantidade_lampadas = Number(input_quantidade_lampadas.value);
+        var horario_empresa = Number(input_horario.value);
+
+        // total de wats - sem a solucao
+        var consumo_wats = (quantidade_lampadas * 12);
+        var consumo_kwh = (consumo_wats) / 1000;
+        var consumo_custo_kwh = consumo_kwh * 0.86;
+
+       if(horario == 1)
+       {    
+             // CALCULO 24H
+            var consumoTotal_wats_empresa24 = (consumo_wats * 24);
+            var consumoTotal_kwh_empresa24 = (consumo_kwh * 24);
+            var consumo_custo_kwh_empresa24 = (consumo_custo_kwh * 24);
+
+            // com a solucao - maior incidencia
+            var maiorIncidencia = (5 * consumo_custo_kwh_empresa24) * 0.2; // 20% faltante de luz artificial
+            var menorIncidencia = (11.5 * consumo_custo_kwh_empresa24); // consumo total da noite (100% das luzes ligadas)
+            var demaisIncidencia = (7.5 * consumo_custo_kwh_empresa24) * 0.5; // 50% faltante de luz artificial
+            
+            // valor do consumo total por mes - incidencia 
+            // valor do consumo total por mes / ano - sem solucao (SS)
+
+            var custo24_diarioSS = (consumo_custo_kwh_empresa24 * 1);
+            var custo24_anualSS = (consumo_custo_kwh_empresa24 * 365);
+            var custo24_mensalSS = (consumo_custo_kwh_empresa24 * 30);
+
+            // valor do consumo total por mes / ano - com solucao (CS)
+            var custo24_diarioCS = (maiorIncidencia + menorIncidencia + demaisIncidencia) * 1;
+            var custo24_anualCS = (custo24_diarioCS * 365);
+            var custo24_mensalCS = (custo24_diarioCS * 30);
+
+       }
+
+
+       if(horario == 2)
+       {
+            // CALCULO Horario comercial 8h - 18h
+            var consumoTotal_wats_empresaComercial = (consumo_wats * 10);
+            var consumoTotal_kwh_empresaComercial = (consumo_kwh * 10);
+            var consumo_custo_kwh_empresaComercial = (consumo_custo_kwh * 10);
+
+            // com a solucao - maior incidencia
+            var maiorIncidencia = (5 * quantidade_lampadas) * 0.2;
+            var demaisIncidencia = (3 * consumoTotal_wats_empresa24) * 0.5;
+
+            // valor do consumo total por mes - incidencia 
+            // valor do consumo total por mes / ano - sem solucao (SS)
+            var custo10_diarioSS = (consumo_custo_kwh_empresaComercial * 1);
+            var custo10_anualSS = (consumo_custo_kwh_empresaComercial * 365);
+            var custo10_mensalSS = (consumo_custo_kwh_empresaComercial * 30);
+
+            // valor do consumo total por mes / ano - com solucao (CS)
+            var custo10_diarioCS = (maiorIncidencia + demaisIncidencia) * 1;
+            var custo10_anualCS = (custo10_diarioCS * 365);
+            var custo10_mensalCS = (custo10_diarioCS * 30);
+       }
+
+         /*
+            FALTA: 
+            - MOSTRAR A MENSAGEM PARA O USUÁRIO
+            - COLOCAR OS BOTOES PARA O HORARIO AO INVÉS DO INPUT
+         */
+
+        
+
+        
+    }
+</script>
