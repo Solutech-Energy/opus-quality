@@ -1,5 +1,5 @@
 CREATE DATABASE energia_futura ;
- USE energia_futura;
+ use energia_futura;
 
  -- TABELA PRÉ CADASTRO
  CREATE TABLE PreCadastro (idInteressado INT PRIMARY KEY auto_increment,
@@ -10,70 +10,127 @@ CREATE DATABASE energia_futura ;
  constraint chkStatusConta CHECK (statusConta in (0,1))
  );
  DESC PreCadastro;
- drop table PreCadastro;
 
-
- INSERT INTO PreCadastro (email,nome_fantasia,cnpj,statusConta) VALUES
+ INSERT INTO PreCadastro (email, nome_fantasia, cnpj, statusConta) VALUES
  ('empresa.teste@gmail.com','Empresa Teste',38902647820001, 1);
 
 SELECT * FROM PreCadastro;
 
 
 
+
 -- TABELA CADASTRO
+
 CREATE TABLE cadastro (
 idCadastro INT PRIMARY KEY auto_increment,
-rua VARCHAR (100),bairro VARCHAR(80),numero VARCHAR (10),
+rua VARCHAR (100),
+bairro VARCHAR(80),
+numero VARCHAR (10) not null,
 cidade VARCHAR (100),
-cep VARCHAR (8),
+cep VARCHAR (8) not null,
 StatusEmpresa CHAR(1),constraint chkStatusEmpresa CHECK (StatusEmpresa IN (0,1)),
 numeroTelefone VARCHAR(20) not null,
-DthoraComercial DATETIME default current_timestamp not null,
+DthoraComercialAbertura time not null,
+DthoraComercialFechamento time not null,
 numeroLampadas INT not null,
- senha VARCHAR(80) unique);
- drop table cadastro;
-
+ senha VARCHAR(80) unique
+ );
  DESC cadastro;
+ 
+ INSERT INTO cadastro (rua, bairro, numero, cidade, cep, 
+ StatusEmpresa, numeroTelefone, DtHoraComercialAbertura, DtHoraComercialFechamento, numeroLampadas, senha) VALUES
+ ('Rua Haddock Lobo', 'Cerqueira César', '595', 'São Paulo',
+ '01414001', 1, '11312344321', '08:00:00', '17:00:00', 15, 'K9$100jpe');
+ 
  SELECT * FROM cadastro;
-
- INSERT INTO cadastro (rua,bairro,numero,cidade,cep,
- StatusEmpresa,numeroTelefone,numeroLampadas,senha) VALUES
- ('Rua Haddock Lobo','Cerqueira César','595','São Paulo',
- '01414001',1,'11312344321',40,'K9$100jpe');
-
-
+ 
+ 
+ 
 
 -- TABELA SENSOR
 
 CREATE TABLE sensor(
 idSensor INT PRIMARY KEY auto_increment,
-idCadastro INT,
-statusLuminosidade INT,
-constraint chkLuminosidade CHECK (statusLuminosidade <= 1023),
- statusSensor VARCHAR(10),
+idCadastro INT not null,
+statusLuminosidade INT not null,
+ statusSensor VARCHAR(10) not null,
  constraint chkStatusSensor CHECK (statusSensor IN ('inativo','ativo'))
  );
- 
- drop table sensor;
- 
  DESC sensor;
  
-
- SELECT * FROM sensor;
-
  INSERT INTO sensor (idCadastro, statusLuminosidade, statusSensor) VALUES
- (1, '754 ','ativo');
- 
- TRUNCATE table sensor;
- 
- create table lampada(
- idLampada int primary key auto_increment,
+ (1, '754','ativo'),
+ (1, '347','ativo'),
+ (1, '245','ativo');
+  SELECT * FROM sensor;
+
+
+
+-- TABELA LAMPADA
+
+CREATE TABLE lampada(
+ idLampada INT primary key auto_increment,
+ idCadastro int,
  idSensor varchar(15) not null,
- statusLampada int not null,
+ statusLampada INT not null,
   constraint chkStatusLampada check (statusLampada in (0, 1))
-  );
-  
-  insert into lampada values
-  (null, '1', '1');
-  
-  select * from lampada;
+  ) auto_increment = 100;
+DESC lampada;
+
+INSERT INTO lampada (idCadastro, idSensor, statusLampada) VALUES
+  ('1', '1', '0'),
+  ('1', '1', '0'),
+  ('1', '2', '1'),
+  ('1', '2', '1'),
+  ('1', '2', '1'),
+  ('1', '2', '1'),
+  ('1', '3', '1'),
+  ('1', '3', '1'),
+  ('1', '3', '1'),
+  ('1', '3', '1'),
+  ('1', '3', '1'),
+  ('1', '1', '0'),
+  ('1', '1', '0'),
+  ('1', '2', '1'),
+  ('1', '2', '1');
+
+SELECT * FROM lampada;
+
+SELECT * FROM lampada where idSensor = 1;
+
+
+
+
+-- TABELA HISTORICO DO SENSOR
+
+CREATE TABLE historicoSensor (
+idHistorico int auto_increment primary key,
+idSensor varchar(15) not null,
+idLampada INT,
+hrsDaCaptura datetime default current_timestamp,
+statusLuminosidade int not null,
+constraint chkLuminosidade check (statusLuminosidade <= 1023),
+variacaoSensor varchar(15) not null
+constraint chkVariacao check (variacaoSensor in('claro', 'escuro'))
+);
+DESC historicoSensor;
+
+INSERT INTO historicoSensor (idSensor, idLampada, statusLuminosidade, variacaoSensor) VALUES
+
+(1, '100', '754', 'claro'),
+(1, '101', '754', 'claro'),
+(1, '111', '754', 'claro'),
+(1, '112', '754', 'claro'),
+(2, '102', '347', 'escuro'),
+(2, '103', '347', 'escuro'),
+(2, '104', '347', 'escuro'),
+(2, '105', '347', 'escuro'),
+(2, '113', '347', 'escuro'),
+(2, '114', '347', 'escuro'),
+(3, '106', '245', 'escuro'),
+(3, '107', '245', 'escuro'),
+(3, '108', '245', 'escuro'),
+(3, '109', '245', 'escuro'),
+(3, '110', '245', 'escuro');
+
+SELECT * FROM historicoSensor;
