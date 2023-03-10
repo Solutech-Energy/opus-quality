@@ -1,0 +1,79 @@
+CREATE DATABASE energia_futura ;
+ USE energia_futura;
+
+ -- TABELA PRÉ CADASTRO
+ CREATE TABLE PreCadastro (idInteressado INT PRIMARY KEY auto_increment,
+ email VARCHAR (60),
+ nome_fantasia VARCHAR (70),
+ cnpj VARCHAR (14) unique,
+ statusConta CHAR(1),
+ constraint chkStatusConta CHECK (statusConta in (0,1))
+ );
+ DESC PreCadastro;
+ drop table PreCadastro;
+
+
+ INSERT INTO PreCadastro (email,nome_fantasia,cnpj,statusConta) VALUES
+ ('empresa.teste@gmail.com','Empresa Teste',38902647820001, 1);
+
+SELECT * FROM PreCadastro;
+
+
+
+-- TABELA CADASTRO
+CREATE TABLE cadastro (
+idCadastro INT PRIMARY KEY auto_increment,
+rua VARCHAR (100),bairro VARCHAR(80),numero VARCHAR (10),
+cidade VARCHAR (100),
+cep VARCHAR (8),
+StatusEmpresa CHAR(1),constraint chkStatusEmpresa CHECK (StatusEmpresa IN (0,1)),
+numeroTelefone VARCHAR(20) not null,
+DthoraComercial DATETIME default current_timestamp not null,
+numeroLampadas INT not null,
+ senha VARCHAR(80) unique);
+ drop table cadastro;
+
+ DESC cadastro;
+ SELECT * FROM cadastro;
+
+ INSERT INTO cadastro (rua,bairro,numero,cidade,cep,
+ StatusEmpresa,numeroTelefone,numeroLampadas,senha) VALUES
+ ('Rua Haddock Lobo','Cerqueira César','595','São Paulo',
+ '01414001',1,'11312344321',40,'K9$100jpe');
+
+
+
+-- TABELA SENSOR
+
+CREATE TABLE sensor(
+idSensor INT PRIMARY KEY auto_increment,
+idCadastro INT,
+statusLuminosidade INT,
+constraint chkLuminosidade CHECK (statusLuminosidade <= 1023),
+ statusSensor VARCHAR(10),
+ constraint chkStatusSensor CHECK (statusSensor IN ('inativo','ativo'))
+ );
+ 
+ drop table sensor;
+ 
+ DESC sensor;
+ 
+
+ SELECT * FROM sensor;
+
+ INSERT INTO sensor (idCadastro, statusLuminosidade, statusSensor) VALUES
+ (1, '754 ','ativo');
+ 
+ TRUNCATE table sensor;
+ 
+ create table lampada(
+ idLampada int primary key auto_increment,
+ idSensor varchar(15) not null,
+ statusLampada int not null,
+  constraint chkStatusLampada check (statusLampada in (0, 1))
+  );
+  
+  insert into lampada values
+  (null, '1', '1');
+  
+  select * from lampada;
