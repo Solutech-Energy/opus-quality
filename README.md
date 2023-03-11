@@ -1,4 +1,5 @@
-# Energia Futura
+[Energia Futura](https://github.com/Solutech-Energy/energia-futura)
+=================
 
 Este é um projeto desenvolvido pelo grupo <b>SOLUTECH ENERGY</b> como parte da sequencia de estudos da disciplina de Pesquisa e Inovação do curso de Análise e Desenvolvimento de Sisitemas da Faculdade de Tecnologia São Paulo Tech School (SPTECH).
 
@@ -6,7 +7,7 @@ Criamos um sistema inteligente e sustentável de iluminação para ambientes emp
 
 <br>
 
-# Contexto do Negócio
+## Contexto do Negócio
 
 Com a crescente demanda de produtividade das empresas brasileiras, a luminescência, proveniente da energia elétrica, é um fator primordial para as suas atividades. O consumo excessivo de energia elétrica tem sido um dos principais problemas ambientais e econômicos em todo o mundo. De acordo com a Agência Internacional de Energia (AIE), a demanda global de eletricidade deve crescer em média 2,3% ao ano até 2040. O setor de iluminação é um dos maiores consumidores de energia em edifícios comerciais e residenciais.
 
@@ -14,11 +15,11 @@ Estudos apontam que a média de gastos com eletricidade em organizações brasil
 
 <br>
 
-# Objetivo
+## Objetivo
 
 O objetivo do projeto Energia Futura é oferecer recursos integrados a um sistema de iluminação inteligente e sustentável que gere boas condições de visão associadas à visibilidade, segurança e orientação, utilizando a luz natural, automação e luminárias para ter um ambiente iluminado de acordo com sua necessidade e com economia energética.
 
-# Como rodar o site
+## Como rodar o simulador financeiro
 **1. Clone o repositório em sua máquina local usando o comando**:
 ```
 git clone https://github.com/Solutech-Energy/energia-futura.git
@@ -36,7 +37,7 @@ start financeiro.html
 
 <br>
 
-# Tecnologias utilizadas
+## Tecnologias utilizadas
 **Linguagem**:
 ```
 C++ e JavaScript
@@ -59,7 +60,7 @@ Canvas
     
 <br>
 
-# Hardware e Componentes utilizados:
+## Hardware e Componentes utilizados:
 
     Arduino UNO
     Protoboard
@@ -69,7 +70,7 @@ Canvas
     
 <br>
 
-# Participantes
+## Participantes
 
     Arthur Ali Salomão Neto - 01231004
     Brenda Catharina Silva - 01231145
@@ -81,12 +82,12 @@ Canvas
     
 <br>
 
-# Agradecimentos
+## Agradecimentos
 
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
     
 <br>
 
-# Licença
+## Licença
 
 [MIT](LICENSE) © 2021 Bandtec Digital School
