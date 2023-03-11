@@ -1,6 +1,6 @@
 # Energia Futura
 
-Este é um projeto desenvolvido pelo grupo SOLUTECH ENERGY como parte da sequencia de estudos da disciplina Pesquisa e Inovação do curso de Análise e Desenvolvimento de Sisitemas da Faculdade São Paulo Tech School (SPTECH).
+Este é um projeto desenvolvido pelo grupo <b>SOLUTECH ENERGY</b> como parte da sequencia de estudos da disciplina de Pesquisa e Inovação do curso de Análise e Desenvolvimento de Sisitemas da Faculdade de Tecnologia São Paulo Tech School (SPTECH).
 
 Criamos um sistema inteligente e sustentável de iluminação para ambientes empresariais, utilizando sensores de iluminação para determinar a quantidade de luz necessária em cada ambiente e, assim, gerenciar a iluminação de forma eficiente, reduzindo o consumo de energia elétrica e aumentando a eficiência energética.
 
