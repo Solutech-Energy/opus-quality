@@ -90,4 +90,4 @@ Canvas
 
 ## Licença
 
-[MIT](LICENSE) © 2021 Bandtec Digital School
+[MIT](LICENSE) © 2023 Bandtec Digital School
