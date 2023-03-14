@@ -84,10 +84,10 @@ Canvas
 
 ## Agradecimentos
 
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    Agradecemos a São Paulo Tech School por tornar tudo isso possível. 
     
 <br>
 
 ## Licença
 
-[MIT](LICENSE) © 2023 Bandtec Digital School
+[MIT](LICENSE) © 2023 Solutech 
