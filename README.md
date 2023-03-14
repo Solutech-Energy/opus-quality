@@ -71,7 +71,7 @@ Canvas
 <br>
 
 ## Participantes
-
+    1ADSC
     Arthur Ali Salomão Neto - 01231004
     Brenda Catharina Silva - 01231145
     Pedro Henrique Castaldelli Ramos - 01231188
