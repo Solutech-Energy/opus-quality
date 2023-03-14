@@ -1,3 +1,4 @@
+
 CREATE DATABASE energia_futura;
  use energia_futura;
 
@@ -45,8 +46,8 @@ numeroLampadas INT not null,
  
  SELECT * FROM cadastro;
  
-
- 
+UPDATE cadastro SET DtHoraComercialFechamento = '18:00:00' WHERE idCadastro = 1;
+ SELECT * FROM cadastro; 
 
 -- TABELA SENSOR
 
@@ -100,7 +101,8 @@ INSERT INTO lampada (idCadastro, idSensor, statusLampada) VALUES
 
 SELECT * FROM lampada;
 
-SELECT * FROM lampada where idSensor = 1;
+SELECT * FROM lampada where idSensor in (1,3) ;
+
 
 
 
@@ -139,8 +141,8 @@ INSERT INTO historicoSensor (idSensor, idLampada, statusLuminosidade, variacaoSe
 
 SELECT * FROM historicoSensor;
 
-
-
+ALTER TABLE historicoSensor DROP COLUMN hrsDaCaptura;
+SELECT * FROM historicoSensor;
 
 -- TABELA FUNCIONARIO
 
@@ -168,4 +170,4 @@ insert into funcionario(nome,cpf,RG,dtNasc,email,permissao) values
 ('Bruno', '456-345-234.54', '54.345.678-5', '2000-12-09', 'bruno.pinheiros@gmail.com', 'funcionario');
 
 
-SELECT * FROM funcionario;
+select * from funcionario;
