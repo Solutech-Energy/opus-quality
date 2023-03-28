@@ -72,13 +72,13 @@ Canvas
 
 ## Participantes
     1ADSC
-    Arthur Ali Salomão Neto - 01231004
-    Brenda Catharina Silva - 01231145
-    Pedro Henrique Castaldelli Ramos - 01231188
-    Evelyn Farias da Silva - 01231084
-    Felipe de Andrade - 01231091
-    Daniel Victor O. Rodrigues - 01231200
-    Matheus V. Santiago - 01231154
+    Carlos Henrique Santos de Goes
+    Gabriel Guedes dos Santos
+    Katherinne Assis dos Santos Silva
+    Luan Ribeiro Cartacho Magno
+    Luíz Fernando Lemes Suleman
+    Peterson maranho santos
+    Yan Carlos Camargo Bezerra
     
 <br>
 
