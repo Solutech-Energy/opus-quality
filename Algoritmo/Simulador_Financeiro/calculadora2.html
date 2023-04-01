@@ -25,11 +25,11 @@
     Quantos colaboradores possui?<br>
     <input type="number" id="input_colab"><br><br>
    
-    Média de Faltas? <br>
-    <input type="number" id="input_mediaFaltas"><br><br>
+    Faltas no mês? <br>
+    <input type="number" id="input_FaltasMes"><br><br>
     
-    Total de meses trabalhados <br> 
-    <input type="number" id="input_TotalMeses"><br><br>
+    <!-- Total de meses trabalhados <br> 
+    <input type="number" id="input_TotalMeses"><br><br> -->
     
     Total de horas trabalhadas por dia?<br> 
     <input type="number" id="input_horasDia"><br><br>
@@ -59,12 +59,13 @@
 
         // Recebendo valores dos inputs
         var colaboradores= input_colab.value
-        var mediaFaltas= input_mediaFaltas.value
-        var mesesTrabalhados= input_TotalMeses.value
+        var FaltasMes= input_FaltasMes.value
+        // var mesesTrabalhados= input_TotalMeses.value
         var horas_por_dia= input_horasDia.value
+        var horas_por_mes= horas_por_dia *30
 
         // Variavel da conta
-        var indice= (colaboradores*mediaFaltas)/(colaboradores* mesesTrabalhados)*100
+        var indice= (colaboradores*FaltasMes)/(horas_por_mes * colaboradores )*100
         var indinheiro= Number(input_mdsalario.value)
         var containd= (indinheiro *colaboradores)*indice
         absentismo.innerHTML = `Porcentagem de absenteísmo <span style="color: red;">${indice}%</span><br> Dinhero perdido com essa porcentagem sem o nosso sistema<span style="color: red;">${containd}$</span>
@@ -119,17 +120,14 @@
             Mensal: R$<span style="color: red">${valor_consumo_kwh_mensal_semSolucao}</span>  <br>
             Anual: R$<span style="color: red">${valor_consumo_kwh_anual_semSolucao}</span>    <br>
         <br>
-
         <p>Com a solução <span style="color: rgb(255, 138, 20)">ENERGY TECH</span>, a empresa <b>${nome_empresa}</b>, possuirá os seguintes gastos: <p>
             Diário: R$<span style="color: rgb(255, 138, 20)">${valor_custo_kwh_diario_comSolucao}</span>  <br>
             Mensal: R$<span style="color: rgb(255, 138, 20)">${valor_custo_kwh_mensal_comSolucao}</span>  <br>
             Anual: R$<span style="color: rgb(255, 138, 20)">${valor_custo_kwh_anual_comSolucao}</span>    <br><br>    
-
             <p>Sendo assim, os valores economizados pela empresa <b>${nome_empresa}</b>, com o uso da solução <span style="color: rgb(255, 138, 20)">Energia Futura</span> serão de: <br>  <p>
         Diário: R$<span style="color: green">${valor_consumo_kwh_diario_semSolucao - valor_custo_kwh_diario_comSolucao}</span>  <br>
         Mensal: R$<span style="color: green">${valor_consumo_kwh_mensal_semSolucao - valor_custo_kwh_mensal_comSolucao}</span>  <br>
         Anual: R$<span style="color: green">${valor_consumo_kwh_anual_semSolucao - valor_custo_kwh_anual_comSolucao}</span><p>  
-
             <h3>Com a economia anual de: <span style="color: GREEN">${economia_geral_comSolucao}</span>, a empresa <b>${nome_empresa}</b>, poderá reinvestir os valores com melhoras de infraestrutura, sustentabilidade, projetos internos e inovações tecnológicas.</h3>
         `;
 
