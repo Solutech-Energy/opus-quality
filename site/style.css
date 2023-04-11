@@ -1,285 +1,488 @@
+/* navbar */
 body {
-    margin: 0;
-    padding: 0;
+    background-color: #0F1631;
+    margin: 0%;
+    padding: 0%;
 }
-
 @font-face {
-    font-family: Poppins;
-    src: url("assets/fonts/Poppins-Regular.ttf");
+    font-family: 'Poppins';
+    src: url(fonts/Poppins-Regular.ttf);
 }
-
-.containerGeral {
-    display: flex;
-    width: 100%;
-    background-color: #FFFFFF;
-    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+*{
+    font-family: 'Poppins';
 }
-
-.headerContainer {
-    display: flex;
-    width: 100%;
-    justify-content: end;
+a {
+        text-decoration: none;
+        color: inherit;
+        
 }
-
-.logoContainer {
-    display: flex;
-    width: 30%;
-}
-
-/* começo do navbar */
-.navbarLista {
-    display: flex;
-    width: 70%;
+.header {
+    font-family: 'Poppins';
+    justify-content: center;
     align-items: center;
-    list-style: none;
-    justify-content: space-evenly;
-}
-
-
-.navbarLista ul,
-.navbarLista li a {
-    padding: 5px 10px;
-    color: #4F4D4D;
-    text-decoration: none;
-
-}
-
-.loginBtn {
-    padding: 7px 25px;
+    font-size: 130%;
+    display: flex;
+    background-color: #0F1631;
+    width: 100%;
+    height: 60px;
     color: white;
-    letter-spacing: 1px;
-    border-radius: 10px;
-    text-decoration: none;
+    border-bottom-width: 5px;
+    border-bottom-style:solid;
+    border-bottom-color: #0d1328;
+    
+
+}
+.headerLogo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 40px;
+    width: 50%;
+    height: 100%;
+}
+.headerText {
+    font-family: 'Poppins';
+    font-family: 'inter';
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+}
+.clickLogin {
+    display: flex;
     background-color: #EF8A14;
+    width: 15%;
+    height: 35px;
+    border-radius: 7px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
-/*começo da propaganda*/
+/* building */
 
-.propaganda {
+.building {
     display: flex;
+    background-color: #0F1631;
     width: 100%;
+    height: 380px;
     color: white;
-    font-family: Poppins;
-    background: #EF8A14;
 }
 
-.propagandaContainer {
-    display: flex;
-    width: 100%;
+.buildingText {
+    font-weight: bold;
     flex-direction: column;
-}
-
-.propagandaTitulo {
+    font-size: 300%;
     display: flex;
-    width: 100%;
-    margin-top: 2%;
-    margin-bottom: 3%;
-    align-self: center;
-    justify-content: center;
-    font-size: 150%;
-    font-weight: 900;
-}
-
-.propagandaBoxes {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    flex-direction: row;
-}
-
-.propagandaBoxes div {
-    display: flex;
-    width: 10%;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
-
-}
-
-.propagandaContainer h3 {
-    font-weight: 800;
-    font-size: 125%;
-}
-
-/*começo do clienteContainer*/
-.clienteContainer {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    font-family: Poppins;
-}
-
-.clienteTitulo {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: #4F4D4D;
-    margin-top: 2%;
-    margin-bottom: 3%;
-    font-size: 150%;
-    font-weight: 900;
-}
-
-.clientesBoxes {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    flex-direction: row;
-}
-
-.clientesBoxes div {
-    display: flex;
-    width: 22%;
-    margin: 2% 1%;
-    flex-direction: column;
-    background-color: #FDC776;
-    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
-    justify-content: center;
-    align-items: center;
-    border-radius: 10%;
-}
-
-.clientesBoxes p {
-    display: flex;
-    padding: 13%;
-}
-
-.clienteContainer label {
-    align-items: center;
-    font-weight: 900;
     margin-top: 5%;
+    margin-left: 5%;
+    width: 40%;
+    height: 100%;
+
 }
 
-/* INICIO DO FAZER PARTE */
-.fazerParteContainer {
+.buildingImg {
     display: flex;
-    width: 100%;
-    background-image: url(assets/imagens/fundo\ laranja\ -\ forma.png);
-    background-size: 60%;
-    background-repeat: no-repeat;
+    justify-content: right;
+    margin: 0;
+    width: 80%;
+    height: 100%;
+
 }
 
+/* vantagens */
 
-/*começo FAZER PARTE container*/
-.FazerParteConteiner {
+.textBenefits {
+    padding-top: 5px;
+    padding-bottom: 30px;
     display: flex;
+    background-color: #353755;
     width: 100%;
-    flex-direction: column;
-    font-family: Poppins;
-}
-
-.FazerParteConteiner label {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    color: #4F4D4D;
-    margin-top: 2%;
-    margin-bottom: 3%;
-    font-size: 150%;
-    font-weight: 900;
-}
-
-.FazerParteConteiner div {
-    width: 100%;
+    height: 70px;
+    color: white;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.Benefits{
+    font-size: 100%;
+    background-color: #353755;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    color: white;
+}
+
+.sustainability {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 50%;
+    margin-bottom: 40px;
+    
+}
+.automation {    
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 50%;
+}
+.economy{
+    margin-top: 25px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 50%;
+}
+.productivity{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 50%;
+}
+.textImgs {
+    display: flex;
+    font-size: 100%;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+
+}
+
+/* diferenca */
+
+.imgFilter {
+    background-color: #0F1631;
+    display: flex;
+
+}
+.textFilter1 {
+    width: 100%;
+    height: 50%;
+
+
+}
+.textFilter2 {
+    width: 100%;
+    height: 50%;
     
 }
 
-.FazerParteConteiner button {
-    align-items: center;
-    justify-content: center;
-    border-radius: 10%;
-    color: #4F4D4D;
-}
+/* CSS Dashboard */
 
-/* começo do footer */
-.footer {
-    justify-content: space-evenly;
-    width: 100%;
-    height: 15%;
+.DashboardText {
+    color: #EF8A14;
+    padding-right: 80px;
+    font-family: 'inter';
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+
+}
+.textDashboard {
     color: white;
-    background-color: #4A4A4A;
-}
-
-.footerContainer {
+    background-color: #0F1631;
     display: flex;
-    width: 100%;
-    align-items: center;
     justify-content: center;
-}
-
-.footerEsquerdo {
-    width: 30%;
-    padding: 60px 41px;
-    font-size: 90%;
-}
-
-.footerEsquerdo label {
-    margin: 20% 0;
-    font-size: 115%;
-    font-weight: bold;
-    font-family: Poppins;
-}
-
-.footerEsquerdo p {
-    display: flex;
     align-items: center;
-    justify-content: left;
-    font-family: Poppins;
-}
-
-.footerEsquerdo p svg {
-    margin-right: 1%;
-}
-
-
-.footerDireito {
-    width: 30%;
-    padding: 60px 41px;
-    font-size: 90%;
-}
-
-.footerDireito label {
-    margin: 20% 0%;
-    font-weight: bold;
-    font-size: 115%;
-    font-family: Poppins;
-}
-
-.footerDireito p {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    font-family: Poppins;
-}
-
-.footerDireito p svg {
-    margin-right: 1%;
-}
-
-
-.final {
-    display: flex;
+    font-size: 200%;
     width: 100%;
-    font-size: 100%;
-    align-self: center;
+    height: 100%;
+    padding-top: 8px;
+}
+.Graficos{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    height: auto;
+    flex-direction: row;
+    margin-top: 20px;
+    display: flex;
+    padding-bottom: 20px;
+}
+.left{ 
+    
+    display: flex;
+    align-items: end;
+    justify-content: end;
     flex-direction: column;
+
+    width: 90%;
+    height: 100%;
+}
+.graphicDescription {  
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: right;
+    width: 60%;
+    height: 100%;
+    color: white;
+}
+.graphicDescriptionLDR5 {
+    padding-bottom: 100px;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+.graphicDescriptionLM35 {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+.cardGraficoLM35{
     justify-content: center;
+    text-align: center;
+    display: flex;
+    width: 50%;
+    height: 300px;
+    background-color: white;
+
+}
+.cardGraficoLDR5{
+
+    width: 100%;
+    height: 50%;
+    display: flex;
+    padding-top: 50px;
+    background-color: white;
+    width: 500px;
+    height: 230px;
+    border-radius: 15px;
+}
+.cardGraficoLM35{
+    width: 100%;
+    height: 50%;
+    margin-top: 50px;
+    display: flex;
+    padding-top: 50px;
+    background-color: white;
+    width: 500px;
+    height: 230px;
+    border-radius: 15px;
+}
+.right {
+    flex-direction: column;
+    display:flex;
+    width: 40%;
+    height: 100%;
+}
+.graficoAbsenteismo{
+    margin-bottom: 100px;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+#linhaVertical {
+    display: flex;
+    margin-left: 50px;
+    height: 630px;
+    border-left: 4px solid #EF8A14;
+}
+.graphicAbsenteismo{
+    font-size: 20px;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.clickGraphic {
+    display: flex;
+    background-color: #EF8A14;
+    width: 15%;
+    height: 35px;
+    border-radius: 7px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login */
+
+
+.cardLogin {
+    background-color: black;
+    margin: auto;
+    margin-top: 8%;
+    display: flex;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.imgLogin {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    opacity: 10%;
+}
+
+
+.imgLogo{
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.rightLogin{
+    background-color: #D9D9D9;
+    flex-direction: column;
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.buttonClose{
+    display: flex;
+    justify-content: end;
+    width: 98%;
+    height: 5%;
+    padding-top: 15px;
+}
+
+.textLogin {
+    color: #1F4662;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    justify-content: left;
+    font-size: 220%;
+    display: flex;
+    width: 100%;
+    height: 20%;
+    padding-left: 80px;
+}
+
+.textEmail{
+    justify-content: flex-start;
+
+    color: #1F4662;
+    font-size: 22px;
+    flex-direction: row;
+    display: flex;
+    width: 30%;
+    height: 5%;
+    align-items: center;
+    padding-left: 80px;
     font-weight: bold;
+    padding-top: 15px;
+    
 }
 
-.final p {
-    align-self: center;
-    justify-content: center;
-    font-family: Poppins;
+.inputsLogin{
+    outline: none;
+    background-color: #D9D9D9;
+    display: flex;
+    width: 60%;
+    height: 30px;
+    margin-left: 80px;
+    margin-top: 10px;
+    padding-top: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #1F4662 solid 3px;
 }
 
-.final img {
-    align-self: center;
+.textPassword{
+    justify-content: flex-start;
+    color: #1F4662;
+    font-size: 22px;
+    flex-direction: row;
+    display: flex;
+    width: 30%;
+    height: 5%;
+    align-items: center;
+    padding-left: 80px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.cardsClicks {
+    padding-left: 80px;
+    margin-top: 30px;
+    flex-direction: row;
+    color: white;
+    display: flex;
+    width: 100%;
+    height: 40%;
+}
+.clickEnter {
+    align-items: center;
     justify-content: center;
+    background-color: #1F4662;
+    display: flex;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.clickRecoverPassword {
+    align-items: center;
+    margin-left: 25px;
+    justify-content: center;
+    background-color: #1F4662;
+    display: flex;
+    width: 160px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+
+/* CADASTRO */
+
+.cardRegister {
+    display: flex;
+    background-color: #D9D9D9;
+    margin: auto;
+    margin-top: 8%;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 15px;
+}
+.imgRegister { 
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 25%;
+}
+.buttonCloseRegister{
+    display: flex;
+    justify-content: end;
+    padding-top: 15px;
+    padding-right: 15px;
+    height: 5%;
+    z-index: 100px;
+}
+
+.inputsRegister{
+    width: 80;
+    height: 70%;
+    display: flex;
 }
