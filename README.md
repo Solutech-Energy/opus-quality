@@ -10,6 +10,7 @@ Criamos um sistema inteligente de iluminação e temperatura para ambientes empr
 ## Contexto do Negócio
 
 O absenteísmo pode ser definido como a ausência de um colaborador ao trabalho, seja ela justificada ou não, e pode ter diversas causas, como doenças, problemas pessoais, falta de motivação, entre outras. O absenteísmo pode afetar diretamente a produtividade da empresa, pois a ausência de um colaborador pode gerar atrasos em projetos, sobrecarregar os demais colaboradores e, consequentemente, afetar o desempenho da equipe. 
+
 Além disso, o absenteísmo também pode gerar custos para a empresa, como a necessidade de contratação de temporários ou até mesmo a perda de negócios por não conseguir atender às demandas dos clientes.
 Dois fatores do ambiente de trabalho que interferem na produtividade dos funcionários são a luminosidade e a temperatura. Quando ambos estão em níveis ideais para seu segmento, podem melhorar a qualidade do trabalho realizado em uma empresa.
 
