@@ -93,96 +93,9 @@ a {
 
 }
 
-/* vantagens */
-
-.textBenefits {
-    padding-top: 5px;
-    padding-bottom: 30px;
-    display: flex;
-    background-color: #353755;
-    width: 100%;
-    height: 70px;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 150%;
-}
-
-.Benefits{
-    font-size: 100%;
-    background-color: #353755;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: space-around;
-    color: white;
-}
-
-.sustainability {
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 25%;
-    height: 50%;
-    margin-bottom: 40px;
-    
-}
-.automation {    
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 25%;
-    height: 50%;
-}
-.economy{
-    margin-top: 25px;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 25%;
-    height: 50%;
-}
-.productivity{
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 25%;
-    height: 50%;
-}
-.textImgs {
-    display: flex;
-    font-size: 100%;
-    width: 50%;
-    height: 50%;
-    justify-content: center;
-
-}
-
-/* diferenca */
-
-.imgFilter {
-    background-color: #0F1631;
-    display: flex;
-
-}
-.textFilter1 {
-    width: 100%;
-    height: 50%;
 
 
-}
-.textFilter2 {
-    width: 100%;
-    height: 50%;
-    
-}
-
-/* CSS Dashboard */
+/* CSS Dashboard Local*/
 
 .DashboardText {
     color: #EF8A14;
@@ -317,6 +230,213 @@ a {
     align-items: center;
 }
 
+
+/* CSS DASHBOARD GERAL */
+
+.navbarDashboard {
+    font-family: 'Poppins';
+    justify-content: center;
+    align-items: center;
+    font-size: 130%;
+    display: flex;
+    background-color: #0F1631;
+    width: 100%;
+    height: 60px;
+    color: white;
+    border-bottom-width: 5px;
+    border-bottom-style:solid;
+    border-bottom-color: #0d1328;
+    
+
+}
+.logoDashboard {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 40px;
+    width: 50%;
+    height: 100%;
+}
+
+.NavbarTextDashboard {
+    color: #EF8A14;
+    padding-right: 80px;
+    font-family: 'inter';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+
+}
+
+.imgUser {
+    margin-right: 15px;
+    background-color: #D9D9D9;
+    width: 5%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+.bodyDashboard {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.rightDash {
+    width: 35%;
+    color: #D9D9D9;
+}
+
+
+.leftDash{
+    background-color: #101A41;
+    color: #D9D9D9;
+    width: 65%;
+}
+
+.textCompany {
+    width: 100%;
+    height: 5%;
+    margin-left: 5%;
+
+}
+.generalQuality {
+    width: 100%;
+    height: 8%;
+    margin-left: 10%;
+}
+
+.cardIndex {
+    background-color: #1F4662;
+    margin-left: 10%;
+    width: 60%;
+    height: 40vh;
+    border-radius: 10px;    
+}
+
+.horizontalLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    background-color: #070D25;
+    width: 75%;
+    height: 1%;
+    margin-left: 3%;
+}
+
+.Generalmonitoring {
+    width: 95%;
+    margin-left: 5%;
+    height: auto;
+}
+
+.sensors {
+    margin-bottom: 10%;
+    background-color: #101A41;
+    display: flex;
+    width: 100%;
+
+}
+.sensor1 {
+    background-color: #BE1CA4;
+    margin-left: 5%;
+    width: 30%;
+    height: 15vh;
+    border-radius: 10px;    
+}
+
+.sensor2 {
+    background-color: #BE871C;
+    margin-left: 5%;
+    width: 30%;
+    height: 15vh;
+    border-radius: 10px;    
+}
+
+.textAbsenteeism {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+}
+
+.absenteeismGraph{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+}
+
+.overallPercentage{
+    padding-top: 2%;
+    font-size: 150%;
+    display: flex;
+    width: 100%;
+    height: 10%;
+}
+.Percentage1 {
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    width: 50%;
+    height: 100%;
+
+}
+.Percentage2 {
+    font-weight: bold;
+
+    justify-content: center;
+
+    display: flex;
+    width: 50%;
+    height: 100%;
+
+}
+
+.textAbsenteeism {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+}
+
+
+.textEnvironments {
+    padding-left: 7%;
+    font-weight: bold;
+    display: flex;
+    width: 50%;
+
+}
+.environments{
+    padding-top: 2%;
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+}
+.environments1 {
+    background-image: url(img/unsplash_jUOaONoXJQk.png);
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    width: 40%;
+    height: 15vh;
+    border-radius: 15%;
+
+}
+
+.environments2 {
+    background-image: url(img/unsplash_jUOaONoXJQk.png);
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    width: 40%;
+    height: 15vh;
+    border-radius: 15%;
+}
 /* Login */
 
 
@@ -331,24 +451,16 @@ a {
     overflow: hidden;
 }
 .imgLogin {
+    align-items: center;
+    justify-content: left;
+    background-color: #0d1328;
     display: flex;
     width: 50%;
     height: 100%;
-    overflow: hidden;
-    background-size: cover;
-    opacity: 10%;
 }
 
 
-.imgLogo{
-    position: relative;
-    z-index: 5;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
+
 
 
 .rightLogin{
@@ -395,20 +507,20 @@ a {
     
 }
 
-.inputsLogin{
+.inputsLogin {
     outline: none;
     background-color: #D9D9D9;
     display: flex;
     width: 60%;
     height: 30px;
     margin-left: 80px;
-    margin-top: 10px;
     padding-top: 1px;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: #1F4662 solid 3px;
 }
+
 
 .textPassword{
     justify-content: flex-start;
@@ -458,31 +570,160 @@ a {
 /* CADASTRO */
 
 .cardRegister {
-    display: flex;
-    background-color: #D9D9D9;
+    background-color:#D9D9D9;
     margin: auto;
     margin-top: 8%;
     width: 60vw;
     height: 80vh;
     border-radius: 15px;
 }
-.imgRegister { 
-    background-size: cover;
-    overflow: hidden;
+
+.topRegister {
+    display: flex;
     width: 100%;
-    height: 25%;
+    height: 30%;
+
+}
+.imgRegister { 
+    background-color :#0d1328;
+    width: 100%;
+    height:100%;
+    border-radius: 15px 15px 0 0;
+    display: flex;
 }
 .buttonCloseRegister{
+    position: absolute;
     display: flex;
-    justify-content: end;
-    padding-top: 15px;
-    padding-right: 15px;
-    height: 5%;
-    z-index: 100px;
+    width: 3%;
+    height: 3%;
+    z-index: 50;
+    padding-left: 57%;
+    padding-top: 1%;
+
 }
 
-.inputsRegister{
-    width: 80;
-    height: 70%;
+
+
+.sectionRegister{
     display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 70%;
 }
+
+.textMyData {
+    display: flex;
+    justify-content: center;
+    font-size: 200%;
+    color: #1F4662;
+    height: 3%;
+    padding-bottom: 3%;
+}
+.inputsRegister {
+    outline: none;
+    background-color: #D9D9D9;
+    display: flex;
+    width: 30%;
+    height: 30px;
+    margin-left: 80px;
+    padding-top: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #1F4662 solid 3px;
+}
+
+
+.line1 {
+    font-size: 150px;
+    display: flex;
+    width: 90%;
+    height: 10%;
+    justify-content: space-around;
+}
+
+.line2 {
+    padding-top: 3%;
+
+    display: flex;
+    width: 90%;
+    height: 10%;
+    justify-content: space-around;
+}
+
+.line3 {
+    padding-top: 3%;
+
+    display: flex;
+    width: 90%;
+    height: 10%;
+    justify-content: space-around;
+}
+
+.line4 {
+    align-items: center;
+    padding-top: 5%;
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+}
+
+.inputsSmall {
+
+        outline: none;
+        background-color: #D9D9D9;
+        display: flex;
+        width: 10%;
+        height: 30px;
+        margin-left: 80px;
+        padding-top: 1px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: #1F4662 solid 3px;
+    }
+
+.inputsAverage {
+        outline: none;
+        background-color: #D9D9D9;
+        display: flex;
+        width: 15%;
+        height: 30px;
+        margin-left: 80px;
+        padding-top: 1px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: #1F4662 solid 3px;
+}
+.inputsBig {
+        outline: none;
+        background-color: #D9D9D9;
+        display: flex;
+        width: 45%;
+        height: 30px;
+        margin-left: 80px;
+        padding-top: 1px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: #1F4662 solid 3px;
+}
+.clickSave {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F4662;
+    display: flex;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+} 
+
+
+
+/* QUEM SOMOS */
+
+
+
