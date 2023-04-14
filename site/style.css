@@ -4,18 +4,22 @@ body {
     margin: 0%;
     padding: 0%;
 }
+
 @font-face {
     font-family: 'Poppins';
     src: url(fonts/Poppins-Regular.ttf);
 }
-*{
+
+* {
     font-family: 'Poppins';
 }
+
 a {
-        text-decoration: none;
-        color: inherit;
-        
+    text-decoration: none;
+    color: inherit;
+
 }
+
 .header {
     font-family: 'Poppins';
     justify-content: center;
@@ -27,11 +31,12 @@ a {
     height: 60px;
     color: white;
     border-bottom-width: 5px;
-    border-bottom-style:solid;
+    border-bottom-style: solid;
     border-bottom-color: #0d1328;
-    
+
 
 }
+
 .headerLogo {
     display: flex;
     justify-content: left;
@@ -40,6 +45,7 @@ a {
     width: 50%;
     height: 100%;
 }
+
 .headerText {
     font-family: 'Poppins';
     font-family: 'inter';
@@ -50,6 +56,7 @@ a {
     width: 50%;
     height: 100%;
 }
+
 .clickLogin {
     display: flex;
     background-color: #EF8A14;
@@ -108,6 +115,7 @@ a {
     height: 100%;
 
 }
+
 .textDashboard {
     color: white;
     background-color: #0F1631;
@@ -119,7 +127,8 @@ a {
     height: 100%;
     padding-top: 8px;
 }
-.Graficos{
+
+.Graficos {
     align-items: center;
     width: 100%;
     height: 100%;
@@ -129,8 +138,9 @@ a {
     display: flex;
     padding-bottom: 20px;
 }
-.left{ 
-    
+
+.left {
+
     display: flex;
     align-items: end;
     justify-content: end;
@@ -139,7 +149,8 @@ a {
     width: 90%;
     height: 100%;
 }
-.graphicDescription {  
+
+.graphicDescription {
     padding-left: 20px;
     padding-right: 20px;
     text-align: right;
@@ -147,6 +158,7 @@ a {
     height: 100%;
     color: white;
 }
+
 .graphicDescriptionLDR5 {
     padding-bottom: 100px;
     flex-direction: column;
@@ -154,13 +166,15 @@ a {
     width: 100%;
     height: 50%;
 }
+
 .graphicDescriptionLM35 {
     flex-direction: column;
     display: flex;
     width: 100%;
     height: 50%;
 }
-.cardGraficoLM35{
+
+.cardGraficoLM35 {
     justify-content: center;
     text-align: center;
     display: flex;
@@ -169,7 +183,8 @@ a {
     background-color: white;
 
 }
-.cardGraficoLDR5{
+
+.cardGraficoLDR5 {
 
     width: 100%;
     height: 50%;
@@ -180,7 +195,8 @@ a {
     height: 230px;
     border-radius: 15px;
 }
-.cardGraficoLM35{
+
+.cardGraficoLM35 {
     width: 100%;
     height: 50%;
     margin-top: 50px;
@@ -191,25 +207,29 @@ a {
     height: 230px;
     border-radius: 15px;
 }
+
 .right {
     flex-direction: column;
-    display:flex;
+    display: flex;
     width: 40%;
     height: 100%;
 }
-.graficoAbsenteismo{
+
+.graficoAbsenteismo {
     margin-bottom: 100px;
     flex-direction: row;
     width: 100%;
     height: 100%;
 }
+
 #linhaVertical {
     display: flex;
     margin-left: 50px;
     height: 630px;
     border-left: 4px solid #EF8A14;
 }
-.graphicAbsenteismo{
+
+.graphicAbsenteismo {
     font-size: 20px;
     flex-direction: column;
     color: white;
@@ -219,6 +239,7 @@ a {
     text-align: center;
     justify-content: center;
 }
+
 .clickGraphic {
     display: flex;
     background-color: #EF8A14;
@@ -244,11 +265,12 @@ a {
     height: 60px;
     color: white;
     border-bottom-width: 5px;
-    border-bottom-style:solid;
+    border-bottom-style: solid;
     border-bottom-color: #0d1328;
-    
+
 
 }
+
 .logoDashboard {
     display: flex;
     justify-content: left;
@@ -283,13 +305,14 @@ a {
     width: 100%;
     height: 100%;
 }
+
 .rightDash {
     width: 35%;
     color: #D9D9D9;
 }
 
 
-.leftDash{
+.leftDash {
     background-color: #101A41;
     color: #D9D9D9;
     width: 65%;
@@ -301,6 +324,7 @@ a {
     margin-left: 5%;
 
 }
+
 .generalQuality {
     width: 100%;
     height: 8%;
@@ -312,7 +336,7 @@ a {
     margin-left: 10%;
     width: 60%;
     height: 40vh;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
 
 .horizontalLine {
@@ -339,12 +363,13 @@ a {
     width: 100%;
 
 }
+
 .sensor1 {
     background-color: #BE1CA4;
     margin-left: 5%;
     width: 30%;
     height: 15vh;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
 
 .sensor2 {
@@ -352,7 +377,7 @@ a {
     margin-left: 5%;
     width: 30%;
     height: 15vh;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
 
 .textAbsenteeism {
@@ -362,7 +387,7 @@ a {
     justify-content: center;
 }
 
-.absenteeismGraph{
+.absenteeismGraph {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -370,13 +395,14 @@ a {
     height: 40%;
 }
 
-.overallPercentage{
+.overallPercentage {
     padding-top: 2%;
     font-size: 150%;
     display: flex;
     width: 100%;
     height: 10%;
 }
+
 .Percentage1 {
     font-weight: bold;
     justify-content: center;
@@ -385,6 +411,7 @@ a {
     height: 100%;
 
 }
+
 .Percentage2 {
     font-weight: bold;
 
@@ -411,12 +438,14 @@ a {
     width: 50%;
 
 }
-.environments{
+
+.environments {
     padding-top: 2%;
     display: flex;
     width: 95%;
     justify-content: space-around;
 }
+
 .environments1 {
     background-image: url(img/unsplash_jUOaONoXJQk.png);
     font-weight: bold;
@@ -437,6 +466,7 @@ a {
     height: 15vh;
     border-radius: 15%;
 }
+
 /* Login */
 
 
@@ -450,6 +480,7 @@ a {
     border-radius: 15px;
     overflow: hidden;
 }
+
 .imgLogin {
     align-items: center;
     justify-content: left;
@@ -463,7 +494,7 @@ a {
 
 
 
-.rightLogin{
+.rightLogin {
     background-color: #D9D9D9;
     flex-direction: column;
     display: flex;
@@ -471,7 +502,7 @@ a {
     height: 100%;
 }
 
-.buttonClose{
+.buttonClose {
     display: flex;
     justify-content: end;
     width: 98%;
@@ -491,7 +522,7 @@ a {
     padding-left: 80px;
 }
 
-.textEmail{
+.textEmail {
     justify-content: flex-start;
 
     color: #1F4662;
@@ -504,7 +535,7 @@ a {
     padding-left: 80px;
     font-weight: bold;
     padding-top: 15px;
-    
+
 }
 
 .inputsLogin {
@@ -522,7 +553,7 @@ a {
 }
 
 
-.textPassword{
+.textPassword {
     justify-content: flex-start;
     color: #1F4662;
     font-size: 22px;
@@ -545,6 +576,7 @@ a {
     width: 100%;
     height: 40%;
 }
+
 .clickEnter {
     align-items: center;
     justify-content: center;
@@ -570,7 +602,7 @@ a {
 /* CADASTRO */
 
 .cardRegister {
-    background-color:#D9D9D9;
+    background-color: #D9D9D9;
     margin: auto;
     margin-top: 8%;
     width: 60vw;
@@ -584,14 +616,16 @@ a {
     height: 30%;
 
 }
-.imgRegister { 
-    background-color :#0d1328;
+
+.imgRegister {
+    background-color: #0d1328;
     width: 100%;
-    height:100%;
+    height: 100%;
     border-radius: 15px 15px 0 0;
     display: flex;
 }
-.buttonCloseRegister{
+
+.buttonCloseRegister {
     position: absolute;
     display: flex;
     width: 3%;
@@ -604,7 +638,7 @@ a {
 
 
 
-.sectionRegister{
+.sectionRegister {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -619,6 +653,7 @@ a {
     height: 3%;
     padding-bottom: 3%;
 }
+
 .inputsRegister {
     outline: none;
     background-color: #D9D9D9;
@@ -671,45 +706,47 @@ a {
 
 .inputsSmall {
 
-        outline: none;
-        background-color: #D9D9D9;
-        display: flex;
-        width: 10%;
-        height: 30px;
-        margin-left: 80px;
-        padding-top: 1px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: #1F4662 solid 3px;
-    }
+    outline: none;
+    background-color: #D9D9D9;
+    display: flex;
+    width: 10%;
+    height: 30px;
+    margin-left: 80px;
+    padding-top: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #1F4662 solid 3px;
+}
 
 .inputsAverage {
-        outline: none;
-        background-color: #D9D9D9;
-        display: flex;
-        width: 15%;
-        height: 30px;
-        margin-left: 80px;
-        padding-top: 1px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: #1F4662 solid 3px;
+    outline: none;
+    background-color: #D9D9D9;
+    display: flex;
+    width: 15%;
+    height: 30px;
+    margin-left: 80px;
+    padding-top: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #1F4662 solid 3px;
 }
+
 .inputsBig {
-        outline: none;
-        background-color: #D9D9D9;
-        display: flex;
-        width: 45%;
-        height: 30px;
-        margin-left: 80px;
-        padding-top: 1px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: #1F4662 solid 3px;
+    outline: none;
+    background-color: #D9D9D9;
+    display: flex;
+    width: 45%;
+    height: 30px;
+    margin-left: 80px;
+    padding-top: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #1F4662 solid 3px;
 }
+
 .clickSave {
     color: white;
     align-items: center;
@@ -719,11 +756,8 @@ a {
     width: 200px;
     height: 40px;
     border-radius: 10px;
-} 
+}
 
 
 
 /* QUEM SOMOS */
-
-
-
