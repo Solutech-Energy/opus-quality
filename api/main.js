@@ -146,13 +146,7 @@ const servidor = (
     const valoresLuminosidade = [];
     const valoresLm35Temperatura = [];
 
-    await serial(
-        valoresLuminosidade,
-        valoresLm35Temperatura,
-    );
-    servidor(
+    await serial(valoresLuminosidade, valoresLm35Temperatura);
 
-        valoresLuminosidade,
-        valoresLm35Temperatura,
-    );
+    servidor(valoresLuminosidade, valoresLm35Temperatura,);
 })();
