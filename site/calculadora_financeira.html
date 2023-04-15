@@ -49,7 +49,7 @@
     <button onclick="simular_economia()">Simular Economia</button><br><br>
 
     <div id="absentismo"></div>
-    <div id="resultado"></div>
+    <div id="energia"></div>
 
 </body>
 
@@ -96,26 +96,20 @@
         var valor_kwh = 0.6 // Valor médio do KW/h no estado de São Paulo (R$0,60)
 
         // Calculos de KWH por mês (Consumo = (Potencia (Watts) * Tempo) / 1000)
-        var kwh_ar_cond_24h = ((((btu_ar_cond * 0.2929) * 24) * 22) * qtd_ar_condicionado) / 1000;
         var kwh_ar_cond_11h = ((((btu_ar_cond * 0.2929) * 11) * 22) * qtd_ar_condicionado) / 1000; // Considerando o horário comercial (9h às 18h) 
-        var kwh_lampada_24h = (((watts_lampada * 24) * 22) * qtd_lampadas) / 1000;
         var kwh_lampada_11h = (((watts_lampada * 11) * 22) * qtd_lampadas) / 1000;
 
         // Calculos de Gasto:
-        var gasto_ar_cond_24h = kwh_ar_cond_24h * valor_kwh;
         var gasto_ar_cond_11h = kwh_ar_cond_11h * valor_kwh;
-        var gasto_lampada_24h = kwh_lampada_24h * valor_kwh;
         var gasto_lampada_11h = kwh_lampada_11h * valor_kwh;
 
         // Calculos de Economia:
-        var economia_ar_cond_24h = gasto_ar_cond_24h * 0.5;
         var economia_ar_cond_11h = gasto_ar_cond_11h * 0.5;
-        var economia_lampada_24h = gasto_lampada_24h * 0.1;
         var economia_lampada_11h = gasto_lampada_11h * 0.1;
 
         var economia_total = economia_absenteismo + economia_ar_cond_11h + economia_lampada_11h;
 
-        resultado.innerHTML = `
+        energia.innerHTML = `
         <h3>Bônus: Economia de Energia</h3>
         Sem a nossa solução, você gasta:<br>
         R$${gasto_ar_cond_11h.toFixed(2)} com Ar Condicionado ligado apenas durante o horário comercial (${kwh_ar_cond_11h} KWh/mês) <br>
