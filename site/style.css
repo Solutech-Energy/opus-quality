@@ -18,14 +18,6 @@ a {
     font-family: 'Poppins';
 }
 
-
-
-
-
-
-
-
-
 /*HOME HOME HOME HOME*/
 
 .containerGeralhome {
@@ -55,7 +47,7 @@ a {
 
 .logoContainer img {
     display: flex;
-    width: 30%;
+    width: 100%;
 }
 
 .navbarLista {
@@ -257,7 +249,7 @@ a {
     /* flex-direction: column;
     align-items: end;
     justify-content: center; */
-    border-radius: 24px;    
+    border-radius: 24px;
     width: 100%;
     background: rgba(106, 193, 255, 0.6);
     box-shadow: 12px 12px 18px rgba(47, 74, 102, 0.35);
@@ -266,7 +258,7 @@ a {
 
 
 
-.containerClientes1 p img { 
+.containerClientes1 p img {
     display: flex;
     align-self: start;
     margin: 5% 5%;
@@ -284,13 +276,13 @@ a {
     align-items: center;
     color: #000000;
     background: #FFFFFFD4;
-    
+
 }
 
 
 /* começo do footer */
 .footer0 {
-    background: rgba(74, 74, 74, 0.33);
+    background: rgba(74, 74, 74, 0.303);
     opacity: 4;
 }
 
@@ -1134,15 +1126,241 @@ a {
 }
 
 /* QUEM SOMOS */
+body {
+    margin: 0;
+    padding: 0;
+    background: #0F1631;
+    font-family: monospace;
+}
 
+/* começo do navbar */
+.containerGeral {
+    display: flex;
+    width: 100%;
+    font-size: 110%;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+}
 
+.navBarContainer {
+    display: flex;
+    width: 90%;
+    justify-content: end;
+}
 
+.logoContainer {
+    width: 10%;
+    justify-content: left;
+}
 
+.navbarLista {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    justify-content: end;
+}
 
+.navbarLista ul,
+.navbarLista li a {
+    justify-content: space-evenly;
 
+    padding: 5px 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.loginBtn {
+    padding: 7px 25px;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #EF8A14;
+}
+
+/*Começo quem somos*/
+.quemSomosContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.quemSomosContainer h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 300%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+
+}
+
+.quemSomosContainer h3 span {
+    color: #EF8A14;
+}
+
+.quemSomosContainer p {
+    width: 55%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 200%;
+    color: #ffffff;
+    align-self: center;
+    background: rgba(0, 0, 0, 0.89);
+    border-radius: 20px;
+}
+
+.imgBackgroundQuemSomos {
+    background-image: url(/assets/EscritorioQuemSomos.png);
+    display: flex;
+    width: 80%;
+    height: 300%;
+    justify-self: center;
+}
+
+.solucaoQuemSomos {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.89);
+    width: 100%;
+
+}
+
+.solucaoQuemSomos h3 {
+    width: 65%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 200%;
+    color: #ffffff;
+}
+
+.solucaoQuemSomos p {
+    align-self: flex-end;
+    display: flex;
+    width: 55%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 200%;
+    color: #ffffff;
+}
+
+.linhaQuemSomos {
+    display: flex;
+    justify-self: center;
+    width: 98%;
+    height: 2px;
+    background: #ffffff;
+}
+
+.tituloQuemSomos h3 {
+    display: flex;
+    font-size: 300%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    justify-content: center;
+}
+
+.tituloQuemSomos h3 span {
+    color: #EF8A14;
+}
+
+.tituloQuemSomos p {
+    margin: 7%;
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 200%;
+    color: #ffffff;
+}
+
+.ceo1 {
+    color: #EF8A14;
+    align-self: flex-end;
+    display: flex;
+    width: 75%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+}
+
+.ceo2 {
+    color: #EF8A14;
+    align-self: flex-end;
+    display: flex;
+    width: 75%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+}
+
+.ceo3 {
+    color: #EF8A14;
+    align-self: flex-end;
+    display: flex;
+    width: 75%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+}
+
+.ceo4 {
+    color: #EF8A14;
+    align-self: flex-end;
+    display: flex;
+    width: 75%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+}
+
+.ceo5 {
+    color: #EF8A14;
+    align-self: flex-end;
+    display: flex;
+    width: 75%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+}
+
+.ceo6 {
+    color: #EF8A14;
+    align-self: flex-end;
+    display: flex;
+    width: 75%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+}
+
+.ceo7 {
+    color: #EF8A14;
+    align-self: flex-end;
+    display: flex;
+    width: 75%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+}
 
 
 /*A A A A A A COMEÇO CALCULADORA A A A A A A*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0F1631;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1F4662;
+    border-radius: 20px;
+}
+
 .containerGeralCalculadora {
     background-color: #0F1631;
     flex-direction: row;
@@ -1152,6 +1370,8 @@ a {
     background-image: url(img/CalculadoraImgFundo.png);
     background-size: 100%;
     background-repeat: no-repeat;
+    background-color: #242c55cb;
+    background-blend-mode: multiply;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1163,9 +1383,9 @@ a {
     width: 100%;
     justify-content: center;
     align-items: center;
-    font-family: 'Poppins';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    color: #EF8A14;
+    color: #FFFFFF;
 
 }
 
@@ -1174,44 +1394,58 @@ a {
     background-size: cover;
     border-radius: 15px;
     padding: 1%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .containerCalculosGeral span {
-    color: #FFFFFF;
+    color: #EF8A14;
 }
 
 /*Começo dos inputs*/
 .containerCalculadoraInputs {
     display: flex;
     width: 90%;
-    align-self: center;
+    align-items: center;
     align-items: center;
 }
 
 .InputDireitoCalculadora h3 {
-    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 60%;
     font-size: 200%;
     font-weight: 900px;
-    color: #EF8A14;
+    color: #FFFFFF;
 }
 
 .InputEsquerdoCalculadora h3 {
-    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 60%;
     font-size: 200%;
     font-weight: 900px;
-    color: #EF8A14;
+    color: #FFFFFF;
 }
 
-.InputEsquerdoCalculadora p {}
+.InputEsquerdoCalculadora p {
+    width: 60%;
+    color: #EF8A14;
+    font-size: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+    justify-content: left;
+    text-decoration: underline;
+}
 
 .InputEsquerdoCalculadora span {
     font-size: 100%;
-    color: #FFFFFF;
+    color: #EF8A14;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .InputDireitoCalculadora span {
     font-size: 100%;
-    color: #FFFFFF;
+    color: #EF8A14;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .InputEsquerdoCalculadora {
@@ -1245,7 +1479,11 @@ a {
     border-right: none;
     border-top: none;
     border-bottom: 3px solid #ffffff;
+}
 
+input::placeholder {
+    color: rgb(255, 255, 255);
+    font-family: monospace;
 }
 
 .InputDireitoCalculadora p {
@@ -1259,9 +1497,15 @@ a {
     text-decoration: underline;
 }
 
+.ButtonDivCalculadora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .containerGeralCalculadora button {
-    align-self: center;
-    width: 20%;
+    width: 200%;
     padding: 4px;
     margin: 2%;
     cursor: pointer;
@@ -1269,6 +1513,10 @@ a {
     align-self: center;
     border-radius: 50px;
     font-weight: bolder;
-    background-color: #EF8A14;
-    color: #ffffff;
+    color: #EF8A14;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 3px solid #ffffff;
+    background: transparent;
 }
