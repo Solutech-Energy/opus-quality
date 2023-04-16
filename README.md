@@ -1,4 +1,4 @@
-[Energia Futura](https://github.com/Solutech-Energy/energia-futura)
+[Opus Quality](https://github.com/Solutech-Energy/energia-futura)
 =================
 
 Este é um projeto desenvolvido pelo grupo <b>Opus Quality</b> como parte da sequencia de estudos da disciplina de Pesquisa e Inovação do curso de Análise e Desenvolvimento de Sisitemas da Faculdade de Tecnologia São Paulo Tech School (SPTECH).

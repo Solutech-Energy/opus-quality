@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro</title>
+</head>
+
+<body>
+    <h1>Simulação Opus Quality</h1>
+    <h2>Sobre Absenteísmo</h2>
+    Qual o nome da empresa? <br>
+    <input type="text" id="input_nome_empresa">
+    <br><br>
+
+    Quantos colaboradores possui? <br>
+    <input type="number" id="input_colab">
+    <br><br>
+
+    Faltas em média por dia? <br>
+    <input type="number" id="input_faltas_dia">
+    <br><br>
+
+    Média de salario? <br>
+    <input id="input_media_salario">
+    <br><br>
+
+    <h2>Sobre Energia Elétrica</h2>
+
+    <!--Novas Imputs-->
+    Quantos aparelhos de Ar Condicionados a Empresa possui?<br>
+    <input type="number" min="0" id="input_ar_condicionado"> 
+    <br><br>
+
+    Cada Ar Condicionado tem quantos BTUs?<br>
+    <input type="number" min="0" id="input_btu_ar_cond"> 
+    <br><br>
+
+    Quantas lampadas a Empresa possui?<br>
+    <input type="number" min="0" id="input_lampada">
+    <br><br>
+
+    Quantos Watts tem cada lâmpada?<br>
+    <input type="number" min="0" id="input_watts_lampada">
+    <br><br>
+
+    <button onclick="simular_economia()">Simular Economia</button><br><br>
+
+    <div id="absentismo"></div>
+    <div id="energia"></div>
+
+</body>
+
+</html>
+<script>
+
+    function simular_economia() {
+
+        // ABSENTEÍSMO (Foco)
+        // Recebendo valores dos inputs
+        var nome_empresa = input_nome_empresa.value;
+        var colaboradores = Number(input_colab.value);
+        var faltas_dia = Number(input_faltas_dia.value);
+        var media_salario = Number(input_media_salario.value);
+
+        // Calculos de Absenteismo
+        var faltas_mes = faltas_dia * 22 // 22 = Dias úteis do mês
+        var indice_faltas = (faltas_dia / colaboradores) * 100;
+        var salario_perdido = (faltas_mes / colaboradores) * media_salario;
+        var economia_absenteismo = salario_perdido * 0.5; // Dinheiro economizado com a nossa solução (50%)
+        var novo_indice_absenteismo = indice_faltas * 0.5;
+
+        absentismo.innerHTML = `
+        <h2>Estimativa Financeira para ${nome_empresa}</h2>
+        <h3>Absenteísmo</h3>
+        A Taxa de Absenteísmo da sua empresa é de ${indice_faltas}% (A Taxa ideal é menos de 4%). <br>
+        Isso equivale a ${faltas_mes} faltas por mês. <br>
+        Com a taxa atual, você tem uma perda de R$${salario_perdido.toFixed(2)} por mês em salario pago que não foi equivalente às horas trabalhadas. 
+        <br><br>
+        Nossa solução se propõe para reduzir essa taxa em pelo menos 50%, reduzindo os gastos com absenteísmo em R$${economia_absenteismo} com uma taxa final de ${novo_indice_absenteismo}%.
+        <br><br>
+        E ainda tem mais! Nosso projeto também contribui com a economia de energia na sua empresa. Veja as estimativas a seguir:
+        <br<br>
+        `;
+
+        // ECONOMIA DE ENERGIA (Bônus)
+        // Recebendo valores dos inputs
+        
+        var qtd_ar_condicionado = Number(input_ar_condicionado.value);
+        var btu_ar_cond = Number(input_btu_ar_cond.value)
+        var qtd_lampadas = Number(input_lampada.value);
+        var watts_lampada = Number(input_watts_lampada.value);
+        
+        var valor_kwh = 0.6 // Valor médio do KW/h no estado de São Paulo (R$0,60)
+
+        // Calculos de KWH por mês (Consumo = (Potencia (Watts) * Tempo) / 1000)
+        var kwh_ar_cond_11h = ((((btu_ar_cond * 0.2929) * 11) * 22) * qtd_ar_condicionado) / 1000; // Considerando o horário comercial (9h às 18h) 
+        var kwh_lampada_11h = (((watts_lampada * 11) * 22) * qtd_lampadas) / 1000;
+
+        // Calculos de Gasto:
+        var gasto_ar_cond_11h = kwh_ar_cond_11h * valor_kwh;
+        var gasto_lampada_11h = kwh_lampada_11h * valor_kwh;
+
+        // Calculos de Economia:
+        var economia_ar_cond_11h = gasto_ar_cond_11h * 0.5;
+        var economia_lampada_11h = gasto_lampada_11h * 0.1;
+
+        var economia_total = economia_absenteismo + economia_ar_cond_11h + economia_lampada_11h;
+
+        energia.innerHTML = `
+        <h3>Bônus: Economia de Energia</h3>
+        Sem a nossa solução, você gasta:<br>
+        R$${gasto_ar_cond_11h.toFixed(2)} com Ar Condicionado ligado apenas durante o horário comercial (${kwh_ar_cond_11h} KWh/mês) <br>
+        R$${gasto_lampada_11h.toFixed(2)} com Lâmpadas ligadas apenas durante o horário comercial (${kwh_lampada_11h} KWh/mês) 
+        <br><br>
+        Com a nossa solução, além da economia de absenteísmo, você poupa:
+        R$${economia_ar_cond_11h.toFixed(2)} com Ar Condicionado ligado apenas durante o horário comercial (50%) <br>
+        R$${economia_lampada_11h.toFixed(2)} com Lâmpadas ligadas apenas durante o horário comercial (10%)
+        <br><br>
+        No total, estimamos que você economizará R$${economia_total.toFixed(2)} mensalmente com a nossa solução.<br><br>
+        <Insira texto breve sobre como essa economia acontece aqui>
+        `
+    }
+</script>
