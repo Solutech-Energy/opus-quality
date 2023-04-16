@@ -30,6 +30,7 @@ a {
 
 .containerGeralhome {
     background-image: url(img/FundoPGInicial.jpeg);
+    background-repeat: no-repeat;
     background-size: 100%;
     background-color: #5b6284;
     background-blend-mode: multiply;
@@ -104,7 +105,7 @@ a {
 
 .containerAumentando button {
     width: 40%;
-    padding: 3% 5%;
+    padding: 3% 3%;
     border: 4px solid #147aef59;
     border-radius: 5px;
     background: #525E8D;
@@ -118,7 +119,7 @@ a {
     padding: 3% 3%;
     background: #147aef56;
     border: 4px solid rgba(20, 122, 239, 0.338);
-    border-radius: 15px;
+    border-radius: 10px;
     font-weight: 700;
     font-size: 70%
 }
@@ -183,6 +184,8 @@ a {
 
 /*Começo do Nossa missão*/
 .headerNossaMissao {
+    display: flex;
+    justify-content: center;
     background-image: url(img/imgNossaMissao.jpeg);
     background-size: 100%;
     width: 100%;
@@ -190,29 +193,48 @@ a {
     align-items: center;
     text-align: center;
     flex-direction: row;
-    background-color: #000000ca;
+    background-color: #444444ca;
     background-blend-mode: multiply;
     color: #FFFFFF;
 }
 
 .containerMissao {
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .containerMissao h3 {
-    width: 100%;
+    align-self: center;
+    justify-content: center;
+    width: 80%;
     font-family: poppins;
     font-size: 300%;
     font-weight: 800%;
 }
 
 .containerMissao p {
-    width: 80%;
+    display: flex;
+    align-self: center;
+    padding: 10px 30px;
+    justify-items: center;
+    border: 4px solid #EFBF14;
+    border-radius: 5px;
+    width: 50%;
+    height: 50%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 150%;
     line-height: 120%;
-
 }
+
+.containerVerQuemSomos {
+    display: flex;
+    justify-content: end;
+    padding: 10px 90px;
+    text-decoration: underline;
+}
+
+
 
 /* começando CLIENTES*/
 .headerClientes {
@@ -223,10 +245,48 @@ a {
 }
 
 .headerClientes h3 {
+    display: flex;
     width: 100%;
     font-size: 250%;
     font-weight: 800%;
+
 }
+
+.containerClientes p {
+    display: flex;
+    /* flex-direction: column;
+    align-items: end;
+    justify-content: center; */
+    border-radius: 24px;    
+    width: 100%;
+    background: rgba(106, 193, 255, 0.6);
+    box-shadow: 12px 12px 18px rgba(47, 74, 102, 0.35);
+    backdrop-filter: blur(5px);
+}
+
+
+
+.containerClientes1 p img { 
+    display: flex;
+    align-self: start;
+    margin: 5% 5%;
+    width: 50%;
+    height: 5%;
+}
+
+.containerClientes p span {
+    display: flex;
+    font-family: 'Montserrat';
+    font-style: italic;
+    padding: -21px -20px;
+    font-weight: 200;
+    line-height: 16px;
+    align-items: center;
+    color: #000000;
+    background: #FFFFFFD4;
+    
+}
+
 
 /* começo do footer */
 .footer0 {
