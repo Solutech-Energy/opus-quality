@@ -1181,54 +1181,87 @@ body {
 
 /*Começo quem somos*/
 .quemSomosContainer {
+    width: 100%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-
 }
 
 .quemSomosContainer h3 {
-    display: flex;
-    justify-content: center;
+    width: 100%;
     font-size: 300%;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
+}
 
+.solucaoQuemSomosTexto1 {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+}
+
+.solucaoQuemSomosTexto2 {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    padding-bottom: 3%;
+}
+
+.solucaoQuemSomosTexto1 h3 {
+    width: 40%;
+    justify-content: start;
 }
 
 .quemSomosContainer h3 span {
     color: #EF8A14;
 }
 
-.quemSomosContainer p {
-    width: 55%;
+.imgBackgroundQuemSomos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgBackgroundQuemSomos img {
+    align-self: center;
+    margin-bottom: 5%;
+}
+
+
+.imgBackgroundQuemSomos p {
+    position: absolute;
+    margin-top: 30%;
+    margin-bottom: 5%;
+    width: 40%;
+    justify-self: start;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: 200%;
     color: #ffffff;
     align-self: center;
-    background: rgba(0, 0, 0, 0.89);
+    flex-direction: column;
+    background-color: #000000c1;
+    margin-right: 20%;
+    padding: 2%;
     border-radius: 20px;
 }
 
-.imgBackgroundQuemSomos {
-    background-image: url(/assets/EscritorioQuemSomos.png);
-    display: flex;
-    width: 80%;
-    height: 300%;
-    justify-self: center;
-}
-
 .solucaoQuemSomos {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background: rgba(0, 0, 0, 0.89);
-    width: 100%;
-
 }
 
 .solucaoQuemSomos h3 {
-    width: 65%;
+    width: 60%;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: 200%;
@@ -1247,8 +1280,9 @@ body {
 
 .linhaQuemSomos {
     display: flex;
-    justify-self: center;
-    width: 98%;
+    width: 95%;
+    align-self: center;
+    margin: 3% 3%;
     height: 2px;
     background: #ffffff;
 }
@@ -1269,11 +1303,12 @@ body {
     margin: 7%;
     display: flex;
     justify-content: center;
-    width: 55%;
+    width: 80%;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: 200%;
     color: #ffffff;
+    text-align: center;
 }
 
 .ceo1 {
@@ -1521,18 +1556,21 @@ input::placeholder {
     border-bottom: 3px solid #ffffff;
     background: transparent;
 }
-#resultado{
+
+#resultado {
     display: inherit;
     justify-content: center;
     background-color: #FFFFFF;
     margin: 10px 10% 10% 10%;
     border-radius: 10px;
 }
-#absentismo{
+
+#absentismo {
     width: 35%;
     margin: 2%;
 }
-#energia{
+
+#energia {
     width: 35%;
     margin: 2%;
 }
