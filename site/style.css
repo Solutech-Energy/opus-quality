@@ -18,6 +18,18 @@ a {
     font-family: 'Poppins';
 }
 
+.containerModal {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 15;
+    opacity: 1;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    ;
+}
+
 /*HOME HOME HOME HOME*/
 
 .containerGeralhome {
@@ -788,6 +800,8 @@ body {
 input::placeholder {
     color: #0F1631;
     font-family: Poppins;
+    color: rgb(255, 255, 255);
+    font-family: poppins;
 }
 
 .InputDireitoCalculadora p {
@@ -1522,8 +1536,18 @@ input::placeholder {
     height: 40px;
     border-radius: 10px;
 } 
-
-
-
-
-
+#resultado{
+    display: inherit;
+    justify-content: center;
+    background-color: #FFFFFF;
+    margin: 10px 10% 10% 10%;
+    border-radius: 10px;
+}
+#absentismo{
+    width: 35%;
+    margin: 2%;
+}
+#energia{
+    width: 35%;
+    margin: 2%;
+}
