@@ -18,6 +18,18 @@ a {
     font-family: 'Poppins';
 }
 
+.containerModal {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 15;
+    opacity: 1;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    ;
+}
+
 /*HOME HOME HOME HOME*/
 
 .containerGeralhome {
