@@ -858,6 +858,7 @@ a {
     height: 80vh;
     border-radius: 15px;
     overflow: hidden;
+    animation: openModal 1s normal;
 }
 
 .imgLogin {
