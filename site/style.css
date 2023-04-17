@@ -1471,7 +1471,6 @@ body {
     margin-bottom: 3%;
     padding: 5px 8px;
     font-size: 120%;
-    background: transparent;
     font-style: italic;
     color: #EF8A14;
     border-radius: 10px;
@@ -1479,6 +1478,8 @@ body {
     border-right: none;
     border-top: none;
     border-bottom: 3px solid #ffffff;
+    background: transparent;
+    outline: none;
 }
 
 input::placeholder {
