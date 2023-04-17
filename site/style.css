@@ -1497,7 +1497,7 @@ body {
 
 input::placeholder {
     color: rgb(255, 255, 255);
-    font-family: monospace;
+    font-family: poppins;
 }
 
 .InputDireitoCalculadora p {
@@ -1533,4 +1533,19 @@ input::placeholder {
     border-top: none;
     border-bottom: 3px solid #ffffff;
     background: transparent;
+}
+#resultado{
+    display: inherit;
+    justify-content: center;
+    background-color: #FFFFFF;
+    margin: 10px 10% 10% 10%;
+    border-radius: 10px;
+}
+#absentismo{
+    width: 35%;
+    margin: 2%;
+}
+#energia{
+    width: 35%;
+    margin: 2%;
 }
