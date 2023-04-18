@@ -26,7 +26,7 @@ function toggleModal() {
 btnCloseModal.addEventListener("click", function () {
     toggleModal();
 });
-toggleModal();
+
 
 function cria_cookie(nome, valor) {
     // Cria uma data 01/01/2020
