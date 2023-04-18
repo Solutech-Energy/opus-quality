@@ -445,68 +445,15 @@ body {
     margin: 0;
     padding: 0;
     background: #0F1631;
-    font-family: monospace;
+    font-family: poppins;
 }
 
-/* começo do navbar */
-.containerGeral {
-    display: flex;
-    width: 100%;
-    font-size: 110%;
-    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
-    justify-content: center;
-}
-
-.navBarContainer {
-    display: flex;
-    width: 90%;
-    justify-content: end;
-}
-
-.logoContainer {
-    width: 10%;
-    justify-content: left;
-}
-
-.navbarLista {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    list-style: none;
-    justify-content: end;
-}
-
-.navbarLista ul,
-.navbarLista li a {
-    justify-content: space-evenly;
-
-    padding: 5px 10px;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.loginBtn {
-    padding: 7px 25px;
-    color: white;
-    letter-spacing: 1px;
-    border-radius: 10px;
-    text-decoration: none;
-    background-color: #EF8A14;
-}
-
-/*Começo quem somos*/
 .quemSomosContainer {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.quemSomosContainer h3 {
-    width: 100%;
-    font-size: 300%;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-}
 
 .solucaoQuemSomosTexto1 {
     display: flex;
@@ -530,6 +477,18 @@ body {
 .solucaoQuemSomosTexto1 h3 {
     width: 40%;
     justify-content: start;
+}
+
+.titulo02 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.quemSomosContainer h3 {
+    font-size: 300%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
 }
 
 .quemSomosContainer h3 span {
@@ -603,7 +562,6 @@ body {
 }
 
 .tituloQuemSomos h3 {
-    display: flex;
     font-size: 300%;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
@@ -634,6 +592,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: 400%;
+    
 }
 
 .ceo2 {
@@ -740,9 +699,7 @@ body {
 }
 
 .tituloCalculadora h1 {
-    background-color: #000000c1;
     background-size: cover;
-    border-radius: 15px;
     padding: 1%;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -783,7 +740,6 @@ body {
     cursor: pointer;
     align-self: center;
     justify-content: left;
-    text-decoration: underline;
 }
 
 .InputEsquerdoCalculadora span {
@@ -815,28 +771,27 @@ body {
 }
 
 .InputCalculadora {
-    display: none;
-    width: 60%;
+    width: 50%;
+    align-self: center;
+    background: transparent;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     display: flex;
-    margin-bottom: 3%;
     padding: 5px 8px;
     font-size: 120%;
     font-style: italic;
+    margin-bottom: 3%;
     color: #EF8A14;
-    border-radius: 10px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
     border-bottom: 3px solid #ffffff;
-    background: transparent;
-    outline: none;
 }
 
 input::placeholder {
-    color: #0F1631;
+    cursor: text;
+    color: #ffffff;
+    font-size: 100%;
     font-family: Poppins;
-    color: rgb(255, 255, 255);
-    font-family: poppins;
 }
 
 .InputDireitoCalculadora p {
@@ -844,10 +799,8 @@ input::placeholder {
     color: #EF8A14;
     font-size: 100%;
     font-weight: bold;
-    cursor: pointer;
     justify-content: left;
     align-self: center;
-    text-decoration: underline;
 }
 
 .ButtonDivCalculadora {
@@ -860,24 +813,34 @@ input::placeholder {
 .containerGeralCalculadora button {
     width: 200%;
     padding: 4px;
-    margin: 2%;
+    margin: 15%;
     cursor: pointer;
     font-size: 120%;
     align-self: center;
     border-radius: 50px;
     font-weight: bolder;
     color: #EF8A14;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: 3px solid #ffffff;
+    border: 3px solid #ffffff;
     background: transparent;
 }
 
-<<<<<<< HEAD
 #resultado {
-=======
+    display: inherit;
+    justify-content: center;
+    background-color: #FFFFFF;
+    margin: 10px 10% 10% 10%;
+    border-radius: 10px;
+}
 
+#absentismo {
+    width: 35%;
+    margin: 2%;
+}
+
+#energia {
+    width: 35%;
+    margin: 2%;
+}
 
 
 /* CSS Dashboard Local*/
@@ -891,16 +854,19 @@ input::placeholder {
     font-size: 100%;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
 }
+
 .headerContainerDashboard {
     display: flex;
     width: 100%;
     padding: 0 1%;
     justify-content: space-between;
 }
+
 .logoContainer img {
     display: flex;
     width: 30%;
 }
+
 .navbarLista {
     display: flex;
     width: 100%;
@@ -908,6 +874,7 @@ input::placeholder {
     list-style: none;
     justify-content: end;
 }
+
 .navbarLista ul,
 .navbarLista li a {
     padding: 5px 10px;
@@ -916,6 +883,7 @@ input::placeholder {
     font-weight: 800;
     text-decoration: none;
 }
+
 .loginBtnDashboard {
     padding: 7px 25px;
     color: white;
@@ -924,6 +892,7 @@ input::placeholder {
     text-decoration: none;
     background-color: #EF8A14;
 }
+
 .imgUserDashboard {
     justify-content: center;
     align-items: center;
@@ -935,6 +904,7 @@ input::placeholder {
     background-color: #D9D9D9;
     border-radius: 10px;
 }
+
 .textDashboard {
     color: white;
     background-color: #101A41;
@@ -945,7 +915,8 @@ input::placeholder {
     height: 50%;
     padding-top: 20px;
 }
-.Graficos{
+
+.Graficos {
     background-color: #101A41;
 
     position: fixed;
@@ -957,7 +928,8 @@ input::placeholder {
     flex-direction: row;
     display: flex;
 }
-.left{ 
+
+.left {
     display: flex;
     align-items: end;
     justify-content: end;
@@ -965,7 +937,8 @@ input::placeholder {
     width: 65%;
     height: 100%;
 }
-.graphicDescription {  
+
+.graphicDescription {
     padding-left: 20px;
     padding-right: 20px;
     text-align: right;
@@ -973,6 +946,7 @@ input::placeholder {
     height: 100%;
     color: white;
 }
+
 .graphicDescriptionLDR5 {
     padding-bottom: 100px;
     flex-direction: column;
@@ -980,13 +954,15 @@ input::placeholder {
     width: 100%;
     height: 50%;
 }
+
 .graphicDescriptionLM35 {
     flex-direction: column;
     display: flex;
     width: 100%;
     height: 50%;
 }
-.cardGraficoLDR5{
+
+.cardGraficoLDR5 {
 
     width: 100%;
     height: 50%;
@@ -997,7 +973,8 @@ input::placeholder {
     height: 200px;
     border-radius: 15px;
 }
-.cardGraficoLM35{
+
+.cardGraficoLM35 {
     width: 100%;
     height: 50%;
     margin-top: 20px;
@@ -1008,12 +985,14 @@ input::placeholder {
     height: 200px;
     border-radius: 15px;
 }
+
 .right {
     padding-top: 10px;
     flex-direction: column;
-    display:flex;
+    display: flex;
     width: 35%;
 }
+
 .plantasala {
     margin-right: 50px;
     margin-bottom: 20px;
@@ -1021,6 +1000,7 @@ input::placeholder {
     width: 100%;
     height: 30%;
 }
+
 #linhaVertical {
     margin-right: 70px;
     display: flex;
@@ -1028,6 +1008,7 @@ input::placeholder {
     height: 585px;
     border-left: 4px solid #EF8A14;
 }
+
 .tableSensors {
     display: flex;
     background-color: white;
@@ -1036,6 +1017,7 @@ input::placeholder {
     border-radius: 15px;
 
 }
+
 .clickGraphic {
     display: flex;
     background-color: #EF8A14;
@@ -1062,30 +1044,14 @@ input::placeholder {
     font-size: 100%;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
 }
+
 .headerContainerDashboardGeneral {
     display: flex;
     width: 100%;
     padding: 0 1%;
     justify-content: space-between;
 }
-.logoContainer img {
-    display: flex;
-    width: 30%;
-}
-.navbarLista {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    list-style: none;
-    justify-content: end;
-}
-.navbarLista ul,
-.navbarLista li a {
-    padding: 5px 10px;
-    color: #D68F3B;
-    font-weight: 800;
-    text-decoration: none;
-}
+
 .loginBtnDashboard {
     padding: 7px 25px;
     color: white;
@@ -1094,6 +1060,7 @@ input::placeholder {
     text-decoration: none;
     background-color: #EF8A14;
 }
+
 .imgUserDashboardGeneral {
     justify-content: center;
     align-items: center;
@@ -1105,6 +1072,7 @@ input::placeholder {
     background-color: #D9D9D9;
     border-radius: 10px;
 }
+
 .bodyDashboard {
     position: fixed;
 
@@ -1112,6 +1080,7 @@ input::placeholder {
     width: 100%;
     height: 100%;
 }
+
 .rightDash {
     background-color: #0F1631;
     overflow-y: scroll;
@@ -1121,39 +1090,47 @@ input::placeholder {
     width: 35%;
     color: #D9D9D9;
 }
+
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background-color: #0F1631;
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: #1F4662;
     border-radius: 20px;
 }
-.leftDash{
+
+.leftDash {
     background-color: #101A41;
     color: #D9D9D9;
     width: 65%;
     height: 100%;
 }
+
 .textCompany {
     width: 100%;
     height: 5%;
     margin-left: 5%;
 }
+
 .generalQuality {
     width: 100%;
     height: 8%;
     margin-left: 10%;
 }
+
 .cardIndex {
     background-color: #1F4662;
     margin-left: 10%;
     width: 60%;
     height: 40vh;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
+
 .horizontalLine {
     display: flex;
     justify-content: center;
@@ -1164,38 +1141,44 @@ input::placeholder {
     height: 1%;
     margin-left: 3%;
 }
+
 .Generalmonitoring {
     width: 95%;
     margin-left: 5%;
     height: auto;
 }
+
 .sensors {
     margin-bottom: 10%;
     background-color: #101A41;
     display: flex;
     width: 100%;
 }
+
 .sensor1 {
     background-color: #BE1CA4;
     margin-left: 5%;
     width: 30%;
     height: 15vh;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
+
 .sensor2 {
     background-color: #BE871C;
     margin-left: 5%;
     width: 30%;
     height: 15vh;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
+
 .textAbsenteeism {
     display: flex;
     width: 100%;
     height: 2%;
     justify-content: center;
 }
-.absenteeismGraph{
+
+.absenteeismGraph {
     padding-top: 18%;
     align-items: center;
     display: flex;
@@ -1203,13 +1186,15 @@ input::placeholder {
     width: 100%;
     height: 10%;
 }
-.overallPercentage{
+
+.overallPercentage {
     padding-top: 18%;
     font-size: 150%;
     display: flex;
     width: 100%;
     height: 3%;
 }
+
 .Percentage1 {
     font-weight: bold;
     justify-content: center;
@@ -1217,6 +1202,7 @@ input::placeholder {
     width: 50%;
     height: 5%;
 }
+
 .Percentage2 {
     font-weight: bold;
     justify-content: center;
@@ -1224,12 +1210,14 @@ input::placeholder {
     width: 50%;
     height: 5%;
 }
+
 .textAbsenteeism {
     display: flex;
     width: 100%;
     height: 10%;
     justify-content: center;
 }
+
 .textEnvironments {
     padding-top: 5%;
     padding-left: 7%;
@@ -1237,6 +1225,7 @@ input::placeholder {
     display: flex;
     width: 50%;
 }
+
 .environmentisGeneral {
     display: flex;
     flex-direction: column;
@@ -1244,6 +1233,7 @@ input::placeholder {
     width: 100%;
     justify-content: space-around;
 }
+
 .environmentisLine1 {
 
     display: flex;
@@ -1253,6 +1243,7 @@ input::placeholder {
     height: 20%;
     justify-content: space-around;
 }
+
 .environmentisLine2 {
     display: flex;
     flex-direction: row;
@@ -1261,6 +1252,7 @@ input::placeholder {
     height: 20%;
     justify-content: space-around;
 }
+
 .environmentisLine3 {
     display: flex;
     flex-direction: row;
@@ -1269,6 +1261,7 @@ input::placeholder {
     height: 20%;
     justify-content: space-around;
 }
+
 .environmentisLine4 {
     display: flex;
     flex-direction: row;
@@ -1277,6 +1270,7 @@ input::placeholder {
     height: 100%;
     justify-content: space-around;
 }
+
 .environmentisLine5 {
     display: flex;
     flex-direction: row;
@@ -1286,6 +1280,7 @@ input::placeholder {
     justify-content: space-around;
     margin-bottom: 90px;
 }
+
 .environments1 {
     align-items: end;
     background-image: url(img/unsplash_jUOaONoXJQk.png);
@@ -1314,6 +1309,7 @@ input::placeholder {
     background: transparent;
     font-size: 125%
 }
+
 .cardLogin {
     background-color: #101a41d2;
     margin: auto;
@@ -1322,9 +1318,10 @@ input::placeholder {
     width: 60vw;
     height: 80vh;
     border-radius: 15px;
-    overflow: hidden;   
-    
+    overflow: hidden;
+
 }
+
 .imgLogin {
 
     background-image: url(img/imgLoginBackground.png);
@@ -1337,25 +1334,29 @@ input::placeholder {
     mix-blend-mode: multiply;
 
 }
-.rightLoginBackground{
+
+.rightLoginBackground {
     background-color: #D9D9D9;
     width: 50%;
     height: 100%;
 }
-.rightLogin{
+
+.rightLogin {
     color: #0F1631;
     flex-direction: column;
     display: flex;
     width: 100%;
     height: 100%;
 }
-.buttonClose{
+
+.buttonClose {
     display: flex;
     justify-content: end;
     width: 98%;
     height: 5%;
     padding-top: 15px;
 }
+
 .textLogin {
     color: #1F4662;
     margin-top: 30px;
@@ -1367,7 +1368,8 @@ input::placeholder {
     height: 20%;
     padding-left: 80px;
 }
-.textEmail{
+
+.textEmail {
     justify-content: flex-start;
     color: #1F4662;
     font-size: 22px;
@@ -1380,7 +1382,8 @@ input::placeholder {
     font-weight: bold;
     padding-top: 15px;
 }
-.textPassword{
+
+.textPassword {
     justify-content: flex-start;
     color: #1F4662;
     font-size: 22px;
@@ -1393,6 +1396,7 @@ input::placeholder {
     font-weight: bold;
     padding-top: 30px;
 }
+
 .cardsClicks {
     padding-left: 80px;
     margin-top: 30px;
@@ -1402,6 +1406,7 @@ input::placeholder {
     width: 100%;
     height: 40%;
 }
+
 .clickEnter {
     align-items: center;
     justify-content: center;
@@ -1411,6 +1416,7 @@ input::placeholder {
     height: 40px;
     border-radius: 10px;
 }
+
 .clickRecoverPassword {
     align-items: center;
     margin-left: 45px;
@@ -1429,7 +1435,7 @@ input::placeholder {
 .cardRegister {
     font-family: 'Poppins';
     border-radius: 15px 15px 0 0;
-    background-color:#101a41d2;
+    background-color: #101a41d2;
     margin: auto;
     margin-top: 8%;
     width: 60vw;
@@ -1437,6 +1443,7 @@ input::placeholder {
     border-radius: 15px 15px 15px 15px;
 
 }
+
 .topRegister {
     background-size: cover;
     background-image: url(img/imgCadastro.png);
@@ -1447,7 +1454,7 @@ input::placeholder {
     mix-blend-mode: multiply;
 }
 
-.buttonCloseRegister{
+.buttonCloseRegister {
     position: absolute;
     display: flex;
     width: 3%;
@@ -1456,10 +1463,11 @@ input::placeholder {
     padding-left: 57%;
     padding-top: 1%;
 }
-.sectionRegister{
+
+.sectionRegister {
     font-family: 'Poppins';
 
-    background-color:#D9D9D9;
+    background-color: #D9D9D9;
 
     display: flex;
     width: 100%;
@@ -1467,6 +1475,7 @@ input::placeholder {
     height: 70%;
     border-radius: 0 0 20px 20px;
 }
+
 .textMyData {
     display: flex;
     justify-content: center;
@@ -1475,8 +1484,9 @@ input::placeholder {
     height: 3%;
     padding-bottom: 3%;
 }
+
 .inputsRegister {
-    
+
     outline: none;
     background-color: #D9D9D9;
     display: flex;
@@ -1489,6 +1499,7 @@ input::placeholder {
     border-right: none;
     border-bottom: #1F4662 solid 3px;
 }
+
 .line1 {
 
     font-size: 150px;
@@ -1497,6 +1508,7 @@ input::placeholder {
     height: 10%;
     justify-content: space-around;
 }
+
 .line2 {
     padding-top: 3%;
 
@@ -1505,6 +1517,7 @@ input::placeholder {
     height: 10%;
     justify-content: space-around;
 }
+
 .line3 {
     padding-top: 3%;
 
@@ -1513,6 +1526,7 @@ input::placeholder {
     height: 10%;
     justify-content: space-around;
 }
+
 .line4 {
     align-items: center;
     padding-top: 5%;
@@ -1521,49 +1535,53 @@ input::placeholder {
     height: 10%;
     justify-content: center;
 }
+
 .inputsSmall {
-        outline: none;
-        background-color: #D9D9D9;
-        display: flex;
-        width: 10%;
-        height: 30px;
-        margin-left: 80px;
-        padding-top: 1px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: #1F4662 solid 3px;
-    }
+    outline: none;
+    background-color: #D9D9D9;
+    display: flex;
+    width: 10%;
+    height: 30px;
+    margin-left: 80px;
+    padding-top: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #1F4662 solid 3px;
+}
+
 .inputsAverage {
 
-        outline: none;
-        background-color: #D9D9D9;
-        display: flex;
-        width: 15%;
-        height: 30px;
-        margin-left: 80px;
-        padding-top: 1px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: #1F4662 solid 3px;
+    outline: none;
+    background-color: #D9D9D9;
+    display: flex;
+    width: 15%;
+    height: 30px;
+    margin-left: 80px;
+    padding-top: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #1F4662 solid 3px;
 }
+
 .inputsBig {
     font-family: 'Poppins';
 
-        outline: none;
-        background-color: #D9D9D9;
-        display: flex;
-        width: 45%;
-        height: 30px;
-        margin-left: 80px;
-        padding-top: 1px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: #1F4662 solid 3px;
-        
+    outline: none;
+    background-color: #D9D9D9;
+    display: flex;
+    width: 45%;
+    height: 30px;
+    margin-left: 80px;
+    padding-top: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #1F4662 solid 3px;
+
 }
+
 .clickSave {
     color: white;
     align-items: center;
@@ -1573,22 +1591,4 @@ input::placeholder {
     width: 200px;
     height: 40px;
     border-radius: 10px;
-} 
-#resultado{
->>>>>>> f9c114dd7efab3c4af90e5d458a01b2045d861e1
-    display: inherit;
-    justify-content: center;
-    background-color: #FFFFFF;
-    margin: 10px 10% 10% 10%;
-    border-radius: 10px;
-}
-
-#absentismo {
-    width: 35%;
-    margin: 2%;
-}
-
-#energia {
-    width: 35%;
-    margin: 2%;
 }
