@@ -18,6 +18,18 @@ a {
     font-family: 'Poppins';
 }
 
+.containerModal {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 15;
+    opacity: 1;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    ;
+}
+
 /*HOME HOME HOME HOME*/
 
 .containerGeralhome {
@@ -427,703 +439,6 @@ a {
     align-items: center;
 }
 
-/* building */
-
-.building {
-    display: flex;
-    background-color: #0F1631;
-    width: 100%;
-    height: 380px;
-    color: white;
-}
-
-.buildingText {
-    font-weight: bold;
-    flex-direction: column;
-    font-size: 300%;
-    display: flex;
-    align-items: center;
-    margin-top: 5%;
-    margin-left: 5%;
-    width: 40%;
-    height: 100%;
-
-}
-
-.buildingImg {
-    display: flex;
-    justify-content: right;
-    margin: 0;
-    width: 80%;
-    height: 100%;
-
-}
-
-
-
-
-
-
-/* CSS Dashboard Local*/
-
-.DashboardText {
-    color: #EF8A14;
-    padding-right: 80px;
-    font-family: 'inter';
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 50%;
-    height: 100%;
-
-}
-
-.textDashboard {
-    color: white;
-    background-color: #0F1631;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 200%;
-    width: 100%;
-    height: 100%;
-    padding-top: 8px;
-}
-
-.Graficos {
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    height: auto;
-    flex-direction: row;
-    margin-top: 20px;
-    display: flex;
-    padding-bottom: 20px;
-}
-
-.left {
-
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    flex-direction: column;
-
-    width: 90%;
-    height: 100%;
-}
-
-.graphicDescription {
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: right;
-    width: 60%;
-    height: 100%;
-    color: white;
-}
-
-.graphicDescriptionLDR5 {
-    padding-bottom: 100px;
-    flex-direction: column;
-    display: flex;
-    width: 100%;
-    height: 50%;
-}
-
-.graphicDescriptionLM35 {
-    flex-direction: column;
-    display: flex;
-    width: 100%;
-    height: 50%;
-}
-
-.cardGraficoLM35 {
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    width: 50%;
-    height: 300px;
-    background-color: white;
-
-}
-
-.cardGraficoLDR5 {
-
-    width: 100%;
-    height: 50%;
-    display: flex;
-    padding-top: 50px;
-    background-color: white;
-    width: 500px;
-    height: 230px;
-    border-radius: 15px;
-}
-
-.cardGraficoLM35 {
-    width: 100%;
-    height: 50%;
-    margin-top: 50px;
-    display: flex;
-    padding-top: 50px;
-    background-color: white;
-    width: 500px;
-    height: 230px;
-    border-radius: 15px;
-}
-
-.right {
-    flex-direction: column;
-    display: flex;
-    width: 40%;
-    height: 100%;
-}
-
-.graficoAbsenteismo {
-    margin-bottom: 100px;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-}
-
-#linhaVertical {
-    display: flex;
-    margin-left: 50px;
-    height: 630px;
-    border-left: 4px solid #EF8A14;
-}
-
-.graphicAbsenteismo {
-    font-size: 20px;
-    flex-direction: column;
-    color: white;
-    width: 100%;
-    height: 20%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-.clickGraphic {
-    display: flex;
-    background-color: #EF8A14;
-    width: 15%;
-    height: 35px;
-    border-radius: 7px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-
-
-
-
-
-/* CSS DASHBOARD GERAL */
-.navbarDashboard {
-    font-family: 'Poppins';
-    justify-content: center;
-    align-items: center;
-    font-size: 130%;
-    display: flex;
-    background-color: #0F1631;
-    width: 100%;
-    height: 60px;
-    color: white;
-    border-bottom-width: 5px;
-    border-bottom-style: solid;
-    border-bottom-color: #0d1328;
-
-
-}
-
-.logoDashboard {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-left: 40px;
-    width: 50%;
-    height: 100%;
-}
-
-.NavbarTextDashboard {
-    color: #EF8A14;
-    padding-right: 80px;
-    font-family: 'inter';
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 70%;
-    height: 100%;
-
-}
-
-.imgUser {
-    margin-right: 15px;
-    background-color: #D9D9D9;
-    width: 5%;
-    height: 90%;
-    border-radius: 10px;
-}
-
-.bodyDashboard {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.rightDash {
-    width: 35%;
-    color: #D9D9D9;
-}
-
-
-.leftDash {
-    background-color: #101A41;
-    color: #D9D9D9;
-    width: 65%;
-}
-
-.textCompany {
-    width: 100%;
-    height: 5%;
-    margin-left: 5%;
-
-}
-
-.generalQuality {
-    width: 100%;
-    height: 8%;
-    margin-left: 10%;
-}
-
-.cardIndex {
-    background-color: #1F4662;
-    margin-left: 10%;
-    width: 60%;
-    height: 40vh;
-    border-radius: 10px;
-}
-
-.horizontalLine {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3%;
-    background-color: #070D25;
-    width: 75%;
-    height: 1%;
-    margin-left: 3%;
-}
-
-.Generalmonitoring {
-    width: 95%;
-    margin-left: 5%;
-    height: auto;
-}
-
-.sensors {
-    margin-bottom: 10%;
-    background-color: #101A41;
-    display: flex;
-    width: 100%;
-
-}
-
-.sensor1 {
-    background-color: #BE1CA4;
-    margin-left: 5%;
-    width: 30%;
-    height: 15vh;
-    border-radius: 10px;
-}
-
-.sensor2 {
-    background-color: #BE871C;
-    margin-left: 5%;
-    width: 30%;
-    height: 15vh;
-    border-radius: 10px;
-}
-
-.textAbsenteeism {
-    display: flex;
-    width: 100%;
-    height: 10%;
-    justify-content: center;
-}
-
-.absenteeismGraph {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 40%;
-}
-
-.overallPercentage {
-    padding-top: 2%;
-    font-size: 150%;
-    display: flex;
-    width: 100%;
-    height: 10%;
-}
-
-.Percentage1 {
-    font-weight: bold;
-    justify-content: center;
-    display: flex;
-    width: 50%;
-    height: 100%;
-
-}
-
-.Percentage2 {
-    font-weight: bold;
-
-    justify-content: center;
-
-    display: flex;
-    width: 50%;
-    height: 100%;
-
-}
-
-.textAbsenteeism {
-    display: flex;
-    width: 100%;
-    height: 10%;
-    justify-content: center;
-}
-
-
-.textEnvironments {
-    padding-left: 7%;
-    font-weight: bold;
-    display: flex;
-    width: 50%;
-
-}
-
-.environments {
-    padding-top: 2%;
-    display: flex;
-    width: 95%;
-    justify-content: space-around;
-}
-
-.environments1 {
-    background-image: url(img/unsplash_jUOaONoXJQk.png);
-    font-weight: bold;
-    justify-content: center;
-    display: flex;
-    width: 40%;
-    height: 15vh;
-    border-radius: 15%;
-
-}
-
-.environments2 {
-    background-image: url(img/unsplash_jUOaONoXJQk.png);
-    font-weight: bold;
-    justify-content: center;
-    display: flex;
-    width: 40%;
-    height: 15vh;
-    border-radius: 15%;
-}
-
-/* Login */
-
-
-.cardLogin {
-    background-color: black;
-    margin: auto;
-    margin-top: 8%;
-    display: flex;
-    width: 60vw;
-    height: 80vh;
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-.imgLogin {
-    align-items: center;
-    justify-content: left;
-    background-color: #0d1328;
-    display: flex;
-    width: 50%;
-    height: 100%;
-}
-
-.rightLogin {
-    background-color: #D9D9D9;
-    flex-direction: column;
-    display: flex;
-    width: 50%;
-    height: 100%;
-}
-
-.buttonClose {
-    display: flex;
-    justify-content: end;
-    width: 98%;
-    height: 5%;
-    padding-top: 15px;
-}
-
-.textLogin {
-    color: #1F4662;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    justify-content: left;
-    font-size: 220%;
-    display: flex;
-    width: 100%;
-    height: 20%;
-    padding-left: 80px;
-}
-
-.textEmail {
-    justify-content: flex-start;
-
-    color: #1F4662;
-    font-size: 22px;
-    flex-direction: row;
-    display: flex;
-    width: 30%;
-    height: 5%;
-    align-items: center;
-    padding-left: 80px;
-    font-weight: bold;
-    padding-top: 15px;
-
-}
-
-.inputsLogin {
-    outline: none;
-    background-color: #D9D9D9;
-    display: flex;
-    width: 60%;
-    height: 30px;
-    margin-left: 80px;
-    padding-top: 1px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: #1F4662 solid 3px;
-}
-
-
-.textPassword {
-    justify-content: flex-start;
-    color: #1F4662;
-    font-size: 22px;
-    flex-direction: row;
-    display: flex;
-    width: 30%;
-    height: 5%;
-    align-items: center;
-    padding-left: 80px;
-    font-weight: bold;
-    padding-top: 30px;
-}
-
-.cardsClicks {
-    padding-left: 80px;
-    margin-top: 30px;
-    flex-direction: row;
-    color: white;
-    display: flex;
-    width: 100%;
-    height: 40%;
-}
-
-.clickEnter {
-    align-items: center;
-    justify-content: center;
-    background-color: #1F4662;
-    display: flex;
-    width: 100px;
-    height: 40px;
-    border-radius: 10px;
-}
-
-.clickRecoverPassword {
-    align-items: center;
-    margin-left: 25px;
-    justify-content: center;
-    background-color: #1F4662;
-    display: flex;
-    width: 160px;
-    height: 40px;
-    border-radius: 10px;
-}
-
-
-
-
-
-
-/* CADASTRO */
-
-.cardRegister {
-    background-color: #D9D9D9;
-    margin: auto;
-    margin-top: 8%;
-    width: 60vw;
-    height: 80vh;
-    border-radius: 15px;
-}
-
-.topRegister {
-    display: flex;
-    width: 100%;
-    height: 30%;
-
-}
-
-.imgRegister {
-    background-color: #0d1328;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px 15px 0 0;
-    display: flex;
-}
-
-.buttonCloseRegister {
-    position: absolute;
-    display: flex;
-    width: 3%;
-    height: 3%;
-    z-index: 50;
-    padding-left: 57%;
-    padding-top: 1%;
-
-}
-
-
-
-.sectionRegister {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    height: 70%;
-}
-
-.textMyData {
-    display: flex;
-    justify-content: center;
-    font-size: 200%;
-    color: #1F4662;
-    height: 3%;
-    padding-bottom: 3%;
-}
-
-.inputsRegister {
-    outline: none;
-    background-color: #D9D9D9;
-    display: flex;
-    width: 30%;
-    height: 30px;
-    margin-left: 80px;
-    padding-top: 1px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: #1F4662 solid 3px;
-}
-
-
-.line1 {
-    font-size: 150px;
-    display: flex;
-    width: 90%;
-    height: 10%;
-    justify-content: space-around;
-}
-
-.line2 {
-    padding-top: 3%;
-
-    display: flex;
-    width: 90%;
-    height: 10%;
-    justify-content: space-around;
-}
-
-.line3 {
-    padding-top: 3%;
-
-    display: flex;
-    width: 90%;
-    height: 10%;
-    justify-content: space-around;
-}
-
-.line4 {
-    align-items: center;
-    padding-top: 5%;
-    display: flex;
-    width: 100%;
-    height: 10%;
-    justify-content: center;
-}
-
-.inputsSmall {
-
-    outline: none;
-    background-color: #D9D9D9;
-    display: flex;
-    width: 10%;
-    height: 30px;
-    margin-left: 80px;
-    padding-top: 1px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: #1F4662 solid 3px;
-}
-
-.inputsAverage {
-    outline: none;
-    background-color: #D9D9D9;
-    display: flex;
-    width: 15%;
-    height: 30px;
-    margin-left: 80px;
-    padding-top: 1px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: #1F4662 solid 3px;
-}
-
-.inputsBig {
-    outline: none;
-    background-color: #D9D9D9;
-    display: flex;
-    width: 45%;
-    height: 30px;
-    margin-left: 80px;
-    padding-top: 1px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: #1F4662 solid 3px;
-}
-
-.clickSave {
-    color: white;
-    align-items: center;
-    justify-content: center;
-    background-color: #1F4662;
-    display: flex;
-    width: 200px;
-    height: 40px;
-    border-radius: 10px;
-}
 
 /* QUEM SOMOS */
 body {
@@ -1518,6 +833,8 @@ body {
 }
 
 input::placeholder {
+    color: #0F1631;
+    font-family: Poppins;
     color: rgb(255, 255, 255);
     font-family: poppins;
 }
@@ -1557,7 +874,708 @@ input::placeholder {
     background: transparent;
 }
 
+<<<<<<< HEAD
 #resultado {
+=======
+
+
+
+/* CSS Dashboard Local*/
+
+
+.containerNavbarDashboard {
+    background-color: #0F1631;
+    display: flex;
+    width: 100%;
+    font-family: Poppins;
+    font-size: 100%;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+.headerContainerDashboard {
+    display: flex;
+    width: 100%;
+    padding: 0 1%;
+    justify-content: space-between;
+}
+.logoContainer img {
+    display: flex;
+    width: 30%;
+}
+.navbarLista {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    justify-content: end;
+}
+.navbarLista ul,
+.navbarLista li a {
+    padding: 5px 10px;
+    margin-right: 25px;
+    color: #D68F3B;
+    font-weight: 800;
+    text-decoration: none;
+}
+.loginBtnDashboard {
+    padding: 7px 25px;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #EF8A14;
+}
+.imgUserDashboard {
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 25px;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+}
+.textDashboard {
+    color: white;
+    background-color: #101A41;
+    display: flex;
+    justify-content: center;
+    font-size: 200%;
+    width: 100%;
+    height: 50%;
+    padding-top: 20px;
+}
+.Graficos{
+    background-color: #101A41;
+
+    position: fixed;
+
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    height: auto;
+    flex-direction: row;
+    display: flex;
+}
+.left{ 
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    flex-direction: column;
+    width: 65%;
+    height: 100%;
+}
+.graphicDescription {  
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: right;
+    width: 60%;
+    height: 100%;
+    color: white;
+}
+.graphicDescriptionLDR5 {
+    padding-bottom: 100px;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+.graphicDescriptionLM35 {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+.cardGraficoLDR5{
+
+    width: 100%;
+    height: 50%;
+    display: flex;
+    padding-top: 20px;
+    background-color: white;
+    width: 450px;
+    height: 200px;
+    border-radius: 15px;
+}
+.cardGraficoLM35{
+    width: 100%;
+    height: 50%;
+    margin-top: 20px;
+    display: flex;
+    padding-top: 50px;
+    background-color: white;
+    width: 450px;
+    height: 200px;
+    border-radius: 15px;
+}
+.right {
+    padding-top: 10px;
+    flex-direction: column;
+    display:flex;
+    width: 35%;
+}
+.plantasala {
+    margin-right: 50px;
+    margin-bottom: 20px;
+    flex-direction: row;
+    width: 100%;
+    height: 30%;
+}
+#linhaVertical {
+    margin-right: 70px;
+    display: flex;
+    margin-left: 50px;
+    height: 585px;
+    border-left: 4px solid #EF8A14;
+}
+.tableSensors {
+    display: flex;
+    background-color: white;
+    width: 430px;
+    height: 230px;
+    border-radius: 15px;
+
+}
+.clickGraphic {
+    display: flex;
+    background-color: #EF8A14;
+    width: 15%;
+    height: 35px;
+    border-radius: 7px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+/* CSS DASHBOARD GERAL */
+
+.containerNavbarDashboardGeneral {
+    background-color: #0F1631;
+    display: flex;
+    width: 100%;
+    font-family: Poppins;
+    font-size: 100%;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+.headerContainerDashboardGeneral {
+    display: flex;
+    width: 100%;
+    padding: 0 1%;
+    justify-content: space-between;
+}
+.logoContainer img {
+    display: flex;
+    width: 30%;
+}
+.navbarLista {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    justify-content: end;
+}
+.navbarLista ul,
+.navbarLista li a {
+    padding: 5px 10px;
+    color: #D68F3B;
+    font-weight: 800;
+    text-decoration: none;
+}
+.loginBtnDashboard {
+    padding: 7px 25px;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #EF8A14;
+}
+.imgUserDashboardGeneral {
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 25px;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+}
+.bodyDashboard {
+    position: fixed;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.rightDash {
+    background-color: #0F1631;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 35%;
+    color: #D9D9D9;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #0F1631;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #1F4662;
+    border-radius: 20px;
+}
+.leftDash{
+    background-color: #101A41;
+    color: #D9D9D9;
+    width: 65%;
+    height: 100%;
+}
+.textCompany {
+    width: 100%;
+    height: 5%;
+    margin-left: 5%;
+}
+.generalQuality {
+    width: 100%;
+    height: 8%;
+    margin-left: 10%;
+}
+.cardIndex {
+    background-color: #1F4662;
+    margin-left: 10%;
+    width: 60%;
+    height: 40vh;
+    border-radius: 10px;    
+}
+.horizontalLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    background-color: #070D25;
+    width: 75%;
+    height: 1%;
+    margin-left: 3%;
+}
+.Generalmonitoring {
+    width: 95%;
+    margin-left: 5%;
+    height: auto;
+}
+.sensors {
+    margin-bottom: 10%;
+    background-color: #101A41;
+    display: flex;
+    width: 100%;
+}
+.sensor1 {
+    background-color: #BE1CA4;
+    margin-left: 5%;
+    width: 30%;
+    height: 15vh;
+    border-radius: 10px;    
+}
+.sensor2 {
+    background-color: #BE871C;
+    margin-left: 5%;
+    width: 30%;
+    height: 15vh;
+    border-radius: 10px;    
+}
+.textAbsenteeism {
+    display: flex;
+    width: 100%;
+    height: 2%;
+    justify-content: center;
+}
+.absenteeismGraph{
+    padding-top: 18%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+}
+.overallPercentage{
+    padding-top: 18%;
+    font-size: 150%;
+    display: flex;
+    width: 100%;
+    height: 3%;
+}
+.Percentage1 {
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    width: 50%;
+    height: 5%;
+}
+.Percentage2 {
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    width: 50%;
+    height: 5%;
+}
+.textAbsenteeism {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+}
+.textEnvironments {
+    padding-top: 5%;
+    padding-left: 7%;
+    font-weight: bold;
+    display: flex;
+    width: 50%;
+}
+.environmentisGeneral {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    width: 100%;
+    justify-content: space-around;
+}
+.environmentisLine1 {
+
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
+    width: 100%;
+    height: 20%;
+    justify-content: space-around;
+}
+.environmentisLine2 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
+    width: 100%;
+    height: 20%;
+    justify-content: space-around;
+}
+.environmentisLine3 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
+    width: 100%;
+    height: 20%;
+    justify-content: space-around;
+}
+.environmentisLine4 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+.environmentisLine5 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    margin-bottom: 90px;
+}
+.environments1 {
+    align-items: end;
+    background-image: url(img/unsplash_jUOaONoXJQk.png);
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    width: 40%;
+    height: 15vh;
+    border-radius: 15%;
+}
+
+
+
+/* Login */
+
+.inputstransparente {
+    width: 65%;
+    margin-left: 80px;
+    padding-top: 2px;
+    outline: none;
+    border-radius: 10px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: #1F4662 solid 3px;
+    background: transparent;
+    font-size: 125%
+}
+.cardLogin {
+    background-color: #101a41d2;
+    margin: auto;
+    margin-top: 8%;
+    display: flex;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 15px;
+    overflow: hidden;   
+    
+}
+.imgLogin {
+
+    background-image: url(img/imgLoginBackground.png);
+    background-size: cover;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    mix-blend-mode: multiply;
+
+}
+.rightLoginBackground{
+    background-color: #D9D9D9;
+    width: 50%;
+    height: 100%;
+}
+.rightLogin{
+    color: #0F1631;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.buttonClose{
+    display: flex;
+    justify-content: end;
+    width: 98%;
+    height: 5%;
+    padding-top: 15px;
+}
+.textLogin {
+    color: #1F4662;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    justify-content: left;
+    font-size: 220%;
+    display: flex;
+    width: 100%;
+    height: 20%;
+    padding-left: 80px;
+}
+.textEmail{
+    justify-content: flex-start;
+    color: #1F4662;
+    font-size: 22px;
+    flex-direction: row;
+    display: flex;
+    width: 30%;
+    height: 5%;
+    align-items: center;
+    padding-left: 80px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+.textPassword{
+    justify-content: flex-start;
+    color: #1F4662;
+    font-size: 22px;
+    flex-direction: row;
+    display: flex;
+    width: 30%;
+    height: 5%;
+    align-items: center;
+    padding-left: 80px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+.cardsClicks {
+    padding-left: 80px;
+    margin-top: 30px;
+    flex-direction: row;
+    color: white;
+    display: flex;
+    width: 100%;
+    height: 40%;
+}
+.clickEnter {
+    align-items: center;
+    justify-content: center;
+    background-color: #1F4662;
+    display: flex;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+}
+.clickRecoverPassword {
+    align-items: center;
+    margin-left: 45px;
+    justify-content: center;
+    background-color: #1F4662;
+    display: flex;
+    width: 160px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+
+
+/* CADASTRO */
+
+.cardRegister {
+    font-family: 'Poppins';
+    border-radius: 15px 15px 0 0;
+    background-color:#101a41d2;
+    margin: auto;
+    margin-top: 8%;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 15px 15px 15px 15px;
+
+}
+.topRegister {
+    background-size: cover;
+    background-image: url(img/imgCadastro.png);
+    display: flex;
+    width: 100%;
+    height: 30%;
+    border-radius: 15px 15px 0 0;
+    mix-blend-mode: multiply;
+}
+
+.buttonCloseRegister{
+    position: absolute;
+    display: flex;
+    width: 3%;
+    height: 3%;
+    z-index: 100;
+    padding-left: 57%;
+    padding-top: 1%;
+}
+.sectionRegister{
+    font-family: 'Poppins';
+
+    background-color:#D9D9D9;
+
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 70%;
+    border-radius: 0 0 20px 20px;
+}
+.textMyData {
+    display: flex;
+    justify-content: center;
+    font-size: 200%;
+    color: #1F4662;
+    height: 3%;
+    padding-bottom: 3%;
+}
+.inputsRegister {
+    
+    outline: none;
+    background-color: #D9D9D9;
+    display: flex;
+    width: 30%;
+    height: 30px;
+    margin-left: 80px;
+    padding-top: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #1F4662 solid 3px;
+}
+.line1 {
+
+    font-size: 150px;
+    display: flex;
+    width: 90%;
+    height: 10%;
+    justify-content: space-around;
+}
+.line2 {
+    padding-top: 3%;
+
+    display: flex;
+    width: 90%;
+    height: 10%;
+    justify-content: space-around;
+}
+.line3 {
+    padding-top: 3%;
+
+    display: flex;
+    width: 90%;
+    height: 10%;
+    justify-content: space-around;
+}
+.line4 {
+    align-items: center;
+    padding-top: 5%;
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+}
+.inputsSmall {
+        outline: none;
+        background-color: #D9D9D9;
+        display: flex;
+        width: 10%;
+        height: 30px;
+        margin-left: 80px;
+        padding-top: 1px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: #1F4662 solid 3px;
+    }
+.inputsAverage {
+
+        outline: none;
+        background-color: #D9D9D9;
+        display: flex;
+        width: 15%;
+        height: 30px;
+        margin-left: 80px;
+        padding-top: 1px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: #1F4662 solid 3px;
+}
+.inputsBig {
+    font-family: 'Poppins';
+
+        outline: none;
+        background-color: #D9D9D9;
+        display: flex;
+        width: 45%;
+        height: 30px;
+        margin-left: 80px;
+        padding-top: 1px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: #1F4662 solid 3px;
+        
+}
+.clickSave {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F4662;
+    display: flex;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+} 
+#resultado{
+>>>>>>> f9c114dd7efab3c4af90e5d458a01b2045d861e1
     display: inherit;
     justify-content: center;
     background-color: #FFFFFF;
