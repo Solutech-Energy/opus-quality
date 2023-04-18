@@ -19,6 +19,7 @@ a {
 }
 
 .containerModal {
+    
     width: 100vw;
     height: 100vh;
     display: none;
@@ -1311,7 +1312,7 @@ input::placeholder {
 }
 
 .cardLogin {
-    background-color: #101a41d2;
+    background-color: #000000d2;
     margin: auto;
     margin-top: 8%;
     display: flex;
@@ -1331,7 +1332,7 @@ input::placeholder {
     display: flex;
     width: 50%;
     height: 100%;
-    mix-blend-mode: multiply;
+    mix-blend-mode: normal;
 
 }
 

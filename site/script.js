@@ -11,9 +11,11 @@ function toggleModal() {
     if (modalState == "none") {
         containerMain.animation = "escurecerFundo 1s";
         containerMain.opacity = "0.1";
+        containerMain.backgroundColor = "#000";
         containerMain.position = "fixed"
         modal.display = "flex";
     } else {
+        containerMain.backgroundColor = "#5b6284";
         containerMain.animation = "clarearFundo 1s";
         modal.display = "none";
         containerMain.opacity = "1";
