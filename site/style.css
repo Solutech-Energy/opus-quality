@@ -18,13 +18,18 @@ a {
     font-family: 'Poppins';
 }
 
-
-
-
-
-
-
-
+.containerModal {
+    
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 15;
+    opacity: 1;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    ;
+}
 
 /*HOME HOME HOME HOME*/
 
@@ -55,7 +60,11 @@ a {
 
 .logoContainer img {
     display: flex;
+<<<<<<< HEAD
     width: 40%;
+=======
+    width: 100%;
+>>>>>>> 06952c26ccba1eb1163ca965b54c71b5ee792fb2
 }
 
 .navbarLista {
@@ -75,6 +84,8 @@ a {
 }
 
 .loginBtn {
+    cursor:pointer;
+
     padding: 7px 25px;
     color: white;
     letter-spacing: 1px;
@@ -251,20 +262,34 @@ a {
 
 .boxDepoimento{
     display: flex;
+<<<<<<< HEAD
     justify-content: center;
     margin: auto;   
     margin-top: 6%;
     width: 70%;
     color: #FFFFFF;
     border-radius: 15px;    
+=======
+    /* flex-direction: column;
+    align-items: end;
+    justify-content: center; */
+    border-radius: 24px;
+    width: 100%;
+>>>>>>> 06952c26ccba1eb1163ca965b54c71b5ee792fb2
     background: rgba(106, 193, 255, 0.6);
     box-shadow: 12px 12px 18px rgba(47, 74, 102, 0.35);
     backdrop-filter: blur(5px);
 }
 
+<<<<<<< HEAD
 .imgDepoimento1 { 
     align-items: center; 
     justify-content: left;
+=======
+
+
+.containerClientes1 p img {
+>>>>>>> 06952c26ccba1eb1163ca965b54c71b5ee792fb2
     display: flex;
     width: 100%;
     height: 100%;
@@ -303,13 +328,13 @@ a {
     align-items: center;
     color: #000000;
     background: #FFFFFFD4;
-    
+
 }
 
 
 /* começo do footer */
 .footer0 {
-    background: rgba(74, 74, 74, 0.33);
+    background: rgba(74, 74, 74, 0.303);
     opacity: 4;
 }
 
@@ -403,139 +428,593 @@ a {
 
 
 
-
-/*NÃO SEI*/
-
-.header {
-    font-family: 'Poppins';
-    justify-content: center;
-    align-items: center;
-    font-size: 130%;
-    display: flex;
-    background-color: #0F1631;
-    width: 100%;
-    height: 60px;
-    color: white;
-    border-bottom-width: 5px;
-    border-bottom-style: solid;
-    border-bottom-color: #0d1328;
+/* QUEM SOMOS */
 
 
-}
-
-.headerLogo {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-left: 40px;
-    width: 50%;
-    height: 100%;
-}
-
-.headerText {
-    font-family: 'Poppins';
-    font-family: 'inter';
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    justify-content: space-around;
-    width: 50%;
-    height: 100%;
-}
-
-.clickLogin {
-    display: flex;
-    background-color: #EF8A14;
-    width: 15%;
-    height: 35px;
-    border-radius: 7px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-/* building */
-
-.building {
-    display: flex;
-    background-color: #0F1631;
-    width: 100%;
-    height: 380px;
-    color: white;
-}
-
-.buildingText {
-    font-weight: bold;
-    flex-direction: column;
-    font-size: 300%;
-    display: flex;
-    align-items: center;
-    margin-top: 5%;
-    margin-left: 5%;
-    width: 40%;
-    height: 100%;
-
-}
-
-.buildingImg {
-    display: flex;
-    justify-content: right;
+body {
     margin: 0;
-    width: 80%;
-    height: 100%;
+    padding: 0;
+    background: #0F1631;
+    font-family: poppins;
+}
 
+.quemSomosContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 
+.solucaoQuemSomosTexto1 {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+}
+
+.solucaoQuemSomosTexto2 {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    padding-bottom: 3%;
+}
+
+.solucaoQuemSomosTexto1 h3 {
+    width: 40%;
+    justify-content: start;
+}
+
+.titulo02 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.quemSomosContainer h3 {
+    font-size: 300%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+.quemSomosContainer h3 span {
+    color: #EF8A14;
+}
+
+.imgBackgroundQuemSomos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgBackgroundQuemSomos img {
+    align-self: center;
+    margin-bottom: 5%;
+}
 
 
+.imgBackgroundQuemSomos p {
+    position: absolute;
+    margin-top: 30%;
+    margin-bottom: 5%;
+    width: 40%;
+    justify-self: start;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 200%;
+    color: #ffffff;
+    align-self: center;
+    flex-direction: column;
+    background-color: #000000c1;
+    margin-right: 20%;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+.solucaoQuemSomos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.89);
+}
+
+.solucaoQuemSomos h3 {
+    width: 60%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 200%;
+    color: #ffffff;
+}
+
+.solucaoQuemSomos p {
+    align-self: flex-end;
+    display: flex;
+    width: 55%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 200%;
+    color: #ffffff;
+}
+
+.linhaQuemSomos {
+    display: flex;
+    width: 95%;
+    align-self: center;
+    margin: 3% 3%;
+    height: 2px;
+    background: #ffffff;
+}
+
+.tituloQuemSomos h3 {
+    font-size: 300%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    justify-content: center;
+}
+
+.tituloQuemSomos h3 span {
+    color: #EF8A14;
+}
+
+.tituloQuemSomos p {
+    margin: 7%;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 200%;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.colaboradores {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.ceoEsquerda {
+    color: #EF8A14;
+    display: flex;
+    align-self: flex-start;
+    width: 50%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+    margin-left: 7%;
+    border: 50%;
+
+}
+
+.ceoDireita {
+    color: #EF8A14;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+    margin-left: 7%;
+    border: 50%;
+}
+
+.ceoEsquerda p {
+    color: #ffffff;
+}
+
+.ceoDireita p {
+    color: #ffffff;
+}
+
+
+.cargoCeo {
+    display: flex;
+    flex-direction: column;
+}
+
+.cargoCeo h4 {
+    margin: 0;
+}
+
+.imgQuemSomos {
+    height: 330.25px;
+    border-radius: 3%;
+}
+
+.ceo1 p {
+    color: #ffffff;
+    margin: 7%;
+    flex-direction: column;
+}
+
+.ceo2 {
+    color: #EF8A14;
+    align-self: flex-end;
+    display: flex;
+    width: 75%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+}
+
+.cargoCeo2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.cargoCeo2 h4 {
+    margin: 0;
+}
+
+.img2 {
+    width: 330.25px;
+    height: 371.91px;
+}
+
+.ceo2 p {
+    color: #ffffff;
+    margin: 7%;
+    flex-direction: column;
+}
+
+.ceo3 {
+    color: #EF8A14;
+    align-self: flex-end;
+    display: flex;
+    width: 75%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+}
+
+.cargoCeo3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.cargoCeo3 h4 {
+    margin: 0;
+}
+
+.img3 {
+    width: 330.25px;
+    height: 371.91px;
+}
+
+.ceo3 p {
+    color: #ffffff;
+    margin: 7%;
+    flex-direction: column;
+}
+
+.ceo4 {
+    color: #EF8A14;
+    align-self: flex-end;
+    display: flex;
+    width: 75%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+}
+
+.ceo5 {
+    color: #EF8A14;
+    align-self: flex-end;
+    display: flex;
+    width: 75%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+}
+
+.ceo6 {
+    color: #EF8A14;
+    align-self: flex-end;
+    display: flex;
+    width: 75%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+}
+
+.ceo7 {
+    color: #EF8A14;
+    align-self: flex-end;
+    display: flex;
+    width: 75%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+}
+
+
+/*A A A A A A COMEÇO CALCULADORA A A A A A A*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0F1631;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #EF8A14;
+    border-radius: 20px;
+}
+
+.containerGeralCalculadora {
+    background-color: #0F1631;
+    flex-direction: row;
+}
+
+.containerCalculosGeral {
+    background-image: url(img/CalculadoraImgFundo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #242c55cb;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloCalculadora {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    color: #FFFFFF;
+
+}
+
+.tituloCalculadora h1 {
+    background-size: cover;
+    padding: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.containerCalculosGeral span {
+    color: #EF8A14;
+}
+
+/*Começo dos inputs*/
+.containerCalculadoraInputs {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    align-items: center;
+}
+
+.InputDireitoCalculadora h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 60%;
+    font-size: 200%;
+    font-weight: 900px;
+    color: #FFFFFF;
+}
+
+.InputEsquerdoCalculadora h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 60%;
+    font-size: 200%;
+    font-weight: 900px;
+    color: #FFFFFF;
+}
+
+.InputEsquerdoCalculadora p {
+    width: 60%;
+    color: #EF8A14;
+    font-size: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+    justify-content: left;
+}
+
+.InputEsquerdoCalculadora span {
+    font-size: 100%;
+    color: #EF8A14;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.InputDireitoCalculadora span {
+    font-size: 100%;
+    color: #EF8A14;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.InputEsquerdoCalculadora {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 90%;
+}
+
+.InputDireitoCalculadora {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 90%;
+}
+
+.InputCalculadora {
+    width: 50%;
+    align-self: center;
+    background: transparent;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    padding: 5px 8px;
+    font-size: 120%;
+    font-style: italic;
+    margin-bottom: 3%;
+    color: #EF8A14;
+    border-bottom: 3px solid #ffffff;
+}
+
+input::placeholder {
+    cursor: text;
+    color: #0F1631;
+    font-size: 100%;
+    font-family: Poppins;
+}
+
+.InputDireitoCalculadora p {
+    width: 60%;
+    color: #EF8A14;
+    font-size: 100%;
+    font-weight: bold;
+    justify-content: left;
+    align-self: center;
+}
+
+.ButtonDivCalculadora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerGeralCalculadora button {
+    width: 200%;
+    padding: 4px;
+    margin: 15%;
+    cursor: pointer;
+    font-size: 120%;
+    align-self: center;
+    border-radius: 50px;
+    font-weight: bolder;
+    color: #EF8A14;
+    border: 3px solid #ffffff;
+    background: transparent;
+}
+
+#resultado {
+    display: inherit;
+    justify-content: center;
+    background-color: #FFFFFF;
+    margin: 10px 10% 10% 10%;
+    border-radius: 10px;
+}
+
+#absentismo {
+    width: 35%;
+    margin: 2%;
+}
+
+#energia {
+    width: 35%;
+    margin: 2%;
+}
 
 
 /* CSS Dashboard Local*/
 
-.DashboardText {
-    color: #EF8A14;
-    padding-right: 80px;
-    font-family: 'inter';
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 50%;
-    height: 100%;
 
+.containerNavbarDashboard {
+    background-color: #0F1631;
+    display: flex;
+    width: 100%;
+    font-family: Poppins;
+    font-size: 100%;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+
+.headerContainerDashboard {
+    display: flex;
+    width: 100%;
+    padding: 0 1%;
+    justify-content: space-between;
+}
+
+.logoContainer img {
+    display: flex;
+    width: 30%;
+}
+
+.navbarLista {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    justify-content: end;
+}
+
+.navbarLista ul,
+.navbarLista li a {
+    padding: 5px 10px;
+    margin-right: 25px;
+    color: #D68F3B;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.loginBtnDashboard {
+    padding: 7px 25px;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #EF8A14;
+}
+
+.imgUserDashboard {
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 25px;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    background-color: #D9D9D9;
+    border-radius: 10px;
 }
 
 .textDashboard {
     color: white;
-    background-color: #0F1631;
+    background-color: #101A41;
     display: flex;
     justify-content: center;
-    align-items: center;
     font-size: 200%;
     width: 100%;
-    height: 100%;
-    padding-top: 8px;
+    height: 50%;
+    padding-top: 20px;
 }
 
 .Graficos {
+    background-color: #101A41;
+
+    position: fixed;
+
     align-items: center;
     width: 100%;
     height: 100%;
     height: auto;
     flex-direction: row;
-    margin-top: 20px;
     display: flex;
-    padding-bottom: 20px;
 }
 
 .left {
-
     display: flex;
     align-items: end;
     justify-content: end;
     flex-direction: column;
-
-    width: 90%;
+    width: 65%;
     height: 100%;
 }
 
@@ -563,70 +1042,60 @@ a {
     height: 50%;
 }
 
-.cardGraficoLM35 {
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    width: 50%;
-    height: 300px;
-    background-color: white;
-
-}
-
 .cardGraficoLDR5 {
 
     width: 100%;
     height: 50%;
     display: flex;
-    padding-top: 50px;
+    padding-top: 20px;
     background-color: white;
-    width: 500px;
-    height: 230px;
+    width: 450px;
+    height: 200px;
     border-radius: 15px;
 }
 
 .cardGraficoLM35 {
     width: 100%;
     height: 50%;
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     padding-top: 50px;
     background-color: white;
-    width: 500px;
-    height: 230px;
+    width: 450px;
+    height: 200px;
     border-radius: 15px;
 }
 
 .right {
+    padding-top: 10px;
     flex-direction: column;
     display: flex;
-    width: 40%;
-    height: 100%;
+    width: 35%;
 }
 
-.graficoAbsenteismo {
-    margin-bottom: 100px;
+.plantasala {
+    margin-right: 50px;
+    margin-bottom: 20px;
     flex-direction: row;
     width: 100%;
-    height: 100%;
+    height: 30%;
 }
 
 #linhaVertical {
+    margin-right: 70px;
     display: flex;
     margin-left: 50px;
-    height: 630px;
+    height: 585px;
     border-left: 4px solid #EF8A14;
 }
 
-.graphicAbsenteismo {
-    font-size: 20px;
-    flex-direction: column;
-    color: white;
-    width: 100%;
-    height: 20%;
+.tableSensors {
     display: flex;
-    text-align: center;
-    justify-content: center;
+    background-color: white;
+    width: 430px;
+    height: 230px;
+    border-radius: 15px;
+
 }
 
 .clickGraphic {
@@ -645,78 +1114,87 @@ a {
 
 
 
-
-
 /* CSS DASHBOARD GERAL */
-.navbarDashboard {
-    font-family: 'Poppins';
+
+.containerNavbarDashboardGeneral {
+    background-color: #0F1631;
+    display: flex;
+    width: 100%;
+    font-family: Poppins;
+    font-size: 100%;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+
+.headerContainerDashboardGeneral {
+    display: flex;
+    width: 100%;
+    padding: 0 1%;
+    justify-content: space-between;
+}
+
+.loginBtnDashboard {
+    padding: 7px 25px;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #EF8A14;
+}
+
+.imgUserDashboardGeneral {
     justify-content: center;
     align-items: center;
-    font-size: 130%;
+    margin-top: 15px;
+    margin-right: 25px;
+    width: 50px;
+    height: 40px;
     display: flex;
-    background-color: #0F1631;
-    width: 100%;
-    height: 60px;
-    color: white;
-    border-bottom-width: 5px;
-    border-bottom-style: solid;
-    border-bottom-color: #0d1328;
-
-
-}
-
-.logoDashboard {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-left: 40px;
-    width: 50%;
-    height: 100%;
-}
-
-.NavbarTextDashboard {
-    color: #EF8A14;
-    padding-right: 80px;
-    font-family: 'inter';
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 70%;
-    height: 100%;
-
-}
-
-.imgUser {
-    margin-right: 15px;
     background-color: #D9D9D9;
-    width: 5%;
-    height: 90%;
     border-radius: 10px;
 }
 
 .bodyDashboard {
+    position: fixed;
+
     display: flex;
     width: 100%;
     height: 100%;
 }
 
 .rightDash {
+    background-color: #0F1631;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     width: 35%;
     color: #D9D9D9;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0F1631;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1F4662;
+    border-radius: 20px;
+}
 
 .leftDash {
     background-color: #101A41;
     color: #D9D9D9;
     width: 65%;
+    height: 100%;
 }
 
 .textCompany {
     width: 100%;
     height: 5%;
     margin-left: 5%;
-
 }
 
 .generalQuality {
@@ -755,7 +1233,6 @@ a {
     background-color: #101A41;
     display: flex;
     width: 100%;
-
 }
 
 .sensor1 {
@@ -777,24 +1254,25 @@ a {
 .textAbsenteeism {
     display: flex;
     width: 100%;
-    height: 10%;
+    height: 2%;
     justify-content: center;
 }
 
 .absenteeismGraph {
+    padding-top: 18%;
     align-items: center;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 40%;
+    height: 10%;
 }
 
 .overallPercentage {
-    padding-top: 2%;
+    padding-top: 18%;
     font-size: 150%;
     display: flex;
     width: 100%;
-    height: 10%;
+    height: 3%;
 }
 
 .Percentage1 {
@@ -802,19 +1280,15 @@ a {
     justify-content: center;
     display: flex;
     width: 50%;
-    height: 100%;
-
+    height: 5%;
 }
 
 .Percentage2 {
     font-weight: bold;
-
     justify-content: center;
-
     display: flex;
     width: 50%;
-    height: 100%;
-
+    height: 5%;
 }
 
 .textAbsenteeism {
@@ -824,34 +1298,71 @@ a {
     justify-content: center;
 }
 
-
 .textEnvironments {
+    padding-top: 5%;
     padding-left: 7%;
     font-weight: bold;
     display: flex;
     width: 50%;
-
 }
 
-.environments {
-    padding-top: 2%;
+.environmentisGeneral {
     display: flex;
-    width: 95%;
+    flex-direction: column;
+    padding-top: 2%;
+    width: 100%;
     justify-content: space-around;
 }
 
+.environmentisLine1 {
+
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
+    width: 100%;
+    height: 20%;
+    justify-content: space-around;
+}
+
+.environmentisLine2 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
+    width: 100%;
+    height: 20%;
+    justify-content: space-around;
+}
+
+.environmentisLine3 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
+    width: 100%;
+    height: 20%;
+    justify-content: space-around;
+}
+
+.environmentisLine4 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.environmentisLine5 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2%;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    margin-bottom: 90px;
+}
+
 .environments1 {
-    background-image: url(img/unsplash_jUOaONoXJQk.png);
-    font-weight: bold;
-    justify-content: center;
-    display: flex;
-    width: 40%;
-    height: 15vh;
-    border-radius: 15%;
-
-}
-
-.environments2 {
+    align-items: end;
     background-image: url(img/unsplash_jUOaONoXJQk.png);
     font-weight: bold;
     justify-content: center;
@@ -860,12 +1371,28 @@ a {
     height: 15vh;
     border-radius: 15%;
 }
+
+
 
 /* Login */
 
+.inputstransparente {
+    width: 65%;
+    margin-left: 80px;
+    padding-top: 2px;
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: #1F4662 solid 3px;
+    background: transparent;
+    font-size: 125%
+}
+
+
 
 .cardLogin {
-    background-color: black;
+    background-color: #000000d2;
     margin: auto;
     margin-top: 8%;
     display: flex;
@@ -873,22 +1400,34 @@ a {
     height: 80vh;
     border-radius: 15px;
     overflow: hidden;
+    animation: openModal 1s normal;
+
 }
 
 .imgLogin {
+
+    background-image: url(img/imgLoginBackground.png);
+    background-size: cover;
     align-items: center;
     justify-content: left;
-    background-color: #0d1328;
     display: flex;
+    width: 50%;
+    height: 100%;
+    mix-blend-mode: normal;
+
+}
+
+.rightLoginBackground {
+    background-color: #D9D9D9;
     width: 50%;
     height: 100%;
 }
 
 .rightLogin {
-    background-color: #D9D9D9;
+    color: #0F1631;
     flex-direction: column;
     display: flex;
-    width: 50%;
+    width: 100%;
     height: 100%;
 }
 
@@ -914,7 +1453,6 @@ a {
 
 .textEmail {
     justify-content: flex-start;
-
     color: #1F4662;
     font-size: 22px;
     flex-direction: row;
@@ -925,23 +1463,7 @@ a {
     padding-left: 80px;
     font-weight: bold;
     padding-top: 15px;
-
 }
-
-.inputsLogin {
-    outline: none;
-    background-color: #D9D9D9;
-    display: flex;
-    width: 60%;
-    height: 30px;
-    margin-left: 80px;
-    padding-top: 1px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: #1F4662 solid 3px;
-}
-
 
 .textPassword {
     justify-content: flex-start;
@@ -979,7 +1501,7 @@ a {
 
 .clickRecoverPassword {
     align-items: center;
-    margin-left: 25px;
+    margin-left: 45px;
     justify-content: center;
     background-color: #1F4662;
     display: flex;
@@ -990,53 +1512,49 @@ a {
 
 
 
-
-
-
 /* CADASTRO */
 
 .cardRegister {
-    background-color: #D9D9D9;
+    font-family: 'Poppins';
+    border-radius: 15px 15px 0 0;
     margin: auto;
     margin-top: 8%;
     width: 60vw;
     height: 80vh;
-    border-radius: 15px;
+    border-radius: 15px 15px 15px 15px;
+
 }
 
 .topRegister {
+    background-size: cover;
+    background-image: url(img/imgCadastro.png);
     display: flex;
     width: 100%;
     height: 30%;
-
-}
-
-.imgRegister {
-    background-color: #0d1328;
-    width: 100%;
-    height: 100%;
     border-radius: 15px 15px 0 0;
-    display: flex;
 }
 
 .buttonCloseRegister {
+
     position: absolute;
     display: flex;
     width: 3%;
     height: 3%;
-    z-index: 50;
+    z-index: 100;
     padding-left: 57%;
     padding-top: 1%;
-
 }
 
-
-
 .sectionRegister {
+    font-family: 'Poppins';
+
+    background-color: #D9D9D9;
+
     display: flex;
     width: 100%;
     flex-direction: column;
     height: 70%;
+    border-radius: 0 0 20px 20px;
 }
 
 .textMyData {
@@ -1049,6 +1567,7 @@ a {
 }
 
 .inputsRegister {
+
     outline: none;
     background-color: #D9D9D9;
     display: flex;
@@ -1062,8 +1581,8 @@ a {
     border-bottom: #1F4662 solid 3px;
 }
 
-
 .line1 {
+
     font-size: 150px;
     display: flex;
     width: 90%;
@@ -1099,7 +1618,6 @@ a {
 }
 
 .inputsSmall {
-
     outline: none;
     background-color: #D9D9D9;
     display: flex;
@@ -1114,6 +1632,7 @@ a {
 }
 
 .inputsAverage {
+
     outline: none;
     background-color: #D9D9D9;
     display: flex;
@@ -1128,6 +1647,8 @@ a {
 }
 
 .inputsBig {
+    font-family: 'Poppins';
+
     outline: none;
     background-color: #D9D9D9;
     display: flex;
@@ -1139,6 +1660,7 @@ a {
     border-left: none;
     border-right: none;
     border-bottom: #1F4662 solid 3px;
+
 }
 
 .clickSave {
@@ -1152,142 +1674,171 @@ a {
     border-radius: 10px;
 }
 
-/* QUEM SOMOS */
 
 
 
 
 
+/* NOVO AMBIENTE */
 
 
 
-/*A A A A A A COMEÇO CALCULADORA A A A A A A*/
-.containerGeralCalculadora {
-    background-color: #0F1631;
-    flex-direction: row;
-}
-
-.containerCalculosGeral {
-    background-image: url(img/CalculadoraImgFundo.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.tituloCalculadora {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+.cardNovoAmbiente {
     font-family: 'Poppins';
-    font-size: 100%;
-    color: #EF8A14;
+    border-radius: 15px 15px 0 0;
+    margin: auto;
+    margin-top: 8%;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 15px 15px 15px 15px;
 
 }
 
-.tituloCalculadora h1 {
-    background-color: #000000c1;
-    background-size: cover;
-    border-radius: 15px;
-    padding: 1%;
-}
-
-.containerCalculosGeral span {
-    color: #FFFFFF;
-}
-
-/*Começo dos inputs*/
-.containerCalculadoraInputs {
+.topNovoAmbiente {
+    background-image: url(img/imgNovoAmbiente.jpg);
     display: flex;
-    width: 90%;
-    align-self: center;
-    align-items: center;
-}
-
-.InputDireitoCalculadora h3 {
     width: 100%;
-    font-size: 200%;
-    font-weight: 900px;
-    color: #EF8A14;
+    height: 30%;
+    border-radius: 15px 15px 0 0;
 }
 
-.InputEsquerdoCalculadora h3 {
-    width: 100%;
-    font-size: 200%;
-    font-weight: 900px;
-    color: #EF8A14;
-}
+.buttonCloseNovoAmbiente {
 
-.InputEsquerdoCalculadora p {}
-
-.InputEsquerdoCalculadora span {
-    font-size: 100%;
-    color: #FFFFFF;
-}
-
-.InputDireitoCalculadora span {
-    font-size: 100%;
-    color: #FFFFFF;
-}
-
-.InputEsquerdoCalculadora {
-    width: 100%;
+    position: absolute;
     display: flex;
+    width: 3%;
+    height: 3%;
+    z-index: 100;
+    padding-left: 57%;
+    padding-top: 1%;
+}
+
+.sectionNovoAmbiente {
+    font-family: 'Poppins';
+
+    background-color: #D9D9D9;
+
+    display: flex;
+    width: 100%;
     flex-direction: column;
-    align-items: center;
-    font-size: 90%;
+    height: 70%;
+    border-radius: 0 0 20px 20px;
 }
 
-.InputDireitoCalculadora {
-    width: 100%;
+.textMyDataNovoAmbiente {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 90%;
+    justify-content: center;
+    font-size: 200%;
+    color: #1F4662;
+    height: 3%;
+    padding-bottom: 3%;
 }
 
-.InputCalculadora {
-    display: none;
-    width: 60%;
+.inputsNovoAmbiente {
+
+    outline: none;
+    background-color: #D9D9D9;
     display: flex;
-    margin-bottom: 3%;
-    padding: 5px 8px;
-    font-size: 120%;
-    background: transparent;
-    font-style: italic;
-    color: #EF8A14;
-    border-radius: 10px;
+    width: 30%;
+    height: 30px;
+    margin-left: 80px;
+    padding-top: 1px;
+    border-top: none;
     border-left: none;
     border-right: none;
+    border-bottom: #1F4662 solid 3px;
+}
+
+.line1NovoAmbiente {
+
+    font-size: 150px;
+    display: flex;
+    width: 90%;
+    height: 10%;
+    justify-content: space-around;
+}
+
+.line2NovoAmbiente {
+    padding-top: 3%;
+
+    display: flex;
+    width: 90%;
+    height: 10%;
+    justify-content: space-around;
+}
+
+.line3NovoAmbiente {
+    padding-top: 3%;
+
+    display: flex;
+    width: 90%;
+    height: 10%;
+    justify-content: space-around;
+}
+
+.line4NovoAmbiente {
+    align-items: center;
+    padding-top: 5%;
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+}
+
+.inputsSmallNovoAmbiente {
+    outline: none;
+    background-color: #D9D9D9;
+    display: flex;
+    width: 10%;
+    height: 30px;
+    margin-left: 80px;
+    padding-top: 1px;
     border-top: none;
-    border-bottom: 3px solid #ffffff;
+    border-left: none;
+    border-right: none;
+    border-bottom: #1F4662 solid 3px;
+}
+
+.inputsAverageNovoAmbiente {
+
+    outline: none;
+    background-color: #D9D9D9;
+    display: flex;
+    width: 15%;
+    height: 30px;
+    margin-left: 80px;
+    padding-top: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #1F4662 solid 3px;
+}
+
+.inputsBigNovoAmbiente {
+    font-family: 'Poppins';
+
+    outline: none;
+    background-color: #D9D9D9;
+    display: flex;
+    width: 45%;
+    height: 30px;
+    margin-left: 80px;
+    padding-top: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #1F4662 solid 3px;
 
 }
 
-.InputDireitoCalculadora p {
-    width: 60%;
-    color: #EF8A14;
-    font-size: 100%;
-    font-weight: bold;
-    cursor: pointer;
-    justify-content: left;
-    align-self: center;
-    text-decoration: underline;
+.clickSaveNovoAmbiente {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F4662;
+    display: flex;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
 }
 
-.containerGeralCalculadora button {
-    align-self: center;
-    width: 20%;
-    padding: 4px;
-    margin: 2%;
-    cursor: pointer;
-    font-size: 120%;
-    align-self: center;
-    border-radius: 50px;
-    font-weight: bolder;
-    background-color: #EF8A14;
-    color: #ffffff;
-}
