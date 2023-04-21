@@ -19,7 +19,7 @@ a {
 }
 
 .containerModal {
-    
+
     width: 100vw;
     height: 100vh;
     display: none;
@@ -80,7 +80,7 @@ a {
 }
 
 .loginBtn {
-    cursor:pointer;
+    cursor: pointer;
 
     padding: 7px 25px;
     color: white;
@@ -514,6 +514,13 @@ body {
     background: #ffffff;
 }
 
+
+.tituloQuemSomos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .tituloQuemSomos h3 {
     font-size: 300%;
     font-family: Arial, Helvetica, sans-serif;
@@ -526,47 +533,47 @@ body {
 }
 
 .tituloQuemSomos p {
-    margin: 7%;
-    display: flex;
-    justify-content: center;
     width: 80%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
     font-size: 200%;
     color: #ffffff;
     text-align: center;
+    font-style: italic;
+    margin-bottom: 10%;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
 }
-
 
 .colaboradores {
     display: flex;
-    width: 100%;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 .ceoEsquerda {
-    color: #EF8A14;
     display: flex;
-    align-self: flex-start;
-    width: 50%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 400%;
-    margin-left: 7%;
+    width: 80%;
     border: 50%;
-
+    font-size: 400%;
+    color: #EF8A14;
+    align-self: center;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .ceoDireita {
-    color: #EF8A14;
     display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 400%;
-    margin-left: 7%;
+    width: 80%;
     border: 50%;
+    font-size: 400%;
+    color: #EF8A14;
+    font-style: italic;
+    flex-direction: row-reverse;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.ceoDireita p {
+    align-self: flex-end;
 }
 
 .ceoEsquerda p {
@@ -577,10 +584,14 @@ body {
     color: #ffffff;
 }
 
-
 .cargoCeo {
     display: flex;
+    margin: 2px;
     flex-direction: column;
+}
+
+.cargoCeo p {
+    margin: 0;
 }
 
 .cargoCeo h4 {
@@ -591,113 +602,6 @@ body {
     height: 330.25px;
     border-radius: 3%;
 }
-
-.ceo1 p {
-    color: #ffffff;
-    margin: 7%;
-    flex-direction: column;
-}
-
-.ceo2 {
-    color: #EF8A14;
-    align-self: flex-end;
-    display: flex;
-    width: 75%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 400%;
-}
-
-.cargoCeo2 {
-    display: flex;
-    flex-direction: column;
-}
-
-.cargoCeo2 h4 {
-    margin: 0;
-}
-
-.img2 {
-    width: 330.25px;
-    height: 371.91px;
-}
-
-.ceo2 p {
-    color: #ffffff;
-    margin: 7%;
-    flex-direction: column;
-}
-
-.ceo3 {
-    color: #EF8A14;
-    align-self: flex-end;
-    display: flex;
-    width: 75%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 400%;
-}
-
-.cargoCeo3 {
-    display: flex;
-    flex-direction: column;
-}
-
-.cargoCeo3 h4 {
-    margin: 0;
-}
-
-.img3 {
-    width: 330.25px;
-    height: 371.91px;
-}
-
-.ceo3 p {
-    color: #ffffff;
-    margin: 7%;
-    flex-direction: column;
-}
-
-.ceo4 {
-    color: #EF8A14;
-    align-self: flex-end;
-    display: flex;
-    width: 75%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 400%;
-}
-
-.ceo5 {
-    color: #EF8A14;
-    align-self: flex-end;
-    display: flex;
-    width: 75%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 400%;
-}
-
-.ceo6 {
-    color: #EF8A14;
-    align-self: flex-end;
-    display: flex;
-    width: 75%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 400%;
-}
-
-.ceo7 {
-    color: #EF8A14;
-    align-self: flex-end;
-    display: flex;
-    width: 75%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 400%;
-}
-
 
 /*A A A A A A COMEÇO CALCULADORA A A A A A A*/
 ::-webkit-scrollbar {
@@ -1804,4 +1708,3 @@ input::placeholder {
     height: 40px;
     border-radius: 10px;
 }
-
