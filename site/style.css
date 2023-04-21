@@ -584,15 +584,65 @@ body {
     text-align: center;
 }
 
-.ceo1 {
-    color: #EF8A14;
-    align-self: flex-end;
+
+.colaboradores {
     display: flex;
-    width: 75%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.ceoEsquerda {
+    color: #EF8A14;
+    display: flex;
+    align-self: flex-start;
+    width: 50%;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: 400%;
-    
+    margin-left: 7%;
+    border: 50%;
+
+}
+
+.ceoDireita {
+    color: #EF8A14;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 400%;
+    margin-left: 7%;
+    border: 50%;
+}
+
+.ceoEsquerda p {
+    color: #ffffff;
+}
+
+.ceoDireita p {
+    color: #ffffff;
+}
+
+
+.cargoCeo {
+    display: flex;
+    flex-direction: column;
+}
+
+.cargoCeo h4 {
+    margin: 0;
+}
+
+.imgQuemSomos {
+    height: 330.25px;
+    border-radius: 3%;
+}
+
+.ceo1 p {
+    color: #ffffff;
+    margin: 7%;
+    flex-direction: column;
 }
 
 .ceo2 {
@@ -605,6 +655,26 @@ body {
     font-size: 400%;
 }
 
+.cargoCeo2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.cargoCeo2 h4 {
+    margin: 0;
+}
+
+.img2 {
+    width: 330.25px;
+    height: 371.91px;
+}
+
+.ceo2 p {
+    color: #ffffff;
+    margin: 7%;
+    flex-direction: column;
+}
+
 .ceo3 {
     color: #EF8A14;
     align-self: flex-end;
@@ -613,6 +683,26 @@ body {
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: 400%;
+}
+
+.cargoCeo3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.cargoCeo3 h4 {
+    margin: 0;
+}
+
+.img3 {
+    width: 330.25px;
+    height: 371.91px;
+}
+
+.ceo3 p {
+    color: #ffffff;
+    margin: 7%;
+    flex-direction: column;
 }
 
 .ceo4 {

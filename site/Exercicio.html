@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite quantos takes serão simulados: <input id="inp_takes"> <br>
+    Digite o minímo padrões 2 aparecem: <input id="inp_min_padrao_2"> <br>
+    <button onclick="repeticoes_padroes_take()">Simular</button>
+
+    <div id="div_musica"></div>
+</body>
+
+</html>
+
+<script>
+
+    function repeticoes_padroes_take() {
+        div_musica.innerHTML = "";
+        var takes = Number(inp_takes.value);
+        var min_padroes_2 = Number(inp_min_padrao_2.value);
+        var cor = "";
+        var soma_nah_padrao1 = 0;
+        var soma_nah_padrao2 = 0;
+
+        for (var contador = 1; contador <= takes; contador++) {
+            var nah = "";
+            var nah_heyjude = "";
+            
+            div_musica.innerHTML += `<b> Take:  ${contador} </b> <br> <br>`
+            div_musica.innerHTML += `Hey, Jude, don't make it bad <br>
+                Take a sad song and make it better <br>
+                Remember to let her into your heart <br>
+                Then you can start to make it better <br>
+                Hey, Jude, don't be afraid <br>
+                You were made to go out and get her <br>
+                The minute you let her under your skin <br>
+                Then you begin to make it better <br>
+                And anytime you feel the pain, Hey, Jude, refrain <br>
+                Don't carry the world upon your shoulders <br>
+                For well you know that it's a fool <br>
+                Who plays it cool <br>
+                By making his world a little colder <br> <br>`
+
+            if (contador % 2 == 0) {
+                cor = `blue`
+            } else {
+                cor = `red`
+            }
+
+            for (var contador_nah = 1; contador_nah <= 9; contador_nah++) {
+                if (contador_nah == 1) {
+                    nah += `Nah, `
+                } else if (contador_nah > 1 && contador_nah < 9) {
+                    nah += `nah, `
+                } else {
+                    nah += `nah, <br> <br>`
+                }
+                soma_nah_padrao1++
+            }
+
+            div_musica.innerHTML += `<span style="color: ${cor}; font-weight: 800;">${nah}</span>`
+            div_musica.innerHTML += `Hey, Jude, don't let me down <br>
+                You have found her, now go and get her <br>
+                Remember to let her into your heart <br>
+                Then you can start to make it better <br>
+                So let it out and let it in, Hey, Jude, begin <br>
+                You're waiting for someone to perform with <br>
+                And don't you know that it's just you, Hey, Jude, you'll do <br>
+                The movement you need is on your shoulder <br> <br>`
+
+            div_musica.innerHTML += `<span style="color: ${cor}; font-weight: 800;">${nah}</span>`
+            div_musica.innerHTML += `Hey, Jude, don't make it bad <br>
+                Take a sad song and make it better <br>
+                Remember to let her under your skin <br>
+                Then you'll begin to make it better, better, better, better, better... oh! <br> <br>`
+
+            for (var contador_heyjude = 1; contador_heyjude <= min_padroes_2 + contador; contador_heyjude++) {
+                for (var contador_nah_heyjude = 1; contador_nah_heyjude <= 10; contador_nah_heyjude++) {
+                    if (contador_nah_heyjude == 1) {
+                        nah_heyjude += `Nah, `
+                        soma_nah_padrao2++
+                    } else if (contador_nah_heyjude > 1 && contador_nah_heyjude < 9) {
+                        nah_heyjude += `nah, `
+                        soma_nah_padrao2++
+                    } else if (contador_nah_heyjude == 9) {
+                        nah_heyjude += `nah, <br>`
+                        soma_nah_padrao2++
+                    } else {
+                        nah_heyjude += `Hey, Jude <br>`
+                    }
+                }
+            }
+            div_musica.innerHTML += `<span style="color: green; font-weight: 800;">${nah_heyjude}</span> <br>`
+        }
+        var soma_qtd_nah_total = ((soma_nah_padrao1 * 2) + soma_nah_padrao2);
+        var media_nah_take = soma_qtd_nah_total / takes;
+
+        div_musica.innerHTML += `<b>Quantidade total de Takes: ${takes} <br></b>`;
+        div_musica.innerHTML += `<b>Média de "Nah" por Take: ${media_nah_take} <br></b>`
+        div_musica.innerHTML += `<b>Quantidade total de "Nah" somada em todos os Takes: ${soma_qtd_nah_total} <br> <br></b>`
+
+        if (soma_qtd_nah_total >= 0 && soma_qtd_nah_total <= 487) {
+            div_musica.innerHTML += `<img src="assets/beatles_felizes.png" width="350px" height="200px">`;
+        } else if (soma_qtd_nah_total >= 648 && soma_qtd_nah_total <= 810) {
+            div_musica.innerHTML += `<img src="assets/beatles_medio.jpeg" width="350px" height="200px">`;
+        } else {
+            div_musica.innerHTML += `<img src="assets/beatles_desanimados.jpg" width="350px" height="200px">`;
+        }
+    }
+
+
+
+</script>
