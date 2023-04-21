@@ -35,10 +35,13 @@
 @keyframes escurecerFundo {
     from {
         opacity: 1;
+        background-color: #5b6284;
     }
 
     to {
         opacity: 0.1;
+        background-color: #000000;
+
     }
 }
 
@@ -51,3 +54,4 @@
         opacity: 1;
     }
 }
+
