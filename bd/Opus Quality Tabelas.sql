@@ -123,3 +123,31 @@ insert into Registros values
 (null, '500', '2023-08-12 05:15:02', '5'),
 (null, '750', '2023-07-12 04:15:02', '6');
 
+
+
+select * from Empresa;
+select * from usuario;
+select * from setor;
+select * from sensores;
+select * from registros;
+select * from usuario join empresa on fkempresa = idempresa;
+select * from usuario join empresa on fkempresa = idempresa where nomeFantasia = 'Sptech';
+select * from setor join empresa on fkempresa = idempresa;
+select * from setor join empresa on fkempresa = idempresa where idSetor = '3';      
+select * from Sensores join setor on fkSetor = idsetor;
+select * from Sensores join setor on fkSetor = idsetor where tipo = 'luminosidade';
+select * from registros join sensores on fksensores = idsensores;
+select * from registros join sensores on fksensores = idsensores where tipo = 'temperatura';
+
+
+
+select usuario.nome as Nome_Usuario,
+       Empresa.nomeFantasia as Nome_Empresa,
+       setor.apelido as Local_Empresa,
+       sensores.tipo as Modelo,
+       registros.valor as Valor
+       from usuario join Empresa on usuario.fkEmpresa = Empresa.idEmpresa join setor
+       on setor.fkempresa = empresa.idempresa 
+       join sensores on sensores.fksetor = setor.idsetor
+       join registros on registros.fksensores = sensores.idsensores;
+       
