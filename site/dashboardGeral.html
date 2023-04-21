@@ -38,15 +38,34 @@
             <h4>Qualidade Geral do Prédio</h4>
          </div>
          <div class="cardIndex">
-            sjdbasd
+            
          </div>
          <div class="horizontalLine"></div>
          <div class="Generalmonitoring">
             <h4>Monitoramento Geral</h4>
          </div>
          <div class="sensors">
-            <div class="sensor1">sadasdsa</div>
-            <div class="sensor2">sadasdas</div>
+            <div class="sensor1">
+
+               <div class="leftGrafico">
+               <div class="textPorTemp"><h3>Temperatura</h3></div> 
+               <div class="porcTemp"><h1>95%</h1></div>
+               </div>
+
+               <div class="rightGrafico">
+               <div class="graficoTemp"><canvas id="graficoLDR5"></canvas></div>
+               </div>
+               </div>
+            <div class="sensor2">
+
+            <div class="leftGrafico">
+            <div class="textPorLum"><h3>Luminosidade</h3></div>
+            <div class="porcLum"><h1>98%</h1></div>
+            </div>
+            <div class="rightGrafico">
+            <div class="graficoLum"><canvas id="graficoLM35"></canvas></div>
+            </div>
+            </div>
          </div>
     </div>
 
@@ -55,7 +74,7 @@
             <h2>Taxa de Absenteísmo Geral</h2>
          </div>
          <div class="absenteeismGraph">
-            <img src="img/pngaaa 1.png" alt="">
+            <canvas id="graficoAbsenteismo"></canvas>
          </div>
          <div class="overallPercentage">
             <div class="Percentage1">50%</div>
@@ -100,6 +119,143 @@
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-</body>
-</html>
+<script>
+
+
+    const ctx = document.getElementById('graficoAbsenteismo');
+
+    const graficoAbsenteismo = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        datasets: [
+          {
+            data: [8, 92],
+            borderWidth: 1
+          }]
+      },
+      options: {
+         Plugins: {
+      legend: {
+         labels: ['Ausência (%)', 'Presença (%) ']
+      },
+      title: {
+         display: false,
+      }
+    },
+    scales: {
+      display: false,
+    }
+  }
+});
+  
+
+
+
+    const ctx1 = document.getElementById('graficoLDR5');
+
+const graficoTemperatura = new Chart(ctx1, {
+  type: 'doughnut',
+  data: { 
+    datasets: [{
+      labels: 'Temperatura (ºC))',
+      data: [12, 19],
+      borderWidth: 1
+    },
+]
+  },
+  options: {
+   Plugins: {
+      legend: {
+        display: false
+      },
+      title: {
+         display: false,
+      }
+    },
+    scales: {
+      display: false,
+    }
+  }
+});
+
+
+
+
+
+const ctx2 = document.getElementById('graficoLM35');
+
+const graficoLuminosidade = new Chart(ctx2, {
+  type: 'doughnut',
+  data: {
+    datasets: [{
+      labels: 'Luminosidade (Lux)',
+      data: [12, 19],
+      borderWidth: 1
+    },
+    ]
+  },
+  options: {
+   Plugins: {
+      legend: {
+        display: false
+      },
+      title: {
+         display: false,
+      }
+    },
+    scales: {
+      display: false,
+    }
+  }
+});
+
+
+
+  
+    var paginacao = {};
+    var tempo = {};
+  
+    function obterDados(grafico, endpoint) {
+      var http = new XMLHttpRequest();
+      http.open('GET', 'http://localhost:3300/sensores/' + endpoint, false);
+      http.send(null);
+      var valores = JSON.parse(http.responseText);
+      if (paginacao[endpoint] == null) {
+        paginacao[endpoint] = 0;
+      }
+      if (tempo[endpoint] == null) {
+        tempo[endpoint] = 0;
+      }
+      // Exibir à partir do último elemento exibido anteriormente
+      var ultimaPaginacao = paginacao[endpoint];
+      paginacao[endpoint] = valores.length;
+      var valores = valores.slice(ultimaPaginacao);
+      valores.forEach((valor) => {
+        //Máximo de 60 itens exibidos no gráfico
+        if (grafico.data.labels.length == 10 && grafico.data.datasets[0].data.length == 10) {
+          grafico.data.labels.shift();
+          grafico.data.datasets[0].data.shift();
+        }
+  
+        grafico.data.labels.push(tempo[endpoint]++);
+        grafico.data.datasets[0].data.push(parseFloat(valor));
+        grafico.update();
+      })
+    }
+  
+  
+  
+  
+  
+  
+//     setInterval(() => {
+
+// obterDados(graficoLuminosidade, 'luminosidade');
+// obterDados(graficoTemperatura, 'lm35/temperatura');
+
+// }, 2000);
+
+
+</script>
