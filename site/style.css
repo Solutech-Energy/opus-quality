@@ -55,7 +55,7 @@ a {
 
 .logoContainer img {
     display: flex;
-    width: 30%;
+    width: 40%;
 }
 
 .navbarLista {
@@ -227,6 +227,8 @@ a {
     line-height: 120%;
 }
 
+
+/* Começo de  Quem Somos */
 .containerVerQuemSomos {
     display: flex;
     justify-content: end;
@@ -236,45 +238,62 @@ a {
 
 
 
-/* começando CLIENTES*/
-.headerClientes {
+/* Começando CLIENTES*/
+
+.textInicialDepoimentos h3 {
     display: flex;
     justify-content: center;
     color: #FFFFFF;
-    align-items: center;
-}
-
-.headerClientes h3 {
-    display: flex;
     width: 100%;
     font-size: 250%;
     font-weight: 800%;
-
 }
 
-.containerClientes p {
+.boxDepoimento{
     display: flex;
-    /* flex-direction: column;
-    align-items: end;
-    justify-content: center; */
-    border-radius: 24px;    
-    width: 100%;
+    justify-content: center;
+    margin: auto;   
+    margin-top: 6%;
+    width: 70%;
+    color: #FFFFFF;
+    border-radius: 15px;    
     background: rgba(106, 193, 255, 0.6);
     box-shadow: 12px 12px 18px rgba(47, 74, 102, 0.35);
     backdrop-filter: blur(5px);
 }
 
-
-
-.containerClientes1 p img { 
+.imgDepoimento1 { 
+    align-items: center; 
+    justify-content: left;
     display: flex;
-    align-self: start;
-    margin: 5% 5%;
-    width: 50%;
-    height: 5%;
+    width: 100%;
+    height: 100%;
 }
 
-.containerClientes p span {
+.imgDepoimento1 img{
+    display: flex;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+
+.boxClientes {
+    background-color: black;
+    margin: auto;
+    margin-top: 8%;
+    display: flex;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+.containerClientes{
     display: flex;
     font-family: 'Montserrat';
     font-style: italic;
