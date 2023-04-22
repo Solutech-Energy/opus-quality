@@ -55,3 +55,18 @@
     }
 }
 
+@keyframes animacaoBotao {
+    0% {
+        background: rgba(20, 122, 239, 0.337);
+    }
+
+    100% {
+        background: rgb(20, 122, 239);
+    }
+}
+
+.btnFazerParte:hover {
+
+    animation: animacaoBotao .3s normal;
+    background: rgb(20, 122, 239);
+}

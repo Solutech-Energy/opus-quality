@@ -125,18 +125,18 @@ a {
 
 .containerAumentando .btnFazerParte {
     padding: 3% 3%;
-    background: #147aef56;
+    background: rgba(20, 122, 239, 0.337);
     border: 4px solid rgba(20, 122, 239, 0.338);
     border-radius: 10px;
     font-weight: 700;
-    font-size: 70%
+    font-size: 70%;
 }
 
 .AumentandoImagens {
     display: flex;
     width: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .imagemBaixa {
@@ -1171,6 +1171,7 @@ input::placeholder {
     justify-content: center;
     align-items: center;
 }
+
 .textPorTemp {
     width: 100%;
     height: 50%;
@@ -1179,6 +1180,7 @@ input::placeholder {
     align-items: center;
 
 }
+
 .textPorLum {
     width: 100%;
     height: 50%;
@@ -1211,6 +1213,7 @@ input::placeholder {
     justify-content: center;
     align-items: center;
 }
+
 .graficoLum {
     width: 100%;
     height: 100%;
