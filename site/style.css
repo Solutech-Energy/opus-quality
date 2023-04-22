@@ -19,7 +19,6 @@ a {
 }
 
 .containerModal {
-    
     width: 100vw;
     height: 100vh;
     display: none;
@@ -60,7 +59,9 @@ a {
 
 .logoContainer img {
     display: flex;
+    width: 40%;
     width: 100%;
+
 }
 
 .navbarLista {
@@ -80,7 +81,7 @@ a {
 }
 
 .loginBtn {
-    cursor:pointer;
+    cursor: pointer;
 
     padding: 7px 25px;
     color: white;
@@ -234,6 +235,8 @@ a {
     line-height: 120%;
 }
 
+
+/* Começo de  Quem Somos */
 .containerVerQuemSomos {
     display: flex;
     justify-content: end;
@@ -243,27 +246,25 @@ a {
 
 
 
-/* começando CLIENTES*/
-.headerClientes {
+/* Começando CLIENTES*/
+
+.textInicialDepoimentos h3 {
     display: flex;
     justify-content: center;
     color: #FFFFFF;
-    align-items: center;
-}
-
-.headerClientes h3 {
-    display: flex;
     width: 100%;
     font-size: 250%;
     font-weight: 800%;
-
 }
 
-.containerClientes p {
+.boxDepoimento {
     display: flex;
-    /* flex-direction: column;
-    align-items: end;
-    justify-content: center; */
+    justify-content: center;
+    margin: auto;
+    margin-top: 6%;
+    width: 70%;
+    color: #FFFFFF;
+    border-radius: 15px;
     border-radius: 24px;
     width: 100%;
     background: rgba(106, 193, 255, 0.6);
@@ -271,17 +272,41 @@ a {
     backdrop-filter: blur(5px);
 }
 
-
+.imgDepoimento1 {
+    align-items: center;
+    justify-content: left;
+}
 
 .containerClientes1 p img {
     display: flex;
-    align-self: start;
-    margin: 5% 5%;
-    width: 50%;
-    height: 5%;
+    width: 100%;
+    height: 100%;
 }
 
-.containerClientes p span {
+.imgDepoimento1 img {
+    display: flex;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+
+.boxClientes {
+    background-color: black;
+    margin: auto;
+    margin-top: 8%;
+    display: flex;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+.containerClientes {
     display: flex;
     font-family: 'Montserrat';
     font-style: italic;
@@ -389,10 +414,7 @@ a {
 
 
 
-
-
 /* QUEM SOMOS */
-
 
 body {
     margin: 0;
@@ -401,12 +423,23 @@ body {
     font-family: poppins;
 }
 
+.tituloQuemSomosPrincipal {
+    width: 100%;
+    display: flex;
+    font-size: 300%;
+    font-weight: 900%;
+    color: #ffffff;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .quemSomosContainer {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-
 
 .solucaoQuemSomosTexto1 {
     display: flex;
@@ -432,17 +465,7 @@ body {
     justify-content: start;
 }
 
-.titulo02 {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
 
-.quemSomosContainer h3 {
-    font-size: 300%;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-}
 
 .quemSomosContainer h3 span {
     color: #EF8A14;
@@ -514,6 +537,12 @@ body {
     background: #ffffff;
 }
 
+.tituloQuemSomos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .tituloQuemSomos h3 {
     font-size: 300%;
     font-family: Arial, Helvetica, sans-serif;
@@ -526,87 +555,82 @@ body {
 }
 
 .tituloQuemSomos p {
-    margin: 7%;
-    display: flex;
-    justify-content: center;
     width: 80%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
     font-size: 200%;
     color: #ffffff;
     text-align: center;
+    font-style: italic;
+    margin-bottom: 10%;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.ceo1 {
-    color: #EF8A14;
-    align-self: flex-end;
+.colaboradores {
     display: flex;
-    width: 75%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 400%;
-    
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
-.ceo2 {
-    color: #EF8A14;
-    align-self: flex-end;
+.ceoEsquerda {
     display: flex;
-    width: 75%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
+    width: 80%;
+    border: 50%;
     font-size: 400%;
+    color: #EF8A14;
+    align-self: center;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.ceo3 {
-    color: #EF8A14;
-    align-self: flex-end;
+.ceoDireita {
     display: flex;
-    width: 75%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
+    width: 80%;
+    border: 50%;
     font-size: 400%;
+    color: #EF8A14;
+    font-style: italic;
+    flex-direction: row-reverse;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.ceo4 {
-    color: #EF8A14;
+.ceoDireita p {
     align-self: flex-end;
-    display: flex;
-    width: 75%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 400%;
 }
 
-.ceo5 {
-    color: #EF8A14;
-    align-self: flex-end;
-    display: flex;
-    width: 75%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 400%;
+.ceoEsquerda p {
+    color: #ffffff;
 }
 
-.ceo6 {
-    color: #EF8A14;
-    align-self: flex-end;
-    display: flex;
-    width: 75%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 400%;
+.ceoDireita p {
+    color: #ffffff;
+    padding: 5px;
 }
 
-.ceo7 {
-    color: #EF8A14;
-    align-self: flex-end;
+.cargoCeo {
     display: flex;
-    width: 75%;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-size: 400%;
+    margin: 2px;
+    flex-direction: column;
 }
+
+.cargoCeo p {
+    margin: 0;
+}
+
+.cargoCeo h4 {
+    margin: 0;
+    padding: 5px;
+}
+
+.imgQuemSomos {
+    height: 330.25px;
+    border-radius: 3%;
+}
+
+.espacoFooter {
+    margin: 10px;
+}
+
 
 
 /*A A A A A A COMEÇO CALCULADORA A A A A A A*/
@@ -1608,7 +1632,6 @@ input::placeholder {
     border-left: none;
     border-right: none;
     border-bottom: #1F4662 solid 3px;
-
 }
 
 .clickSave {
@@ -1628,8 +1651,6 @@ input::placeholder {
 
 
 /* NOVO AMBIENTE */
-
-
 
 .cardNovoAmbiente {
     font-family: 'Poppins';
@@ -1789,4 +1810,3 @@ input::placeholder {
     height: 40px;
     border-radius: 10px;
 }
-
