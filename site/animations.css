@@ -70,3 +70,40 @@
     animation: animacaoBotao .3s normal;
     background: rgb(20, 122, 239);
 }
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        margin: 0% 5%;
+    }
+
+    to {
+        opacity: 1;
+        margin: 15% 5%;
+
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+
+
+    }
+}
+
+@keyframes balanco {
+    0% {
+        transform: translateY(-2px);
+    }
+
+
+    100% {
+        transform: translateY(3px);
+    }
+}

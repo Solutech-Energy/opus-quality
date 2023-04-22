@@ -139,8 +139,22 @@ a {
     justify-content: space-evenly;
 }
 
+.imagemAum {
+    animation: balanco 2.8s ease-in-out alternate-reverse infinite;
+}
+
+.imagemAum2 {
+    animation: balanco 3s ease-in-out alternate-reverse infinite;
+}
+
 .imagemBaixa {
     margin: 15% 5%;
+    animation: balanco 1.5s ease-in-out alternate-reverse infinite;
+}
+
+.imagemBaixa2 {
+    margin: 15% 5%;
+    animation: balanco 2.5s ease-in-out alternate-reverse infinite;
 }
 
 /*começo do Ganha-Ganha*/
