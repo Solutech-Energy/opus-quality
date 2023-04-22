@@ -36,13 +36,29 @@
    <div class="bodyDashboard">
       <div class="leftDash">
          <div class="textCompany">
-            <h2>Itaú Unibanco - 29 De Julho / E2709</h2>
+            <h2>SPtech - 29 De Julho / E2709</h2>
          </div>
          <div class="generalQuality">
             <h4>Qualidade Geral do Prédio</h4>
          </div>
          <div class="cardIndex">
-            
+             <div class="leftCard" class="textLeft"><span>Seus índices estão<h2 style="color: green;"> Ótimos</span></h2><span>
+             <div><span>Salas irregulares</span><h2 style="color: green;">0</h2></div>
+            </div>
+             <div class="rightCard">
+               <img src="img/imgPositivos.png" alt="" width="70%" height="70%">
+             </div>
+
+             <!-- <div class="cardIndex">
+               <div class="leftCard" class="textLeft"><span>Seus índices estão<h2 style="color: red;"> Ruins</span></h2><span>
+               <div><span>Salas irregulares</span><h2 style="color: red;">5</h2></div>
+              </div>
+               <div class="rightCard">
+                   <img src="img/imgNegativos.png" alt="" width="70%" height="70%"> 
+               </div> -->
+
+
+
          </div>
          <div class="horizontalLine"></div>
          <div class="Generalmonitoring">
@@ -53,7 +69,7 @@
 
                <div class="leftGrafico">
                <div class="textPorTemp"><h3>Temperatura</h3></div> 
-               <div class="porcTemp"><h1>95%</h1></div>
+               <div class="porcTemp"><h1>98%</h1></div>
                </div>
 
                <div class="rightGrafico">
@@ -64,7 +80,7 @@
 
             <div class="leftGrafico">
             <div class="textPorLum"><h3>Luminosidade</h3></div>
-            <div class="porcLum"><h1>98%</h1></div>
+            <div class="porcLum"><h1>95%</h1></div>
             </div>
             <div class="rightGrafico">
             <div class="graficoLum"><canvas id="graficoLM35"></canvas></div>
@@ -81,8 +97,14 @@
             <canvas id="graficoAbsenteismo"></canvas>
          </div>
          <div class="overallPercentage">
-            <div class="Percentage1">50%</div>
-            <div class="Percentage2">50%</div>
+            <div class="PercentageLeft">
+            <div class="Percentage1">92%</div>
+            <div class="textBottomPercentage1">Presença</div>
+            </div>
+            <div class="PercentageRight">
+            <div class="Percentage2">8%</div>
+            <div class="textBottomPercentage2">Ausência</div>
+           </div>
          </div>
          <div class="textEnvironments">
             <h3>Ambientes</h3>
@@ -91,28 +113,38 @@
 
          <div class="environmentisGeneral ">
             <div class="environmentisLine1">
-               <div class="environments1"><a href="dashboard.html">Sala de Reunioes</div></a>
-               <div class="environments1"><a href="dashboard.html">svdsvdsv</div></a>
+               <div class="environments1">
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 1º Andar</div></a></div>
+               <div class="environments1">
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a></div>
             </div>
 
             <div class="environmentisLine2 ">
-               <div class="environments1"><a href="dashboard.html">sdvsd</div></a>
-               <div class="environments1"><a href="dashboard.html">svdsvdsv</div></a>
+               <div class="environments1">
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 2º Andar</div></a></div>
+               <div class="environments1">
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a></div>
             </div>
 
             <div class="environmentisLine3 ">
-               <div class="environments1"><a href="dashboard.html">sdvsd</div></a>
-               <div class="environments1"><a href="dashboard.html">svdsvdsv</div></a>
+               <div class="environments1">
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 3º Andar</div></a></div>
+               <div class="environments1">
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a></div>
             </div>
 
             <div class="environmentisLine4 ">
-               <div class="environments1"><a href="dashboard.html">sdvsd</div></a>
-               <div class="environments1"><a href="dashboard.html">svdsvdsv</div></a>
+               <div class="environments1">
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 4º Andar</div></a></div>
+               <div class="environments1">
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a></div>
             </div>
 
             <div class="environmentisLine5 ">
-               <div class="environments1"><a href="dashboard.html">sdvsd</div></a>
-               <div class="environments1"><a href="dashboard.html">svdsvdsv</div></a>
+               <div class="environments1">
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 5º Andar</div></a></div>
+               <div class="environments1">
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a></div>
             </div>
 
 
@@ -125,11 +157,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<<<<<<< HEAD
-</body>
-
-</html>
-=======
 <script>
 
 
@@ -169,7 +196,7 @@ const graficoTemperatura = new Chart(ctx1, {
   data: { 
     datasets: [{
       labels: 'Temperatura (ºC))',
-      data: [12, 19],
+      data: [97, 3],
       borderWidth: 1
     },
 ]
@@ -198,9 +225,10 @@ const ctx2 = document.getElementById('graficoLM35');
 const graficoLuminosidade = new Chart(ctx2, {
   type: 'doughnut',
   data: {
+
     datasets: [{
       labels: 'Luminosidade (Lux)',
-      data: [12, 19],
+      data: [92, 8],
       borderWidth: 1
     },
     ]
@@ -268,4 +296,3 @@ const graficoLuminosidade = new Chart(ctx2, {
 
 
 </script>
->>>>>>> 9f99750305d775ad8c002409e1074635797bfbf8

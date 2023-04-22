@@ -18,6 +18,19 @@ a {
     font-family: 'Poppins';
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #070D25;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #EF8A14;
+    border-radius: 50px;
+}
+
 .containerModal {
 
     width: 100vw;
@@ -137,7 +150,7 @@ a {
     display: flex;
     width: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .imagemBaixa {
@@ -249,6 +262,11 @@ a {
 
 /* Começando CLIENTES*/
 
+.tituloQuemSomosPrincipal{
+    display: flex;
+    justify-content: center;
+
+}
 .textInicialDepoimentos h3 {
     display: flex;
     justify-content: center;
@@ -444,6 +462,7 @@ body {
 }
 
 .solucaoQuemSomosTexto1 {
+    
     display: flex;
     width: 80%;
     justify-content: space-between;
@@ -515,6 +534,8 @@ body {
 }
 
 .solucaoQuemSomos {
+    display: flex;
+    margin-top: 3%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -579,6 +600,7 @@ body {
 }
 
 .colaboradores {
+    padding-bottom: 4%;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -634,23 +656,13 @@ body {
 }
 
 .imgQuemSomos {
+    margin-left: 1%;
     height: 330.25px;
     border-radius: 3%;
 }
 
 /*A A A A A A COMEÇO CALCULADORA A A A A A A*/
-::-webkit-scrollbar {
-    width: 8px;
-}
 
-::-webkit-scrollbar-track {
-    background-color: #0F1631;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #EF8A14;
-    border-radius: 20px;
-}
 
 .containerGeralCalculadora {
     background-color: #0F1631;
@@ -765,16 +777,17 @@ body {
     font-size: 120%;
     font-style: italic;
     margin-bottom: 3%;
-    color: #EF8A14;
+    color: #ffffff;
     border-bottom: 3px solid #ffffff;
 }
 
-input::placeholder {
+/* input::placeholder {
     cursor: text;
-    color: #0F1631;
+    color: #ffffff;
     font-size: 100%;
     font-family: Poppins;
-}
+} */
+
 
 .InputDireitoCalculadora p {
     width: 60%;
@@ -836,19 +849,16 @@ input::placeholder {
     font-size: 100%;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
 }
-
 .headerContainerDashboard {
     display: flex;
     width: 100%;
     padding: 0 1%;
     justify-content: space-between;
 }
-
 .logoContainer img {
     display: flex;
     width: 30%;
 }
-
 .navbarLista {
     display: flex;
     width: 100%;
@@ -856,7 +866,6 @@ input::placeholder {
     list-style: none;
     justify-content: end;
 }
-
 .navbarLista ul,
 .navbarLista li a {
     padding: 5px 10px;
@@ -865,7 +874,6 @@ input::placeholder {
     font-weight: 800;
     text-decoration: none;
 }
-
 .loginBtnDashboard {
     padding: 7px 25px;
     color: white;
@@ -874,7 +882,6 @@ input::placeholder {
     text-decoration: none;
     background-color: #EF8A14;
 }
-
 .imgUserDashboard {
     justify-content: center;
     align-items: center;
@@ -886,7 +893,6 @@ input::placeholder {
     background-color: #D9D9D9;
     border-radius: 10px;
 }
-
 .textDashboard {
     color: white;
     background-color: #101A41;
@@ -897,12 +903,9 @@ input::placeholder {
     height: 50%;
     padding-top: 20px;
 }
-
 .Graficos {
     background-color: #101A41;
-
     position: fixed;
-
     align-items: center;
     width: 100%;
     height: 100%;
@@ -910,87 +913,91 @@ input::placeholder {
     flex-direction: row;
     display: flex;
 }
-
-.left {
+.containerGraphics {
+    background-color: #101A41;
     display: flex;
-    align-items: end;
-    justify-content: end;
+    width: 100%;
+    height: 100%;
+}
+.leftGraphic {
     flex-direction: column;
-    width: 65%;
+    display: flex;
+    width: 70%;
     height: 100%;
-}
+    padding-top: 1%;
 
-.graphicDescription {
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: right;
-    width: 60%;
-    height: 100%;
-    color: white;
 }
-
 .graphicDescriptionLDR5 {
-    padding-bottom: 100px;
-    flex-direction: column;
     display: flex;
     width: 100%;
     height: 50%;
+    color: white;
+    padding-left: 4%;
 }
-
 .graphicDescriptionLM35 {
-    flex-direction: column;
     display: flex;
     width: 100%;
     height: 50%;
-}
+    color: white;
+    padding-left: 4%;
 
+}
+.textLeft1 {
+    flex-direction: column;
+    display: flex;
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 20%;
+
+}
+.textLeft2 {
+    flex-direction: column;
+    display: flex;
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 20%;
+
+
+}
 .cardGraficoLDR5 {
 
     width: 100%;
-    height: 50%;
+    height: 100%;
     display: flex;
     padding-top: 20px;
     background-color: white;
-    width: 450px;
-    height: 200px;
+    width: 550px;
+    height: 250px;
     border-radius: 15px;
 }
-
 .cardGraficoLM35 {
     width: 100%;
-    height: 50%;
+    height: 100%;
     margin-top: 20px;
     display: flex;
-    padding-top: 50px;
+    padding-top:20px;
     background-color: white;
-    width: 450px;
-    height: 200px;
+    width: 550px;
+    height: 250px;
     border-radius: 15px;
-}
-
+} 
 .right {
-    padding-top: 10px;
+    margin-left: 5%;
     flex-direction: column;
     display: flex;
-    width: 35%;
+    width: 50%;
 }
-
 .plantasala {
-    margin-right: 50px;
-    margin-bottom: 20px;
-    flex-direction: row;
+    margin-top: 2.5%;
     width: 100%;
-    height: 30%;
+    height: 55%;
 }
-
-#linhaVertical {
-    margin-right: 70px;
-    display: flex;
-    margin-left: 50px;
-    height: 585px;
+.linhaVertical {
+    margin-left: 7%;
+    width: 1%;
+    height: 580px;
     border-left: 4px solid #EF8A14;
 }
-
 .tableSensors {
     display: flex;
     background-color: white;
@@ -999,7 +1006,6 @@ input::placeholder {
     border-radius: 15px;
 
 }
-
 .clickGraphic {
     display: flex;
     background-color: #EF8A14;
@@ -1026,14 +1032,12 @@ input::placeholder {
     font-size: 100%;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
 }
-
 .headerContainerDashboardGeneral {
     display: flex;
     width: 100%;
     padding: 0 1%;
     justify-content: space-between;
 }
-
 .loginBtnDashboard {
     padding: 7px 25px;
     color: white;
@@ -1042,7 +1046,6 @@ input::placeholder {
     text-decoration: none;
     background-color: #EF8A14;
 }
-
 .imgUserDashboardGeneral {
     justify-content: center;
     align-items: center;
@@ -1054,7 +1057,6 @@ input::placeholder {
     background-color: #D9D9D9;
     border-radius: 10px;
 }
-
 .bodyDashboard {
     position: fixed;
 
@@ -1062,7 +1064,6 @@ input::placeholder {
     width: 100%;
     height: 100%;
 }
-
 .rightDash {
     background-color: #0F1631;
     overflow-y: scroll;
@@ -1072,47 +1073,57 @@ input::placeholder {
     width: 35%;
     color: #D9D9D9;
 }
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: #0F1631;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #1F4662;
-    border-radius: 20px;
-}
-
 .leftDash {
     background-color: #101A41;
     color: #D9D9D9;
     width: 65%;
     height: 100%;
 }
-
 .textCompany {
     width: 100%;
     height: 5%;
     margin-left: 5%;
 }
-
 .generalQuality {
     width: 100%;
     height: 8%;
     margin-left: 10%;
 }
-
 .cardIndex {
+font-size: 150%;
+    display: flex;
     background-color: #1F4662;
     margin-left: 10%;
     width: 60%;
     height: 40vh;
     border-radius: 10px;
 }
+.leftCard {
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    width: 50%;
+    padding-left: 10%;
+}
+.textLeft {
+    flex-direction: column;
+    display: flex;
+    height: 50%;
+    width: 100%;
+    padding-left: 10%;
+    align-items: center;
+}
+.rightCard {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 50%;
+    padding-left: 10%;
 
+
+}
 .horizontalLine {
     display: flex;
     justify-content: center;
@@ -1123,91 +1134,188 @@ input::placeholder {
     height: 1%;
     margin-left: 3%;
 }
-
 .Generalmonitoring {
     width: 95%;
     margin-left: 5%;
     height: auto;
 }
-
 .sensors {
     margin-bottom: 10%;
     background-color: #101A41;
     display: flex;
     width: 100%;
 }
-
 .sensor1 {
     background-color: #BE1CA4;
     margin-left: 5%;
     width: 30%;
     height: 15vh;
     border-radius: 10px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    padding-bottom: 1%;
 }
-
 .sensor2 {
     background-color: #BE871C;
     margin-left: 5%;
     width: 30%;
     height: 15vh;
     border-radius: 10px;
-}
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    padding-bottom: 1%;
 
+}
+.leftGrafico {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.rightGrafico {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textPorTemp {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.textPorLum {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.porcTemp {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.porcLum {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.graficoTemp {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.graficoLum {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .textAbsenteeism {
     display: flex;
     width: 100%;
     height: 2%;
     justify-content: center;
 }
-
 .absenteeismGraph {
-    padding-top: 18%;
     align-items: center;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 10%;
+    height: 35%;
+    align-items: center;
 }
-
 .overallPercentage {
-    padding-top: 18%;
+    padding-top: 3%;
     font-size: 150%;
     display: flex;
     width: 100%;
-    height: 3%;
+    height: 100%;
 }
+.PercentageLeft {
+    flex-direction: column;
+    display: flex;
+    width: 45%;
+    height: 100%;
+    justify-content: end;
+    margin-right: 10%;
 
+    
+}
+.textBottomPercentage1 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    padding-top: 5px;
+    justify-content: end;
+    margin-right: 10%;
+
+}
+.textBottomPercentage2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    padding-top: 5px;
+    justify-content: start;
+    margin-left: 20%;
+
+
+}
+.PercentageRight {
+    flex-direction: column;
+    display: flex;
+    width: 55%;
+    height: 100%;
+    
+    
+}
 .Percentage1 {
     font-weight: bold;
-    justify-content: center;
+    justify-content: end;
     display: flex;
-    width: 50%;
-    height: 5%;
-}
+    width: 100%;
+    height: 100%;
+    margin-right: 20%;
 
+}
 .Percentage2 {
     font-weight: bold;
-    justify-content: center;
+    justify-content: start;
     display: flex;
-    width: 50%;
-    height: 5%;
-}
+    width: 100%;
+    height: 100%;
+    margin-left: 20%;
 
+}
 .textAbsenteeism {
     display: flex;
     width: 100%;
     height: 10%;
     justify-content: center;
 }
-
 .textEnvironments {
-    padding-top: 5%;
+    padding-top: 2%;
     padding-left: 7%;
     font-weight: bold;
     display: flex;
     width: 50%;
 }
-
 .environmentisGeneral {
     display: flex;
     flex-direction: column;
@@ -1215,7 +1323,6 @@ input::placeholder {
     width: 100%;
     justify-content: space-around;
 }
-
 .environmentisLine1 {
 
     display: flex;
@@ -1225,7 +1332,6 @@ input::placeholder {
     height: 20%;
     justify-content: space-around;
 }
-
 .environmentisLine2 {
     display: flex;
     flex-direction: row;
@@ -1234,7 +1340,6 @@ input::placeholder {
     height: 20%;
     justify-content: space-around;
 }
-
 .environmentisLine3 {
     display: flex;
     flex-direction: row;
@@ -1243,7 +1348,6 @@ input::placeholder {
     height: 20%;
     justify-content: space-around;
 }
-
 .environmentisLine4 {
     display: flex;
     flex-direction: row;
@@ -1252,7 +1356,6 @@ input::placeholder {
     height: 100%;
     justify-content: space-around;
 }
-
 .environmentisLine5 {
     display: flex;
     flex-direction: row;
@@ -1262,7 +1365,6 @@ input::placeholder {
     justify-content: space-around;
     margin-bottom: 90px;
 }
-
 .environments1 {
     align-items: end;
     background-image: url(img/unsplash_jUOaONoXJQk.png);
@@ -1272,6 +1374,15 @@ input::placeholder {
     width: 40%;
     height: 15vh;
     border-radius: 15%;
+}
+.textEnvironmentsL1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F4662;
+    width: 100%;
+    height: 25%;
+    border-radius: 0px 0px 15px 15px;
 }
 
 
@@ -1448,6 +1559,7 @@ input::placeholder {
 }
 
 .sectionRegister {
+
     font-family: 'Poppins';
 
     background-color: #D9D9D9;
@@ -1459,7 +1571,8 @@ input::placeholder {
     border-radius: 0 0 20px 20px;
 }
 
-.textMyData {
+.textMyData { 
+
     display: flex;
     justify-content: center;
     font-size: 200%;
@@ -1468,7 +1581,8 @@ input::placeholder {
     padding-bottom: 3%;
 }
 
-.inputsRegister {
+.inputsRegister { 
+
 
     outline: none;
     background-color: #D9D9D9;
