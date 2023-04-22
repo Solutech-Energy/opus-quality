@@ -1138,6 +1138,10 @@ input::placeholder {
     width: 30%;
     height: 15vh;
     border-radius: 10px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    padding-bottom: 1%;
 }
 
 .sensor2 {
@@ -1146,7 +1150,76 @@ input::placeholder {
     width: 30%;
     height: 15vh;
     border-radius: 10px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    padding-bottom: 1%;
+
 }
+
+.leftGrafico {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rightGrafico {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textPorTemp {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.textPorLum {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.porcTemp {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.porcLum {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.graficoTemp {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.graficoLum {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .textAbsenteeism {
     display: flex;
@@ -1156,16 +1229,15 @@ input::placeholder {
 }
 
 .absenteeismGraph {
-    padding-top: 18%;
     align-items: center;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 10%;
+    height: 35%;
 }
 
 .overallPercentage {
-    padding-top: 18%;
+    padding-top: 3%;
     font-size: 150%;
     display: flex;
     width: 100%;
@@ -1174,18 +1246,21 @@ input::placeholder {
 
 .Percentage1 {
     font-weight: bold;
-    justify-content: center;
+    justify-content: end;
     display: flex;
     width: 50%;
     height: 5%;
+    margin-right: 10%;
 }
 
 .Percentage2 {
     font-weight: bold;
-    justify-content: center;
+    justify-content: start;
     display: flex;
     width: 50%;
     height: 5%;
+    margin-left: 10%;
+
 }
 
 .textAbsenteeism {
