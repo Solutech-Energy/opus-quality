@@ -19,6 +19,7 @@ a {
 }
 
 .containerModal {
+
     width: 100vw;
     height: 100vh;
     display: none;
@@ -125,36 +126,22 @@ a {
 
 .containerAumentando .btnFazerParte {
     padding: 3% 3%;
-    background: rgba(20, 122, 239, 0.337);
+    background: #147aef56;
     border: 4px solid rgba(20, 122, 239, 0.338);
     border-radius: 10px;
     font-weight: 700;
-    font-size: 70%;
+    font-size: 70%
 }
 
 .AumentandoImagens {
     display: flex;
     width: 100%;
     flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.imagemAum {
-    animation: balanco 2.8s ease-in-out alternate-reverse infinite;
-}
-
-.imagemAum2 {
-    animation: balanco 3s ease-in-out alternate-reverse infinite;
+    justify-content: space-between;
 }
 
 .imagemBaixa {
     margin: 15% 5%;
-    animation: balanco 1.5s ease-in-out alternate-reverse infinite;
-}
-
-.imagemBaixa2 {
-    margin: 15% 5%;
-    animation: balanco 2.5s ease-in-out alternate-reverse infinite;
 }
 
 /*começo do Ganha-Ganha*/
@@ -271,67 +258,77 @@ a {
     font-weight: 800%;
 }
 
-.boxDepoimento {
+.headerDepoimento{
     display: flex;
     justify-content: center;
-    margin: auto;
-    margin-top: 6%;
+}
+
+.containerDepoimento{
+    display: flex;
     width: 70%;
+    border-radius: 19px;
+    justify-content: space-between;
     color: #FFFFFF;
-    border-radius: 15px;
-    border-radius: 24px;
-    width: 100%;
+    border-radius: 25px;
     background: rgba(106, 193, 255, 0.6);
     box-shadow: 12px 12px 18px rgba(47, 74, 102, 0.35);
     backdrop-filter: blur(5px);
 }
 
-.imgDepoimento1 {
-    align-items: center;
+.containerDepoimento img{
+    align-items: flex-start;
     justify-content: left;
-}
-
-.containerClientes1 p img {
     display: flex;
     width: 100%;
     height: 100%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 
-.imgDepoimento1 img {
+
+.DepoimentoTitulo h3{
+    padding-left: 16%;
+    width: 100%;
+    margin: 10%;
+    font-weight: 900%;
+    font-size: 200%;
+    align-self: center;
+}
+
+.DepoimentoTitulo  p{
+    margin-top: -7%;
+    margin-bottom: 7%;
+    padding-left: 38%;
+    font-size: 17px;
+    width: 100%;
+    align-self: center;
+}
+
+.containerBaranco {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 15%;
+    margin-top: 15%;
+    width: 60%;
+    height: 30%;
+    color: black;
+    background: rgba(255, 255, 255, 0.83);
+    backdrop-filter: blur(2.5px);
+    padding: 20px;
+}
+
+.nomeDepoimento {
+    font-family: 'Times New Roman', Times, serif;
     display: flex;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-
-
-.boxClientes {
-    background-color: black;
-    margin: auto;
-    margin-top: 8%;
-    display: flex;
-    width: 60vw;
-    height: 80vh;
-    border-radius: 15px;
-    overflow: hidden;
+    margin-top: 5%;
+    width: 100%;
+    align-items:flex-end;
+    justify-content: flex-end;
 }
 
 
 
 
 
-
-.containerClientes {
-    display: flex;
-    font-family: 'Montserrat';
-    font-style: italic;
-    padding: -21px -20px;
-    font-weight: 200;
-    line-height: 16px;
-    align-items: center;
-    color: #000000;
-    background: #FFFFFFD4;
-
-}
 
 
 /* começo do footer */
@@ -428,25 +425,16 @@ a {
 
 
 
+
+
 /* QUEM SOMOS */
+
 
 body {
     margin: 0;
     padding: 0;
     background: #0F1631;
     font-family: poppins;
-}
-
-.tituloQuemSomosPrincipal {
-    width: 100%;
-    display: flex;
-    font-size: 300%;
-    font-weight: 900%;
-    color: #ffffff;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .quemSomosContainer {
@@ -479,7 +467,17 @@ body {
     justify-content: start;
 }
 
+.titulo02 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 
+.quemSomosContainer h3 {
+    font-size: 300%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
 
 .quemSomosContainer h3 span {
     color: #EF8A14;
@@ -551,6 +549,7 @@ body {
     background: #ffffff;
 }
 
+
 .tituloQuemSomos {
     display: flex;
     align-items: center;
@@ -618,7 +617,6 @@ body {
 
 .ceoDireita p {
     color: #ffffff;
-    padding: 5px;
 }
 
 .cargoCeo {
@@ -633,19 +631,12 @@ body {
 
 .cargoCeo h4 {
     margin: 0;
-    padding: 5px;
 }
 
 .imgQuemSomos {
     height: 330.25px;
     border-radius: 3%;
 }
-
-.espacoFooter {
-    margin: 10px;
-}
-
-
 
 /*A A A A A A COMEÇO CALCULADORA A A A A A A*/
 ::-webkit-scrollbar {
@@ -1152,10 +1143,6 @@ input::placeholder {
     width: 30%;
     height: 15vh;
     border-radius: 10px;
-    border-radius: 10px;
-    align-items: center;
-    display: flex;
-    padding-bottom: 1%;
 }
 
 .sensor2 {
@@ -1164,79 +1151,7 @@ input::placeholder {
     width: 30%;
     height: 15vh;
     border-radius: 10px;
-    border-radius: 10px;
-    align-items: center;
-    display: flex;
-    padding-bottom: 1%;
-
 }
-
-.leftGrafico {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.rightGrafico {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.textPorTemp {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.textPorLum {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.porcTemp {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.porcLum {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.graficoTemp {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.graficoLum {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
 
 .textAbsenteeism {
     display: flex;
@@ -1246,15 +1161,16 @@ input::placeholder {
 }
 
 .absenteeismGraph {
+    padding-top: 18%;
     align-items: center;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 35%;
+    height: 10%;
 }
 
 .overallPercentage {
-    padding-top: 3%;
+    padding-top: 18%;
     font-size: 150%;
     display: flex;
     width: 100%;
@@ -1263,21 +1179,18 @@ input::placeholder {
 
 .Percentage1 {
     font-weight: bold;
-    justify-content: end;
+    justify-content: center;
     display: flex;
     width: 50%;
     height: 5%;
-    margin-right: 10%;
 }
 
 .Percentage2 {
     font-weight: bold;
-    justify-content: start;
+    justify-content: center;
     display: flex;
     width: 50%;
     height: 5%;
-    margin-left: 10%;
-
 }
 
 .textAbsenteeism {
