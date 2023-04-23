@@ -526,6 +526,7 @@ body {
 }
 
 .imgBackgroundQuemSomos img {
+    width: 80%;
     align-self: center;
     margin-bottom: 5%;
 }
@@ -1076,7 +1077,7 @@ body {
     display: flex;
     width: 10%;
     height: 20px;
-    background-color: #18630e;
+    background-color: #2f8c3d;
 
 }
 
