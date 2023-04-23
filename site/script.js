@@ -1,6 +1,8 @@
 btnLogin = document.getElementById("btnLogin");
 btnCloseModal = document.getElementById("btnCloseModal");
 containerMain = document.getElementById("containerMain").style;
+btnRegisterLink = document.getElementById("RegisterLink");
+btnHaveAccount = document.getElementById("haveAccount");
 
 btnLogin.addEventListener("click", function () { toggleModal() });
 
@@ -90,5 +92,28 @@ function logout() {
 }
 
 
-
 verificarLogin();
+
+function toogleLogin() {
+
+    var modalRegister = document.getElementById("cardRegister");
+    var modalRegisterState = modalRegister.style.display;
+    var modalLogin = document.getElementById("cardLogin");
+
+    if (modalRegisterState == "none") {
+        modalRegister.style.display = "block";
+        modalLogin.style.display = "none";
+    } else {
+        modalRegister.style.display = "none";
+        modalLogin.style.display = "flex";
+    }
+}
+
+
+btnRegisterLink.addEventListener("click", () => {
+    toogleLogin();
+})
+
+btnHaveAccount.addEventListener("click", () => {
+    toogleLogin();
+})

@@ -1,13 +1,3 @@
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 @keyframes openModal {
     from {
         transform: translateY(-100%);
@@ -55,46 +45,10 @@
     }
 }
 
-@keyframes animacaoBotao {
-    0% {
-        background: rgba(20, 122, 239, 0.337);
-    }
-
-    100% {
-        background: rgb(20, 122, 239);
-    }
-}
-
 .btnFazerParte:hover {
 
     animation: animacaoBotao .3s normal;
     background: rgb(20, 122, 239);
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        margin: 0% 5%;
-    }
-
-    to {
-        opacity: 1;
-        margin: 15% 5%;
-
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-
-    }
-
-    to {
-        opacity: 1;
-
-
-    }
 }
 
 @keyframes balanco {

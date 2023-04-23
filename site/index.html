@@ -13,8 +13,60 @@
 <body>
 
 
-    <div class="containerModal">
-        <div class="cardLogin modal">
+    <div class="containerModal" id="containerModal">
+
+
+
+        <div class="cardRegister modal" id="cardRegister">
+            <div class="topRegister">
+
+                <div class="imgRegister">
+                </div>
+
+                <div class="buttonCloseRegister" onclick="toggleModal()">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#0F1631"
+                            class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                        </svg></a>
+                </div>
+            </div>
+
+
+            <div class="sectionRegister">
+
+                <h2 class="textMyData">Cadastro</h2>
+
+                <div class="line1">
+                    <input type="text" placeholder="Nome Empresa" class="inputsBig">
+                    <input type="text" placeholder="Razão Social" class="inputsBig">
+                    <input type="text" placeholder="CNPJ" class="inputsBig">
+                </div>
+
+                <div class="line2">
+                    <input type="text" placeholder="Email" class="inputsBig">
+                    <input type="text" placeholder="Contato" class="inputsAverage">
+                    <input type="text" placeholder="CEP" class="inputsAverage">
+                </div>
+
+                <div class="line3">
+                    <input type="text" placeholder=" Endereço" class="inputsBig">
+                    <input type="text" placeholder="Numero" class="inputsSmall">
+                    <input type="text" placeholder="Complemento" class="inputsAverage">
+
+                </div>
+
+                <div class="line4">
+                    <div class="clickSave"><a href="#">Salvar</a></div>
+                    <div class="haveAccount" id="haveAccount">Já tem uma conta? Entre</div>
+                </div>
+
+            </div>
+        </div>`
+
+
+
+        <div class="cardLogin modal" id="cardLogin">
             <div class="imgLogin">
             </div>
 
@@ -66,9 +118,13 @@
                     </div>
 
                     <div class="cardsClicks">
-                        <div class="clickEnter"><a href="#">Entrar</a></div>
-                        <div class="clickRecoverPassword"><a href="#">Recuperar Senha</a></div>
+                        <div class="clickEnter">Entrar</div>
+                        <div class="clickRecoverPassword">Recuperar Senha</div>
+                        <div class="registerLink" id="RegisterLink">
+                            Ainda não tem uma conta? Cadastre-se
+                        </div>
                     </div>
+
 
                 </div>
             </div>
@@ -99,15 +155,17 @@
             <div class="AumentandoParte1">
                 <h1>Aumente a <span>Presença</span> da sua equipe <span>Conosco</span></h1>
                 <div>
-                    <a href="#"> <button class="btnFazerParte"> Fazer parte </button></a>
-                    <a href="#"><button> Conhecer projeto </button></a>
+                    <button onclick="toggleModal()" class="btnFazerParte"> Fazer parte </button>
+                    <button onclick="toggleModal()"> Conhecer projeto </button>
                 </div>
             </div>
             <div class="AumentandoImagens">
                 <div class="imagemAum"> <img src="img/Img1-Home.png" alt="Predios"> </div>
-                <div class="imagemAum imagemBaixa"> <img src="img/Img2-Home.png" alt="AranhaCéu"> </div>
-                <div class="imagemAum"> <img src="img/Img3-Home.png" alt="prediosBancos"> </div>
-                <div class="imagemAum imagemBaixa"> <img src="img/Img4-Home.png" alt="prediosVermelhos"> </div>
+                <div class="imagemBaixa" style="animation-duration: 2s;"> <img src="img/Img2-Home.png" alt="AranhaCéu">
+                </div>
+                <div class="imagemAum2"> <img src="img/Img3-Home.png" alt="prediosBancos">
+                </div>
+                <div class="imagemBaixa2"> <img src="img/Img4-Home.png" alt="prediosVermelhos"> </div>
             </div>
         </div>
         <div class="headerGanha">
@@ -142,17 +200,18 @@
         <div class="textInicialDepoimentos">
             <h3>Conheça alguns dos depoimentos dos nossos clientes</h3>
         </div>
-        
+
         <div class="headerDepoimento">
             <div class="containerDepoimento">
                 <img src="img/Depoimentos img1.jpg" alt="ImagemNoteAberto">
                 <div class="DepoimentoTitulo">
                     <h3>Opus Quality</h3>
                     <p>(São Paulo)</p>
-                    
+
                     <div class="containerBaranco">
                         <i>
-                            “Lorem ipsum dolor sit amet consectetur. Quisque aliquet id nunc maecenas. Mauris ac lacus tincidunt non sed sed lectus”
+                            “Lorem ipsum dolor sit amet consectetur. Quisque aliquet id nunc maecenas. Mauris ac lacus
+                            tincidunt non sed sed lectus”
                         </i>
                         <div class="nomeDepoimento">
                             <i>- Nome cliente</i>

@@ -150,11 +150,26 @@ a {
     display: flex;
     width: 100%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.imagemAum {
+    animation: balanco 2.8s ease-in-out alternate-reverse infinite;
+}
+
+.imagemAum2 {
+    animation: balanco 3s ease-in-out alternate-reverse infinite;
+    justify-content: space-between;
 }
 
 .imagemBaixa {
     margin: 15% 5%;
+    animation: balanco 1.5s ease-in-out alternate-reverse infinite;
+}
+
+.imagemBaixa2 {
+    margin: 15% 5%;
+    animation: balanco 2.5s ease-in-out alternate-reverse infinite;
 }
 
 /*começo do Ganha-Ganha*/
@@ -262,11 +277,12 @@ a {
 
 /* Começando CLIENTES*/
 
-.tituloQuemSomosPrincipal{
+.tituloQuemSomosPrincipal {
     display: flex;
     justify-content: center;
 
 }
+
 .textInicialDepoimentos h3 {
     display: flex;
     justify-content: center;
@@ -276,12 +292,12 @@ a {
     font-weight: 800%;
 }
 
-.headerDepoimento{
+.headerDepoimento {
     display: flex;
     justify-content: center;
 }
 
-.containerDepoimento{
+.containerDepoimento {
     display: flex;
     width: 70%;
     border-radius: 19px;
@@ -293,7 +309,7 @@ a {
     backdrop-filter: blur(5px);
 }
 
-.containerDepoimento img{
+.containerDepoimento img {
     align-items: flex-start;
     justify-content: left;
     display: flex;
@@ -304,7 +320,7 @@ a {
 }
 
 
-.DepoimentoTitulo h3{
+.DepoimentoTitulo h3 {
     padding-left: 16%;
     width: 100%;
     margin: 10%;
@@ -313,7 +329,7 @@ a {
     align-self: center;
 }
 
-.DepoimentoTitulo  p{
+.DepoimentoTitulo p {
     margin-top: -7%;
     margin-bottom: 7%;
     padding-left: 38%;
@@ -339,7 +355,7 @@ a {
     display: flex;
     margin-top: 5%;
     width: 100%;
-    align-items:flex-end;
+    align-items: flex-end;
     justify-content: flex-end;
 }
 
@@ -462,7 +478,7 @@ body {
 }
 
 .solucaoQuemSomosTexto1 {
-    
+
     display: flex;
     width: 80%;
     justify-content: space-between;
@@ -849,16 +865,19 @@ body {
     font-size: 100%;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
 }
+
 .headerContainerDashboard {
     display: flex;
     width: 100%;
     padding: 0 1%;
     justify-content: space-between;
 }
+
 .logoContainer img {
     display: flex;
     width: 30%;
 }
+
 .navbarLista {
     display: flex;
     width: 100%;
@@ -866,6 +885,7 @@ body {
     list-style: none;
     justify-content: end;
 }
+
 .navbarLista ul,
 .navbarLista li a {
     padding: 5px 10px;
@@ -874,6 +894,7 @@ body {
     font-weight: 800;
     text-decoration: none;
 }
+
 .loginBtnDashboard {
     padding: 7px 25px;
     color: white;
@@ -882,6 +903,7 @@ body {
     text-decoration: none;
     background-color: #EF8A14;
 }
+
 .imgUserDashboard {
     justify-content: center;
     align-items: center;
@@ -893,6 +915,7 @@ body {
     background-color: #D9D9D9;
     border-radius: 10px;
 }
+
 .textDashboard {
     color: white;
     background-color: #101A41;
@@ -903,6 +926,7 @@ body {
     height: 50%;
     padding-top: 20px;
 }
+
 .Graficos {
     background-color: #101A41;
     position: fixed;
@@ -913,12 +937,14 @@ body {
     flex-direction: row;
     display: flex;
 }
+
 .containerGraphics {
     background-color: #101A41;
     display: flex;
     width: 100%;
     height: 100%;
 }
+
 .leftGraphic {
     flex-direction: column;
     display: flex;
@@ -927,6 +953,7 @@ body {
     padding-top: 1%;
 
 }
+
 .graphicDescriptionLDR5 {
     display: flex;
     width: 100%;
@@ -934,6 +961,7 @@ body {
     color: white;
     padding-left: 4%;
 }
+
 .graphicDescriptionLM35 {
     display: flex;
     width: 100%;
@@ -942,6 +970,7 @@ body {
     padding-left: 4%;
 
 }
+
 .textLeft1 {
     flex-direction: column;
     display: flex;
@@ -950,6 +979,7 @@ body {
     width: 20%;
 
 }
+
 .textLeft2 {
     flex-direction: column;
     display: flex;
@@ -959,6 +989,7 @@ body {
 
 
 }
+
 .cardGraficoLDR5 {
 
     width: 100%;
@@ -970,34 +1001,39 @@ body {
     height: 250px;
     border-radius: 15px;
 }
+
 .cardGraficoLM35 {
     width: 100%;
     height: 100%;
     margin-top: 20px;
     display: flex;
-    padding-top:20px;
+    padding-top: 20px;
     background-color: white;
     width: 550px;
     height: 250px;
     border-radius: 15px;
-} 
+}
+
 .right {
     margin-left: 5%;
     flex-direction: column;
     display: flex;
     width: 50%;
 }
+
 .plantasala {
     margin-top: 2.5%;
     width: 100%;
     height: 55%;
 }
+
 .linhaVertical {
     margin-left: 7%;
     width: 1%;
     height: 580px;
     border-left: 4px solid #EF8A14;
 }
+
 .tableSensors {
     display: flex;
     background-color: white;
@@ -1006,6 +1042,7 @@ body {
     border-radius: 15px;
 
 }
+
 .clickGraphic {
     display: flex;
     background-color: #EF8A14;
@@ -1023,7 +1060,7 @@ body {
 
 
 /* CSS DASHBOARD GERAL */
-.legend{
+.legend {
     justify-content: center;
     display: flex;
     width: 100%;
@@ -1031,7 +1068,7 @@ body {
 
 }
 
-.legendGraphic1{
+.legendGraphic1 {
     margin-top: 2%;
     margin-right: 10%;
     align-items: center;
@@ -1042,7 +1079,8 @@ body {
     background-color: #18630e;
 
 }
-.legendGraphic2{
+
+.legendGraphic2 {
     margin-left: 10%;
     margin-top: 2%;
 
@@ -1062,12 +1100,14 @@ body {
     font-size: 100%;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
 }
+
 .headerContainerDashboardGeneral {
     display: flex;
     width: 100%;
     padding: 0 1%;
     justify-content: space-between;
 }
+
 .loginBtnDashboard {
     padding: 7px 25px;
     color: white;
@@ -1076,6 +1116,7 @@ body {
     text-decoration: none;
     background-color: #EF8A14;
 }
+
 .imgUserDashboardGeneral {
     justify-content: center;
     align-items: center;
@@ -1087,6 +1128,7 @@ body {
     background-color: #D9D9D9;
     border-radius: 10px;
 }
+
 .bodyDashboard {
     position: fixed;
 
@@ -1094,6 +1136,7 @@ body {
     width: 100%;
     height: 100%;
 }
+
 .rightDash {
     background-color: #0F1631;
     overflow-y: scroll;
@@ -1103,24 +1146,28 @@ body {
     width: 35%;
     color: #D9D9D9;
 }
+
 .leftDash {
     background-color: #101A41;
     color: #D9D9D9;
     width: 65%;
     height: 100%;
 }
+
 .textCompany {
     width: 100%;
     height: 5%;
     margin-left: 5%;
 }
+
 .generalQuality {
     width: 100%;
     height: 8%;
     margin-left: 10%;
 }
+
 .cardIndex {
-font-size: 150%;
+    font-size: 150%;
     display: flex;
     background-color: #1F4662;
     margin-left: 10%;
@@ -1128,6 +1175,7 @@ font-size: 150%;
     height: 40vh;
     border-radius: 10px;
 }
+
 .leftCard {
     flex-direction: column;
     display: flex;
@@ -1135,6 +1183,7 @@ font-size: 150%;
     width: 50%;
     padding-left: 10%;
 }
+
 .textLeft {
     flex-direction: column;
     display: flex;
@@ -1143,6 +1192,7 @@ font-size: 150%;
     padding-left: 10%;
     align-items: center;
 }
+
 .rightCard {
     justify-content: center;
     align-items: center;
@@ -1154,6 +1204,7 @@ font-size: 150%;
 
 
 }
+
 .horizontalLine {
     display: flex;
     justify-content: center;
@@ -1164,17 +1215,20 @@ font-size: 150%;
     height: 1%;
     margin-left: 3%;
 }
+
 .Generalmonitoring {
     width: 95%;
     margin-left: 5%;
     height: auto;
 }
+
 .sensors {
     margin-bottom: 10%;
     background-color: #101A41;
     display: flex;
     width: 100%;
 }
+
 .sensor1 {
     background-color: #1F4662;
     margin-left: 5%;
@@ -1186,6 +1240,7 @@ font-size: 150%;
     display: flex;
     padding-bottom: 1%;
 }
+
 .sensor2 {
     background-color: #1F4662;
     margin-left: 5%;
@@ -1198,12 +1253,14 @@ font-size: 150%;
     padding-bottom: 1%;
 
 }
+
 .leftGrafico {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
+
 .rightGrafico {
     width: 100%;
     height: 100%;
@@ -1211,6 +1268,7 @@ font-size: 150%;
     justify-content: center;
     align-items: center;
 }
+
 .textPorTemp {
     width: 100%;
     height: 50%;
@@ -1219,6 +1277,7 @@ font-size: 150%;
     align-items: center;
 
 }
+
 .textPorLum {
     width: 100%;
     height: 50%;
@@ -1226,6 +1285,7 @@ font-size: 150%;
     justify-content: center;
     align-items: center;
 }
+
 .porcTemp {
     width: 100%;
     height: 50%;
@@ -1233,6 +1293,7 @@ font-size: 150%;
     justify-content: center;
     align-items: center;
 }
+
 .porcLum {
     width: 100%;
     height: 50%;
@@ -1241,6 +1302,7 @@ font-size: 150%;
     align-items: center;
 
 }
+
 .graficoTemp {
     width: 100%;
     height: 100%;
@@ -1248,6 +1310,7 @@ font-size: 150%;
     justify-content: center;
     align-items: center;
 }
+
 .graficoLum {
     width: 100%;
     height: 100%;
@@ -1255,12 +1318,14 @@ font-size: 150%;
     justify-content: center;
     align-items: center;
 }
+
 .textAbsenteeism {
     display: flex;
     width: 100%;
     height: 2%;
     justify-content: center;
 }
+
 .absenteeismGraph {
     align-items: center;
     display: flex;
@@ -1269,12 +1334,14 @@ font-size: 150%;
     height: 35%;
     align-items: center;
 }
+
 .overallPercentage {
     font-size: 150%;
     display: flex;
     width: 100%;
     height: 100%;
 }
+
 .PercentageLeft {
     flex-direction: column;
     display: flex;
@@ -1283,8 +1350,9 @@ font-size: 150%;
     justify-content: end;
     margin-right: 10%;
 
-    
+
 }
+
 .textBottomPercentage1 {
     display: flex;
     width: 100%;
@@ -1294,6 +1362,7 @@ font-size: 150%;
     margin-right: 10%;
 
 }
+
 .textBottomPercentage2 {
     display: flex;
     width: 100%;
@@ -1304,14 +1373,16 @@ font-size: 150%;
 
 
 }
+
 .PercentageRight {
     flex-direction: column;
     display: flex;
     width: 55%;
     height: 100%;
-    
-    
+
+
 }
+
 .Percentage1 {
     font-weight: bold;
     justify-content: end;
@@ -1321,6 +1392,7 @@ font-size: 150%;
     margin-right: 20%;
 
 }
+
 .Percentage2 {
     font-weight: bold;
     justify-content: start;
@@ -1330,12 +1402,14 @@ font-size: 150%;
     margin-left: 20%;
 
 }
+
 .textAbsenteeism {
     display: flex;
     width: 100%;
     height: 10%;
     justify-content: center;
 }
+
 .textEnvironments {
     padding-top: 2%;
     padding-left: 7%;
@@ -1343,6 +1417,7 @@ font-size: 150%;
     display: flex;
     width: 50%;
 }
+
 .environmentisGeneral {
     display: flex;
     flex-direction: column;
@@ -1350,6 +1425,7 @@ font-size: 150%;
     width: 100%;
     justify-content: space-around;
 }
+
 .environmentisLine1 {
 
     display: flex;
@@ -1359,6 +1435,7 @@ font-size: 150%;
     height: 20%;
     justify-content: space-around;
 }
+
 .environmentisLine2 {
     display: flex;
     flex-direction: row;
@@ -1367,6 +1444,7 @@ font-size: 150%;
     height: 20%;
     justify-content: space-around;
 }
+
 .environmentisLine3 {
     display: flex;
     flex-direction: row;
@@ -1375,6 +1453,7 @@ font-size: 150%;
     height: 20%;
     justify-content: space-around;
 }
+
 .environmentisLine4 {
     display: flex;
     flex-direction: row;
@@ -1383,6 +1462,7 @@ font-size: 150%;
     height: 100%;
     justify-content: space-around;
 }
+
 .environmentisLine5 {
     display: flex;
     flex-direction: row;
@@ -1392,6 +1472,7 @@ font-size: 150%;
     justify-content: space-around;
     margin-bottom: 90px;
 }
+
 .environments1 {
     align-items: end;
     background-image: url(img/unsplash_jUOaONoXJQk.png);
@@ -1402,6 +1483,7 @@ font-size: 150%;
     height: 15vh;
     border-radius: 15%;
 }
+
 .textEnvironmentsL1 {
     display: flex;
     align-items: center;
@@ -1520,13 +1602,15 @@ font-size: 150%;
 }
 
 .cardsClicks {
-    padding-left: 80px;
-    margin-top: 30px;
-    flex-direction: row;
     color: white;
     display: flex;
-    width: 100%;
-    height: 40%;
+    width: 65%;
+    margin-top: 5%;
+    padding-left: 18%;
+    padding-right: 18%;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .clickEnter {
@@ -1540,16 +1624,34 @@ font-size: 150%;
 }
 
 .clickRecoverPassword {
+
+    padding-left: 5%;
+    padding-right: 5%;
     align-items: center;
-    margin-left: 45px;
     justify-content: center;
     background-color: #1F4662;
     display: flex;
-    width: 160px;
-    height: 40px;
     border-radius: 10px;
+    height: 40px;
 }
 
+.registerLink {
+    font-size: 14px;
+
+    width: 100%;
+    height: 5%;
+    align-items: center;
+    color: #070D25;
+}
+
+.registerLink:hover {
+    width: 100%;
+    height: 5%;
+    align-items: center;
+    color: #070D25;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 
 /* CADASTRO */
@@ -1562,6 +1664,9 @@ font-size: 150%;
     width: 60vw;
     height: 80vh;
     border-radius: 15px 15px 15px 15px;
+    display: none;
+    overflow: hidden;
+    animation: openModal 1s normal;
 
 }
 
@@ -1598,7 +1703,7 @@ font-size: 150%;
     border-radius: 0 0 20px 20px;
 }
 
-.textMyData { 
+.textMyData {
 
     display: flex;
     justify-content: center;
@@ -1608,7 +1713,7 @@ font-size: 150%;
     padding-bottom: 3%;
 }
 
-.inputsRegister { 
+.inputsRegister {
 
 
     outline: none;
@@ -1656,8 +1761,9 @@ font-size: 150%;
     padding-top: 5%;
     display: flex;
     width: 100%;
-    height: 10%;
-    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+
 }
 
 .inputsSmall {
@@ -1716,6 +1822,21 @@ font-size: 150%;
     border-radius: 10px;
 }
 
+.haveAccount {
+    margin-top: 1%;
+    font-size: 14px;
+    align-items: center;
+    color: #070D25;
+}
+
+.haveAccount:hover {
+    margin-top: 1%;
+    font-size: 14px;
+    align-items: center;
+    color: #070D25;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 
 
