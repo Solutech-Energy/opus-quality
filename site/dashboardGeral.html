@@ -18,7 +18,6 @@
             <img src="img/imgLogo.png" alt="Logo Opus Quality">
          </div>
          <ul class="navbarLista">
-            <li><a href="#">Gerenciar Empresa</a></li>
             <a href="index.html" class="loginBtnDashboard">
                <li><b>Logout</b></li>
             </a>
@@ -49,7 +48,7 @@
                <img src="img/imgPositivos.png" alt="" width="70%" height="70%">
              </div>
 
-             <!-- <div class="cardIndex">
+            <!-- <div class="cardIndex">
                <div class="leftCard" class="textLeft"><span>Seus índices estão<h2 style="color: red;"> Ruins</span></h2><span>
                <div><span>Salas irregulares</span><h2 style="color: red;">5</h2></div>
               </div>
@@ -96,12 +95,21 @@
          <div class="absenteeismGraph">
             <canvas id="graficoAbsenteismo"></canvas>
          </div>
+         
+         <div class="legend">
+               <div class="legendGraphic1"></div>
+               <div class="legendGraphic2"></div>
+               
+         </div>
+
          <div class="overallPercentage">
             <div class="PercentageLeft">
+            
             <div class="Percentage1">92%</div>
             <div class="textBottomPercentage1">Presença</div>
             </div>
             <div class="PercentageRight">
+            
             <div class="Percentage2">8%</div>
             <div class="textBottomPercentage2">Ausência</div>
            </div>
@@ -166,7 +174,7 @@
       type: 'doughnut',
       data: {
         datasets: [
-          {
+          { backgroundColor: ['#911313','#18630e'],
             data: [8, 92],
             borderWidth: 1
           }]
@@ -195,6 +203,7 @@ const graficoTemperatura = new Chart(ctx1, {
   type: 'doughnut',
   data: { 
     datasets: [{
+      backgroundColor: ['#5220f5','#911313'],
       labels: 'Temperatura (ºC))',
       data: [97, 3],
       borderWidth: 1
@@ -227,6 +236,7 @@ const graficoLuminosidade = new Chart(ctx2, {
   data: {
 
     datasets: [{
+      backgroundColor: ['#a39010','#911313'],
       labels: 'Luminosidade (Lux)',
       data: [92, 8],
       borderWidth: 1
