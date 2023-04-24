@@ -44,10 +44,6 @@ a {
     ;
 }
 
-.containerGeral {
-    background-size: 100%;
-}
-
 /*HOME HOME HOME HOME*/
 
 .containerGeralhome {
@@ -92,6 +88,15 @@ a {
 
 .navbarLista ul,
 .navbarLista li a {
+    padding: 5px 10px;
+    color: #D68F3B;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+navbarLista ul,
+.navbarLista li {
     padding: 5px 10px;
     color: #D68F3B;
     font-weight: 800;
@@ -283,7 +288,7 @@ a {
 
 /* Começando CLIENTES*/
 
-.tituloQuemSomosPrincipal {
+.QuemSomosPrincipal {
     display: flex;
     justify-content: center;
 
@@ -319,7 +324,7 @@ a {
     align-items: flex-start;
     justify-content: left;
     display: flex;
-    width: 80%;
+    width: 100%;
     height: 100%;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
@@ -327,11 +332,11 @@ a {
 
 
 .DepoimentoTitulo h3 {
-    padding-left: 25%;
+    padding-left: 16%;
     width: 100%;
     margin: 10%;
     font-weight: 900%;
-    font-size: 250%;
+    font-size: 200%;
     align-self: center;
 }
 
@@ -718,6 +723,7 @@ body {
 .tituloCalculadora h1 {
     background-size: cover;
     padding: 1%;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -843,23 +849,29 @@ body {
 }
 
 #resultado {
-    display: inherit;
     justify-content: center;
-    background-color: #FFFFFF;
-    margin: 10px 10% 10% 10%;
+    background-color: #070d257a;
+    color: #ffffff;
+    margin: 0% 5% 3% 5%;
     border-radius: 10px;
 }
-
-#absentismo {
-    width: 35%;
-    margin: 2%;
+  
+#tituloEstimativa {
+    display: block;
+    text-align: center;
 }
 
+  #absentismo {
+    float: left;
+    width: 44%;
+    margin: 0% 3% 3% 3%;
+}
+  
 #energia {
-    width: 35%;
-    margin: 2%;
+    float: right;
+    width: 44%;
+    margin: 0% 3% 3% 3%;
 }
-
 
 /* CSS Dashboard Local*/
 
@@ -1067,18 +1079,6 @@ body {
 
 
 /* CSS DASHBOARD GERAL */
-
-#Negativos{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #911313;
-        width: 100%;
-        height: 25%;
-        border-radius: 0px 0px 15px 15px;
-        border-color: #911313;
-    }
-
 .legend {
     justify-content: center;
     display: flex;
@@ -1501,11 +1501,6 @@ body {
     width: 40%;
     height: 15vh;
     border-radius: 15%;
-    cursor: pointer;
-}
-
-.environments1:hover .textEnvironmentsL1 {
-    background-color: #ff7300;
 }
 
 .textEnvironmentsL1 {
@@ -1645,7 +1640,6 @@ body {
     width: 100px;
     height: 40px;
     border-radius: 10px;
-    cursor: pointer;
 }
 
 .clickRecoverPassword {
