@@ -5,7 +5,6 @@ btnRegisterLink = document.getElementById("RegisterLink");
 btnHaveAccount = document.getElementById("haveAccount");
 registerNavLink = document.getElementById("registerNavLink");
 
-btnLogin.addEventListener("click", function () { abrirLogin() });
 
 function toggleModal() {
     var modal = document.querySelector(".containerModal").style;
@@ -29,6 +28,56 @@ function toggleModal() {
 btnCloseModal.addEventListener("click", function () {
     toggleModal();
 });
+
+
+function toggleLogin() {
+
+    var modalRegister = document.getElementById("cardRegister");
+    var modalRegisterState = modalRegister.style.display;
+    var modalLogin = document.getElementById("cardLogin");
+
+    if (modalRegisterState == "none" || modalRegisterState == "") {
+        modalRegister.style.display = "block";
+        modalLogin.style.display = "none";
+    } else {
+        modalRegister.style.display = "none";
+        modalLogin.style.display = "flex";
+    }
+}
+
+function abrirLogin() {
+    var modalRegister = document.getElementById("cardRegister");
+    toggleModal();
+    if (modalRegister.style.display == "block") {
+        toggleLogin();
+    }
+};
+
+function abrirRegister() {
+    var modalLogin = document.getElementById("cardLogin");
+    var modalRegister = document.getElementById("cardRegister");
+    toggleModal();
+    if (modalRegister.style.display == "none" || modalRegister.style.display == "" || modalLogin.style.display == "flex") {
+        toggleLogin();
+    }
+};
+
+btnLogin.addEventListener("click", function () { abrirLogin() });
+
+registerNavLink.addEventListener("click", function () {
+    abrirRegister();
+});
+
+
+btnRegisterLink.addEventListener("click", () => {
+    toggleLogin();
+})
+
+btnHaveAccount.addEventListener("click", () => {
+    toggleLogin();
+})
+
+
 
 
 function cria_cookie(nome, valor) {
@@ -69,7 +118,6 @@ function verificarLogin() {
 }
 
 
-
 function login() {
 
     var login = document.getElementById("inputEmail").value;
@@ -77,11 +125,14 @@ function login() {
     var validacao =
         (login == "admin" && senha == "admin") ||
         (login == "user" && senha == "user") ||
-        (login == "yan" && senha == "lindo");
+        (login == "yan" && senha == "lindo") ||
+        (login == "Kat" && senha == 2712);
 
     if (validacao) {
         cria_cookie("login", "true");
         toggleModal();
+        alert("Usuário Autenticado com Sucesso!")
+        window.location.assign("https://api.whatsapp.com/send/?phone=5511974315565&Olá!+Acabei+de+me+*cadastrar*+no+seu+Sistema!")
     } else {
         alert("Login ou senha inválidos");
     }
@@ -92,50 +143,3 @@ function logout() {
     verificarLogin();
 }
 
-
-verificarLogin();
-
-function toggleLogin() {
-
-    var modalRegister = document.getElementById("cardRegister");
-    var modalRegisterState = modalRegister.style.display;
-    var modalLogin = document.getElementById("cardLogin");
-
-    if (modalRegisterState == "none" || modalRegisterState == "") {
-        modalRegister.style.display = "block";
-        modalLogin.style.display = "none";
-    } else {
-        modalRegister.style.display = "none";
-        modalLogin.style.display = "flex";
-    }
-}
-
-function abrirLogin() {
-    var modalRegister = document.getElementById("cardRegister");
-    toggleModal();
-    if (modalRegister.style.display == "block") {
-        toggleLogin();
-    }
-};
-
-function abrirRegister() {
-    var modalLogin = document.getElementById("cardLogin");
-    var modalRegister = document.getElementById("cardRegister");
-    toggleModal();
-    if (modalRegister.style.display == "none" || modalRegister.style.display == "" || modalLogin.style.display == "flex") {
-        toggleLogin();
-    }
-};
-
-registerNavLink.addEventListener("click", function () {
-    abrirRegister();
-});
-
-
-btnRegisterLink.addEventListener("click", () => {
-    toggleLogin();
-})
-
-btnHaveAccount.addEventListener("click", () => {
-    toggleLogin();
-})

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animations.css">
+    <link rel="shortcut icon" href="img/logoFavicon.ico" type="image/x-icon">
     <title> Opus Quality | Home </title>
 </head>
 
@@ -14,8 +15,6 @@
 
 
     <div class="containerModal" id="containerModal">
-
-
 
         <div class="cardRegister modal" id="cardRegister">
             <div class="topRegister">
@@ -62,7 +61,7 @@
                 </div>
 
             </div>
-        </div>`
+        </div>
 
 
 
@@ -96,7 +95,7 @@
                     </div>
 
                     <div>
-                        <input type="text" placeholder="" class="inputstransparente">
+                        <input type="text" placeholder="" id="inputEmail" class="inputstransparente">
                         <div></div>
                     </div>
 
@@ -113,12 +112,12 @@
                     </div>
 
                     <div>
-                        <input type="text" placeholder="" class="inputstransparente">
+                        <input type="text" placeholder="" id="inputSenha" class="inputstransparente">
                         <div></div>
                     </div>
 
                     <div class="cardsClicks">
-                        <div class="clickEnter">Entrar</div>
+                        <div class="clickEnter" onclick="login()">Entrar</div>
                         <div class="clickRecoverPassword">Recuperar Senha</div>
                         <div class="registerLink" id="RegisterLink">
                             Ainda não tem uma conta? Cadastre-se
