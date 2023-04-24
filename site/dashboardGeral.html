@@ -19,7 +19,7 @@
          </div>
          <ul class="navbarLista">
             <a href="index.html" class="loginBtnDashboard">
-               <li><b>Logout</b></li>
+               <li><b onclick="logout()">Logout</b></li>
             </a>
          </ul>
       </div>
@@ -41,14 +41,17 @@
             <h4>Qualidade Geral do Prédio</h4>
          </div>
 
-         
+
          <div class="cardIndex">
-             <div class="leftCard" class="textLeft"><span>Seus índices estão<h2 style="color: #2f8c3d;"> Ótimos</span></h2><span>
-             <div><span>Salas irregulares</span><h2 style="color: #2f8c3d	;">0</h2></div>
+            <div class="leftCard" class="textLeft"><span>Seus índices estão<h2 style="color: #2f8c3d;"> Ótimos</span>
+               </h2><span>
+                  <div><span>Salas irregulares</span>
+                     <h2 style="color: #2f8c3d	;">0</h2>
+                  </div>
             </div>
-             <div class="rightCard">
+            <div class="rightCard">
                <img src="img/imgPositivos.png" alt="" width="70%" height="70%">
-             </div>
+            </div>
 
             <!-- <div class="cardIndex">
                <div class="leftCard" class="textLeft"><span>Seus índices estão<h2 style="color: red;"> Ruins</span></h2><span>
@@ -69,23 +72,31 @@
             <div class="sensor1">
 
                <div class="leftGrafico">
-               <div class="textPorTemp"><h3>Temperatura</h3></div> 
-               <div class="porcTemp"><h1>98%</h1></div>
+                  <div class="textPorTemp">
+                     <h3>Temperatura</h3>
+                  </div>
+                  <div class="porcTemp">
+                     <h1>98%</h1>
+                  </div>
                </div>
 
                <div class="rightGrafico">
-               <div class="graficoTemp"><canvas id="graficoLDR5"></canvas></div>
+                  <div class="graficoTemp"><canvas id="graficoLDR5"></canvas></div>
                </div>
-               </div>
+            </div>
             <div class="sensor2">
 
-            <div class="leftGrafico">
-            <div class="textPorLum"><h3>Luminosidade</h3></div>
-            <div class="porcLum"><h1>95%</h1></div>
-            </div>
-            <div class="rightGrafico">
-            <div class="graficoLum"><canvas id="graficoLM35"></canvas></div>
-            </div>
+               <div class="leftGrafico">
+                  <div class="textPorLum">
+                     <h3>Luminosidade</h3>
+                  </div>
+                  <div class="porcLum">
+                     <h1>95%</h1>
+                  </div>
+               </div>
+               <div class="rightGrafico">
+                  <div class="graficoLum"><canvas id="graficoLM35"></canvas></div>
+               </div>
             </div>
          </div>
       </div>
@@ -97,24 +108,24 @@
          <div class="absenteeismGraph">
             <canvas id="graficoAbsenteismo"></canvas>
          </div>
-         
+
          <div class="legend">
-               <div class="legendGraphic1"></div>
-               <div class="legendGraphic2"></div>
-               
+            <div class="legendGraphic1"></div>
+            <div class="legendGraphic2"></div>
+
          </div>
 
          <div class="overallPercentage">
             <div class="PercentageLeft">
-            
-            <div class="Percentage1">92%</div>
-            <div class="textBottomPercentage1">Presença</div>
+
+               <div class="Percentage1">92%</div>
+               <div class="textBottomPercentage1">Presença</div>
             </div>
             <div class="PercentageRight">
-            
-            <div class="Percentage2">8%</div>
-            <div class="textBottomPercentage2">Ausência</div>
-           </div>
+
+               <div class="Percentage2">8%</div>
+               <div class="textBottomPercentage2">Ausência</div>
+            </div>
          </div>
          <div class="textEnvironments">
             <h3>Ambientes</h3>
@@ -123,38 +134,48 @@
 
          <div class="environmentisGeneral ">
             <div class="environmentisLine1">
+               <div class="environments1" onclick="window.location.assign('./dashboard.html')">
+                  <div class="textEnvironmentsL1">Sala Aula 1º Andar</div>
+               </div>
                <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 1º Andar</div></a></div>
-               <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a></div>
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a>
+               </div>
             </div>
 
             <div class="environmentisLine2 ">
                <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 2º Andar</div></a></div>
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 2º Andar</div></a>
+               </div>
                <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a></div>
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a>
+               </div>
             </div>
 
             <div class="environmentisLine3 ">
                <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 3º Andar</div></a></div>
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 3º Andar</div></a>
+               </div>
                <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a></div>
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a>
+               </div>
             </div>
 
             <div class="environmentisLine4 ">
                <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 4º Andar</div></a></div>
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 4º Andar</div></a>
+               </div>
                <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a></div>
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a>
+               </div>
             </div>
 
             <div class="environmentisLine5 ">
                <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 5º Andar</div></a></div>
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Aula 5º Andar</div></a>
+               </div>
                <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a></div>
+                  <div class="textEnvironmentsL1"><a href="dashboard.html">Sala Técnica</div></a>
+               </div>
             </div>
 
 
@@ -164,141 +185,158 @@
    </div>
 
 
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script>
+   <script>
 
 
-    const ctx = document.getElementById('graficoAbsenteismo');
 
-    const graficoAbsenteismo = new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        datasets: [
-          { backgroundColor: ['#911313','#2f8c3d'],
-            data: [8, 92],
-            borderWidth: 1
-          }]
-      },
-      options: {
-         Plugins: {
-      legend: {
-         labels: ['Ausência (%)', 'Presença (%) ']
-      },
-      title: {
-         display: false,
+      console.log(document.cookie);
+      function logout() {
+         var nome = "login";
+         // Cria uma data no passado 01/01/2010
+         var data = new Date(2010, 0, 01);
+         // Converte a data para GMT
+         data = data.toGMTString();
+         // Tenta modificar o valor do cookie para a data expirada
+         // Assim ele será apagado
+         document.cookie = nome + '=; expires=' + data + '; path=/';
+         console.log('Cookie apagado: ' + nome + '=; expires=' + data + '; path=/');
       }
-    },
-    scales: {
-      display: false,
-    }
-  }
-});
-  
 
 
 
-    const ctx1 = document.getElementById('graficoLDR5');
 
-const graficoTemperatura = new Chart(ctx1, {
-  type: 'doughnut',
-  data: { 
-    datasets: [{
-      backgroundColor: ['#5220f5','#911313'],
-      labels: 'Temperatura (ºC))',
-      data: [97, 3],
-      borderWidth: 1
-    },
-]
-  },
-  options: {
-   Plugins: {
-      legend: {
-        display: false
-      },
-      title: {
-         display: false,
+      const ctx = document.getElementById('graficoAbsenteismo');
+
+      const graficoAbsenteismo = new Chart(ctx, {
+         type: 'doughnut',
+         data: {
+            datasets: [
+               {
+                  backgroundColor: ['#911313', '#2f8c3d'],
+                  data: [8, 92],
+                  borderWidth: 1
+               }]
+         },
+         options: {
+            Plugins: {
+               legend: {
+                  labels: ['Ausência (%)', 'Presença (%) ']
+               },
+               title: {
+                  display: false,
+               }
+            },
+            scales: {
+               display: false,
+            }
+         }
+      });
+
+
+
+
+      const ctx1 = document.getElementById('graficoLDR5');
+
+      const graficoTemperatura = new Chart(ctx1, {
+         type: 'doughnut',
+         data: {
+            datasets: [{
+               backgroundColor: ['#5220f5', '#911313'],
+               labels: 'Temperatura (ºC))',
+               data: [97, 3],
+               borderWidth: 1
+            },
+            ]
+         },
+         options: {
+            Plugins: {
+               legend: {
+                  display: false
+               },
+               title: {
+                  display: false,
+               }
+            },
+            scales: {
+               display: false,
+            }
+         }
+      });
+
+
+
+
+
+      const ctx2 = document.getElementById('graficoLM35');
+
+      const graficoLuminosidade = new Chart(ctx2, {
+         type: 'doughnut',
+         data: {
+
+            datasets: [{
+               backgroundColor: ['#a39010', '#911313'],
+               labels: 'Luminosidade (Lux)',
+               data: [92, 8],
+               borderWidth: 1
+            },
+            ]
+         },
+         options: {
+            Plugins: {
+               legend: {
+                  display: false
+               },
+               title: {
+                  display: false,
+               }
+            },
+            scales: {
+               display: false,
+            }
+         }
+      });
+
+
+
+
+      var paginacao = {};
+      var tempo = {};
+
+      function obterDados(grafico, endpoint) {
+         var http = new XMLHttpRequest();
+         http.open('GET', 'http://localhost:3300/sensores/' + endpoint, false);
+         http.send(null);
+         var valores = JSON.parse(http.responseText);
+         if (paginacao[endpoint] == null) {
+            paginacao[endpoint] = 0;
+         }
+         if (tempo[endpoint] == null) {
+            tempo[endpoint] = 0;
+         }
+         // Exibir à partir do último elemento exibido anteriormente
+         var ultimaPaginacao = paginacao[endpoint];
+         paginacao[endpoint] = valores.length;
+         var valores = valores.slice(ultimaPaginacao);
+         valores.forEach((valor) => {
+            //Máximo de 60 itens exibidos no gráfico
+            if (grafico.data.labels.length == 10 && grafico.data.datasets[0].data.length == 10) {
+               grafico.data.labels.shift();
+               grafico.data.datasets[0].data.shift();
+            }
+
+            grafico.data.labels.push(tempo[endpoint]++);
+            grafico.data.datasets[0].data.push(parseFloat(valor));
+            grafico.update();
+         })
       }
-    },
-    scales: {
-      display: false,
-    }
-  }
-});
 
 
 
 
 
-const ctx2 = document.getElementById('graficoLM35');
 
-const graficoLuminosidade = new Chart(ctx2, {
-  type: 'doughnut',
-  data: {
-
-    datasets: [{
-      backgroundColor: ['#a39010','#911313'],
-      labels: 'Luminosidade (Lux)',
-      data: [92, 8],
-      borderWidth: 1
-    },
-    ]
-  },
-  options: {
-   Plugins: {
-      legend: {
-        display: false
-      },
-      title: {
-         display: false,
-      }
-    },
-    scales: {
-      display: false,
-    }
-  }
-});
-
-
-
-  
-    var paginacao = {};
-    var tempo = {};
-  
-    function obterDados(grafico, endpoint) {
-      var http = new XMLHttpRequest();
-      http.open('GET', 'http://localhost:3300/sensores/' + endpoint, false);
-      http.send(null);
-      var valores = JSON.parse(http.responseText);
-      if (paginacao[endpoint] == null) {
-        paginacao[endpoint] = 0;
-      }
-      if (tempo[endpoint] == null) {
-        tempo[endpoint] = 0;
-      }
-      // Exibir à partir do último elemento exibido anteriormente
-      var ultimaPaginacao = paginacao[endpoint];
-      paginacao[endpoint] = valores.length;
-      var valores = valores.slice(ultimaPaginacao);
-      valores.forEach((valor) => {
-        //Máximo de 60 itens exibidos no gráfico
-        if (grafico.data.labels.length == 10 && grafico.data.datasets[0].data.length == 10) {
-          grafico.data.labels.shift();
-          grafico.data.datasets[0].data.shift();
-        }
-  
-        grafico.data.labels.push(tempo[endpoint]++);
-        grafico.data.datasets[0].data.push(parseFloat(valor));
-        grafico.update();
-      })
-    }
-  
-  
-  
-  
-  
-  
 //     setInterval(() => {
 
 // obterDados(graficoLuminosidade, 'luminosidade');
@@ -307,4 +345,4 @@ const graficoLuminosidade = new Chart(ctx2, {
 // }, 2000);
 
 
-</script>
+   </script>

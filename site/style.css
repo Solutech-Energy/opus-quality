@@ -1497,6 +1497,11 @@ body {
     width: 40%;
     height: 15vh;
     border-radius: 15%;
+    cursor: pointer;
+}
+
+.environments1:hover .textEnvironmentsL1 {
+    background-color: #ff7300;
 }
 
 .textEnvironmentsL1 {
@@ -1636,6 +1641,7 @@ body {
     width: 100px;
     height: 40px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .clickRecoverPassword {
