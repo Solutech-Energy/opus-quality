@@ -359,7 +359,7 @@ a {
 .nomeDepoimento {
     font-family: 'Times New Roman', Times, serif;
     display: flex;
-    margin-top: 5%;
+    margin-top: 1%;
     width: 100%;
     align-items: flex-end;
     justify-content: flex-end;
