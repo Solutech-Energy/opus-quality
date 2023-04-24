@@ -95,15 +95,6 @@ a {
     cursor: pointer;
 }
 
-navbarLista ul,
-.navbarLista li {
-    padding: 5px 10px;
-    color: #D68F3B;
-    font-weight: 800;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 
 .loginBtn {
     cursor: pointer;
