@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animations.css">
+    <link rel="shortcut icon" href="img/logoFavicon.ico" type="image/x-icon">
     <title> Opus Quality | Home </title>
 </head>
 
@@ -14,8 +15,6 @@
 
 
     <div class="containerModal" id="containerModal">
-
-
 
         <div class="cardRegister modal" id="cardRegister">
             <div class="topRegister">
@@ -57,14 +56,12 @@
                 </div>
 
                 <div class="line4">
-                    <div class="clickSave"><a href="#">Salvar</a></div>
+                    <div class="clickSave" id="clickSave"><a href="#">Salvar</a></div>
                     <div class="haveAccount" id="haveAccount">Já tem uma conta? Entre</div>
                 </div>
 
             </div>
-        </div>`
-
-
+        </div>
 
         <div class="cardLogin modal" id="cardLogin">
             <div class="imgLogin">
@@ -96,7 +93,7 @@
                     </div>
 
                     <div>
-                        <input type="text" placeholder="" class="inputstransparente">
+                        <input type="text" placeholder="" id="inputEmail" class="inputstransparente">
                         <div></div>
                     </div>
 
@@ -113,12 +110,12 @@
                     </div>
 
                     <div>
-                        <input type="text" placeholder="" class="inputstransparente">
+                        <input type="password" placeholder="" id="inputSenha" class="inputstransparente">
                         <div></div>
                     </div>
 
                     <div class="cardsClicks">
-                        <div class="clickEnter">Entrar</div>
+                        <div class="clickEnter" onclick="login()">Entrar</div>
                         <div class="clickRecoverPassword">Recuperar Senha</div>
                         <div class="registerLink" id="RegisterLink">
                             Ainda não tem uma conta? Cadastre-se
@@ -144,7 +141,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="quemsomos.html">Quem somos</a></li>
                     <li><a href="calculadora_financeira.html">Simulação</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a id="registerNavLink">Cadastro</a></li>
                     <a id="btnLogin" class="loginBtn">
                         <b>Login</b>
                     </a>
@@ -273,7 +270,8 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="scriptModal.js"></script>
+    <script src="scriptLogin.js"></script>
 </body>
 
 </html>
