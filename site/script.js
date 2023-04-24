@@ -132,7 +132,7 @@ function login() {
         cria_cookie("login", "true");
         toggleModal();
         alert("Usuário Autenticado com Sucesso!")
-        window.location.assign("https://api.whatsapp.com/send/?phone=5511974315565&Olá!+Acabei+de+me+*cadastrar*+no+seu+Sistema!")
+        window.location.assign("https://api.whatsapp.com/send/?phone=5511974315565&Ol%C3%A1%21+Acabei+de+me+%2Acadastrar%2A+no+seu+Sistema%21")
     } else {
         alert("Login ou senha inválidos");
     }
