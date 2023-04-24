@@ -67,8 +67,9 @@
                 <button onclick="simular_economia()">Simular Economia</button>
             </div>
             <div id="resultado">
-                <div id="absentismo"></div>
-                <div id="energia"></div>
+                    <div id="tituloEstimativa"></div>
+                    <div id="absentismo"></div>
+                    <div id="energia"></div>
             </div>
 
 
@@ -144,15 +145,16 @@
         var salario_perdido = (faltas_mes / colaboradores) * media_salario;
         var economia_absenteismo = salario_perdido * 0.5; // Dinheiro economizado com a nossa solução (50%)
         var novo_indice_absenteismo = indice_faltas * 0.5;
-
-        absentismo.innerHTML = `
+        tituloEstimativa.innerHTML = `
         <h2>Estimativa Financeira para ${nome_empresa}</h2>
+        `;
+        absentismo.innerHTML = `
         <h3>Absenteísmo</h3>
-        A Taxa de Absenteísmo da sua empresa é de ${indice_faltas}% (A Taxa ideal é menos de 4%). <br>
-        Isso equivale a ${faltas_mes} faltas por mês. <br>
-        Com a taxa atual, você tem uma perda de R$${salario_perdido.toFixed(2)} por mês em salario pago que não foi equivalente às horas trabalhadas. 
+        A Taxa de Absenteísmo da sua empresa é de <b style="color:red"> ${indice_faltas}% </b> (A Taxa ideal é menos de 4%). <br>
+        Isso equivale a <b style="color:red"> ${faltas_mes} </b> faltas por mês. <br>
+        Com a taxa atual, você tem uma perda de <b style="color:red"> R$${salario_perdido.toFixed(2)} </b> por mês em salario pago que não foi equivalente às horas trabalhadas. 
         <br><br>
-        Nossa solução se propõe para reduzir essa taxa em pelo menos 50%, reduzindo os gastos com absenteísmo em R$${economia_absenteismo} com uma taxa final de ${novo_indice_absenteismo}%.
+        Nossa solução se propõe para reduzir essa taxa em pelo menos 50%, reduzindo os gastos com absenteísmo em <b style="color:green"> R$${economia_absenteismo} </b> com uma taxa final de <b style="color:green"> ${novo_indice_absenteismo}%.</b>
         <br><br>
         E ainda tem mais! Nosso projeto também contribui com a economia de energia na sua empresa. Veja as estimativas a seguir:
         <br<br>
@@ -185,14 +187,14 @@
         energia.innerHTML = `
         <h3>Bônus: Economia de Energia</h3>
         Sem a nossa solução, você gasta:<br>
-        R$${gasto_ar_cond_11h.toFixed(2)} com Ar Condicionado ligado apenas durante o horário comercial (${kwh_ar_cond_11h} KWh/mês) <br>
-        R$${gasto_lampada_11h.toFixed(2)} com Lâmpadas ligadas apenas durante o horário comercial (${kwh_lampada_11h} KWh/mês) 
+        <b style="color:red"> R$${gasto_ar_cond_11h.toFixed(2)} </b> com Ar Condicionado ligado apenas durante o horário comercial <b style="color:red"> (${kwh_ar_cond_11h} KWh/mês) </b> <br>
+        <b style="color:red"> R$${gasto_lampada_11h.toFixed(2)} </b> com Lâmpadas ligadas apenas durante o horário comercial <b style="color:red"> (${kwh_lampada_11h}  KWh/mês) </b>
         <br><br>
         Com a nossa solução, além da economia de absenteísmo, você poupa:
-        R$${economia_ar_cond_11h.toFixed(2)} com Ar Condicionado ligado apenas durante o horário comercial (50%) <br>
-        R$${economia_lampada_11h.toFixed(2)} com Lâmpadas ligadas apenas durante o horário comercial (10%)
+        <b style="color:green"> R$${economia_ar_cond_11h.toFixed(2)} </b> com Ar Condicionado ligado apenas durante o horário comercial (50%) <br>
+        <b style="color:green"> R$${economia_lampada_11h.toFixed(2)} </b> com Lâmpadas ligadas apenas durante o horário comercial (10%)
         <br><br>
-        No total, estimamos que você economizará R$${economia_total.toFixed(2)} mensalmente com a nossa solução.<br><br>
+        No total, estimamos que você economizará <b style="color:green"> R$${economia_total.toFixed(2)} </b> mensalmente com a nossa solução.<br><br>
         <Insira texto breve sobre como essa economia acontece aqui>
         `
     }

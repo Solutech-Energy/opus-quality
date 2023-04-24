@@ -44,10 +44,6 @@ a {
     ;
 }
 
-.containerGeral {
-    background-size: 100%;
-}
-
 /*HOME HOME HOME HOME*/
 
 .containerGeralhome {
@@ -92,6 +88,15 @@ a {
 
 .navbarLista ul,
 .navbarLista li a {
+    padding: 5px 10px;
+    color: #D68F3B;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+navbarLista ul,
+.navbarLista li {
     padding: 5px 10px;
     color: #D68F3B;
     font-weight: 800;
@@ -283,7 +288,7 @@ a {
 
 /* Começando CLIENTES*/
 
-.tituloQuemSomosPrincipal {
+.QuemSomosPrincipal {
     display: flex;
     justify-content: center;
 
@@ -359,7 +364,7 @@ a {
 .nomeDepoimento {
     font-family: 'Times New Roman', Times, serif;
     display: flex;
-    margin-top: 5%;
+    margin-top: 1%;
     width: 100%;
     align-items: flex-end;
     justify-content: flex-end;
@@ -718,6 +723,7 @@ body {
 .tituloCalculadora h1 {
     background-size: cover;
     padding: 1%;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -843,23 +849,29 @@ body {
 }
 
 #resultado {
-    display: inherit;
     justify-content: center;
-    background-color: #FFFFFF;
-    margin: 10px 10% 10% 10%;
+    background-color: #070d257a;
+    color: #ffffff;
+    margin: 0% 5% 3% 5%;
     border-radius: 10px;
 }
 
+#tituloEstimativa {
+    display: block;
+    text-align: center;
+}
+
 #absentismo {
-    width: 35%;
-    margin: 2%;
+    float: left;
+    width: 44%;
+    margin: 0% 3% 3% 3%;
 }
 
 #energia {
-    width: 35%;
-    margin: 2%;
+    float: right;
+    width: 44%;
+    margin: 0% 3% 3% 3%;
 }
-
 
 /* CSS Dashboard Local*/
 
@@ -1501,11 +1513,6 @@ body {
     width: 40%;
     height: 15vh;
     border-radius: 15%;
-    cursor: pointer;
-}
-
-.environments1:hover .textEnvironmentsL1 {
-    background-color: #ff7300;
 }
 
 .textEnvironmentsL1 {
@@ -1645,7 +1652,6 @@ body {
     width: 100px;
     height: 40px;
     border-radius: 10px;
-    cursor: pointer;
 }
 
 .clickRecoverPassword {
