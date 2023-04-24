@@ -3,8 +3,9 @@ btnCloseModal = document.getElementById("btnCloseModal");
 containerMain = document.getElementById("containerMain").style;
 btnRegisterLink = document.getElementById("RegisterLink");
 btnHaveAccount = document.getElementById("haveAccount");
+registerNavLink = document.getElementById("registerNavLink");
 
-btnLogin.addEventListener("click", function () { toggleModal() });
+btnLogin.addEventListener("click", function () { abrirLogin() });
 
 function toggleModal() {
     var modal = document.querySelector(".containerModal").style;
@@ -94,13 +95,13 @@ function logout() {
 
 verificarLogin();
 
-function toogleLogin() {
+function toggleLogin() {
 
     var modalRegister = document.getElementById("cardRegister");
     var modalRegisterState = modalRegister.style.display;
     var modalLogin = document.getElementById("cardLogin");
 
-    if (modalRegisterState == "none") {
+    if (modalRegisterState == "none" || modalRegisterState == "") {
         modalRegister.style.display = "block";
         modalLogin.style.display = "none";
     } else {
@@ -109,11 +110,32 @@ function toogleLogin() {
     }
 }
 
+function abrirLogin() {
+    var modalRegister = document.getElementById("cardRegister");
+    toggleModal();
+    if (modalRegister.style.display == "block") {
+        toggleLogin();
+    }
+};
+
+function abrirRegister() {
+    var modalLogin = document.getElementById("cardLogin");
+    var modalRegister = document.getElementById("cardRegister");
+    toggleModal();
+    if (modalRegister.style.display == "none" || modalRegister.style.display == "" || modalLogin.style.display == "flex") {
+        toggleLogin();
+    }
+};
+
+registerNavLink.addEventListener("click", function () {
+    abrirRegister();
+});
+
 
 btnRegisterLink.addEventListener("click", () => {
-    toogleLogin();
+    toggleLogin();
 })
 
 btnHaveAccount.addEventListener("click", () => {
-    toogleLogin();
+    toggleLogin();
 })
