@@ -46,8 +46,6 @@
 }
 
 .btnFazerParte:hover {
-
-    animation: animacaoBotao .3s normal;
     background: rgb(20, 122, 239);
 }
 

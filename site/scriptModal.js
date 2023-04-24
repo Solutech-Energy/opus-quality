@@ -5,6 +5,7 @@ btnRegisterLink = document.getElementById("RegisterLink");
 btnHaveAccount = document.getElementById("haveAccount");
 registerNavLink = document.getElementById("registerNavLink");
 
+
 btnLogin.addEventListener("click", function () {
     verificarLogin()
 });

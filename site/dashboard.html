@@ -34,45 +34,45 @@
 
   <div class="textDashboard"> Sala Aula 1º Andar</div>
 
-<div class="containerGraphics">
-          <div class="leftGraphic">
+  <div class="containerGraphics">
+    <div class="leftGraphic">
 
-                          <div class="graphicDescriptionLDR5">
-                
-                                    <div class="textLeft1">
-                                    <h4 style="color: #EF8A14">SENSOR LUMINOSIDADE</h4>
-                                     Total de Sensores: 31<br><br>
-                                     Irregulares:<br> 0
-                                    </div>
+      <div class="graphicDescriptionLDR5">
 
-                          <div class="cardGraficoLDR5">
-                                    <canvas id="graficoLDR5"></canvas>
-                                    </div>
+        <div class="textLeft1">
+          <h4 style="color: #EF8A14">SENSOR LUMINOSIDADE</h4>
+          Total de Sensores: 31<br><br>
+          Irregulares:<br> 0
+        </div>
 
-                          </div>
+        <div class="cardGraficoLDR5">
+          <canvas id="graficoLDR5"></canvas>
+        </div>
 
-
-                          <div class="graphicDescriptionLM35">
-                                <div class="textLeft2">
-                                <h4 style="color: #EF8A14">SENSOR TEMPERATURA</h4>
-                                     Total de Sensores: 31<br><br>
-                                     Irregulares:<br> 0
-                              </div>
-
-                          <div class="cardGraficoLM35">
-                                  <canvas id="graficoLM35"></canvas>
-                          </div>
-
-                    </div>
+      </div>
 
 
-          </div>
+      <div class="graphicDescriptionLM35">
+        <div class="textLeft2">
+          <h4 style="color: #EF8A14">SENSOR TEMPERATURA</h4>
+          Total de Sensores: 31<br><br>
+          Irregulares:<br> 0
+        </div>
+
+        <div class="cardGraficoLM35">
+          <canvas id="graficoLM35"></canvas>
+        </div>
+
+      </div>
 
 
+    </div>
 
 
 
-          <div class="linhaVertical"></div>
+
+
+    <div class="linhaVertical"></div>
 
 
     <div class="right">
@@ -89,7 +89,7 @@
 
   </div>
 
-</div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
@@ -107,12 +107,9 @@
       datasets: [{
         label: 'Luminosidade (Lux)',
         data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
-      },
-      {
-        label: 'Luminosidade (Lux)',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
+        borderWidth: 3,
+        borderColor: '#EF8A14',
+        backgroundColor: '#EF8A14',
       }]
     },
     options: {
@@ -136,7 +133,8 @@
         {
           label: 'Temperatura',
           data: [12, 19, 3, 5, 2, 3],
-          borderWidth: 1
+          borderWidth: 3,
+
         }]
     },
     options: {
