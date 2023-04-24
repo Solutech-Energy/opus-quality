@@ -44,6 +44,10 @@ a {
     ;
 }
 
+.containerGeral {
+    background-size: 100%;
+}
+
 /*HOME HOME HOME HOME*/
 
 .containerGeralhome {
