@@ -843,21 +843,28 @@ body {
 }
 
 #resultado {
-    display: inherit;
     justify-content: center;
-    background-color: #FFFFFF;
-    margin: 10px 10% 10% 10%;
+    background-color: #070d257a;
+    color: #ffffff;
+    margin: 0% 5% 3% 5%;
     border-radius: 10px;
 }
+  
+#tituloEstimativa {
+    display: block;
+    text-align: center;
+}
 
-#absentismo {
-    width: 35%;
-    margin: 2%;
+  #absentismo {
+    float: left;
+    width: 44%;
+    margin: 0% 3% 3% 3%;
 }
 
 #energia {
-    width: 35%;
-    margin: 2%;
+    float: right;
+    width: 44%;
+    margin: 0% 3% 3% 3%;
 }
 
 
