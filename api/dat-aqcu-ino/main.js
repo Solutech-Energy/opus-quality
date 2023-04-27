@@ -11,7 +11,7 @@ const SERVIDOR_PORTA = 3300;
 // configure a linha abaixo caso queira que os dados capturados sejam inseridos no banco de dados.
 // false -> nao insere
 // true -> insere
-const HABILITAR_OPERACAO_INSERIR = false;
+const HABILITAR_OPERACAO_INSERIR = true;
 
 // altere o valor da variável AMBIENTE para o valor desejado:
 // API conectada ao banco de dados remoto, SQL Server -> 'producao'
@@ -31,9 +31,9 @@ const serial = async (
                 // altere!
                 // CREDENCIAIS DO BANCO LOCAL - MYSQL WORKBENCH
                 host: 'localhost',
-                user: 'USUARIO_DO_BANCO_LOCAL',
-                password: 'SENHA_DO_BANCO_LOCAL',
-                database: 'DATABASE_LOCAL'
+                user: 'insert-registro',
+                password: 'opus23',
+                database: 'OpusQuality'
             }
         ).promise();
     } else if (AMBIENTE == 'producao') {
@@ -60,13 +60,13 @@ const serial = async (
     arduino.pipe(new serialport.ReadlineParser({ delimiter: '\r\n' })).on('data', async (data) => {
         //console.log(data);
         const valores = data.split(';');
-        const lm35Temperatura = parseFloat(valores[0]);
+        const temperatura = parseFloat(valores[0]);
         const luminosidade = parseFloat(valores[1]);
 
 
 
         valoresLuminosidade.push(luminosidade);
-        valoresLm35Temperatura.push(lm35Temperatura);
+        valoresLm35Temperatura.push(temperatura);
 
         if (HABILITAR_OPERACAO_INSERIR) {
             if (AMBIENTE == 'producao') {
@@ -99,10 +99,14 @@ const serial = async (
                 // Este insert irá inserir dados de fk_aquario id=1 (fixo no comando do insert abaixo)
                 // >> você deve ter o aquario de id 1 cadastrado.
                 await poolBancoDados.execute(
-                    'INSERT INTO medida (dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, chave, momento, fk_aquario) VALUES (?, ?, ?, ?, ?, now(), 1)',
-                    [dht11Umidade, dht11Temperatura, luminosidade, lm35Temperatura, chave]
+                    'INSERT INTO registros (valor, dataHora, fkSensores) VALUES (?, now(), 2)',
+                    [temperatura]
                 );
-                console.log("valores inseridos no banco: ", dht11Umidade + ", " + dht11Temperatura + ", " + luminosidade + ", " + lm35Temperatura + ", " + chave)
+                await poolBancoDados.execute(
+                    'INSERT INTO registros (valor, dataHora, fkSensores) VALUES (?, now(), 1)',
+                    [luminosidade]
+                );
+                console.log("valores inseridos no banco: ", temperatura + ", " + luminosidade)
 
             } else {
                 throw new Error('Ambiente não configurado. Verifique o arquivo "main.js" e tente novamente.');
