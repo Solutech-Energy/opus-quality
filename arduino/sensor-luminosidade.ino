@@ -1,14 +1,31 @@
-int arduino_pin = A5, leitura_sensor_ldr = 0; //  Lê a entrada do sensor LDR no pino A5 
+int lm35_pin = A4, leitura_lm35 = 0;
+float temperatura;
 
-void setup()  // Configura forma de comunicação serial
+int ldr_pin = A0, leitura_ldr = 0;
+
+
+void setup() 
 {
+  //Iniciando o Serial na velocidade de 9600
   Serial.begin(9600);
-  pinMode(arduino_pin, INPUT);
-}
+  //Ajustando a porta A3 do 
+pinMode(lm35_pin, INPUT);
+pinMode(ldr_pin, INPUT);
 
-void loop() // Recebe valor do sensor e atribui à variável 'leitura_sensor_ldr'
+}
+ 
+void loop() 
 {
-  leitura_sensor_ldr = analogRead(arduino_pin);
-  Serial.println(leitura_sensor_ldr);
-  delay(2000);
+
+  leitura_lm35 = analogRead(lm35_pin);
+  temperatura = leitura_lm35 * (5.0/1023) * 100;
+  int luminosidade = analogRead(ldr_pin);
+
+  Serial.print(temperatura);
+  Serial.print(";");
+  Serial.print(luminosidade);
+  Serial.println();
+  
+//Espera  1 segundo para rodar o código denovo
+ delay(1000);
 }
