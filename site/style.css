@@ -15,7 +15,7 @@ a {
 }
 
 * {
-font-family: 'Poppins';
+    font-family: 'Poppins';
 }
 
 ::-webkit-scrollbar {
@@ -40,7 +40,8 @@ font-family: 'Poppins';
     opacity: 1;
     position: absolute;
     justify-content: center;
-    align-items: center;v g
+    align-items: center;
+    v g
 }
 
 .containerGeral {
@@ -848,13 +849,13 @@ body {
     margin: 0% 5% 3% 5%;
     border-radius: 10px;
 }
-  
+
 #tituloEstimativa {
     display: block;
     text-align: center;
 }
 
-  #absentismo {
+#absentismo {
     float: left;
     width: 44%;
     margin: 0% 3% 3% 3%;
@@ -2049,7 +2050,7 @@ body {
     display: flex;
 }
 
-.DashEspecificaLeft{
+.DashEspecificaLeft {
     width: 35%;
     height: 100%;
     display: flex;
@@ -2070,7 +2071,7 @@ body {
     width: 100%;
     display: flex;
     margin-top: 15%;
-    
+
 }
 
 .buttonPlanta {
@@ -2083,7 +2084,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 25%;
-} 
+}
 
 .buttonSair {
     display: flex;
@@ -2095,51 +2096,88 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 170%;
-} 
-
-
+}
 
 .faixaAlertas {
     color: white;
-    flex-direction: column;
     width: 60%;
-    height: 100vh;
+    flex-direction: column;
     display: flex;
     align-items: center;
 }
 
-.cardTemperatura  {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
+.cardsEspecifica {
     width: 90%;
-    height: 35%;
-    background-color: #1F4662;
-    border-radius: 	15px;
-    font-weight: bold;
-
-}
-
-.AlertCores {
-    width: 30%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.cardLuminosidade  {
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    height: 35%;
+    padding-bottom: 5%;
+    border-radius: 15px;
     background-color: #1F4662;
-    border-radius: 	15px;
+}
+
+.titleAlert {
+    width: 100%;
+    display: flex;
+    margin-bottom: 5%;
+    font-size: 120%;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.AlertLeft {
+    display: flex;
+    width: 100%;
+}
+
+.alerta {
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+    margin-left: 10%;
+
+    font-size: 130%;
+    margin-bottom: 2%;
+}
+
+.alerta span {
+    margin-left: 5%;
+}
+
+.Cores {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 
 
 
-.DashEspecificaRight{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.DashEspecificaRight {
     width: 65%;
     height: 100%;
 }
@@ -2168,7 +2206,7 @@ body {
     margin-top: -45%;
 }
 
-.QuadrantesTemp span     {
+.QuadrantesTemp span {
     margin-top: -5%;
 }
 
@@ -2191,32 +2229,4 @@ body {
 
 .QuadrantesLum span {
     margin-top: -5%;
-}
-.Quadrantes3 {
-    width: 45%;
-    height: 40vh;
-    background-color: white;
-    border-radius: 15px;
-    margin-top: 5%;
-}
-.Quadrantes4 {
-    width: 45%;
-    height: 40vh;
-    background-color: white;
-    border-radius: 15px;
-    margin-top: 5%;
-}
-.Quadrantes5 {
-    width: 40%;
-    height: 40vh;
-    background-color: white;
-    border-radius: 15px;
-    margin-top: 5%;
-}
-.Quadrantes6 {
-    width: 40%;
-    height: 40vh;
-    background-color: white;
-    border-radius: 15px;
-    margin-top: 5%;
 }
