@@ -2109,18 +2109,34 @@ body {
 }
 
 .cardTemperatura  {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: 35%;
+    background-color: #1F4662;
+    border-radius: 	15px;
+    font-weight: bold;
+
+}
+
+.AlertCores {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardLuminosidade  {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
     width: 90%;
     height: 35%;
     background-color: #1F4662;
     border-radius: 	15px;
 }
 
-.cardLuminosidade  {
-    width: 90%;
-    height: 35%;
-    background-color: #1F4662;
-    border-radius: 	15px;
-}
 
 
 .DashEspecificaRight{
@@ -2137,6 +2153,10 @@ body {
 }
 
 .QuadrantesTemp {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
     width: 45%;
     height: 40vh;
     background-color: white;
@@ -2144,12 +2164,33 @@ body {
     margin-top: 5%;
 }
 
+.QuadrantesTemp h3 {
+    margin-top: -45%;
+}
+
+.QuadrantesTemp span     {
+    margin-top: -5%;
+}
+
+
 .QuadrantesLum {
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
     width: 45%;
     height: 40vh;
     background-color: white;
     border-radius: 15px;
     margin-top: 5%;
+}
+
+.QuadrantesLum h3 {
+    margin-top: -45%;
+}
+
+.QuadrantesLum span {
+    margin-top: -5%;
 }
 .Quadrantes3 {
     width: 45%;
