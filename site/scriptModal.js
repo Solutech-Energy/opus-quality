@@ -7,7 +7,7 @@ registerNavLink = document.getElementById("registerNavLink");
 
 
 btnLogin.addEventListener("click", function () {
-    verificarLogin()
+    abrirLogin();
 });
 
 registerNavLink.addEventListener("click", function () {
