@@ -1707,9 +1707,7 @@ body {
     width: 60vw;
     height: 80vh;
     border-radius: 15px 15px 15px 15px;
-    display: none;
     overflow: hidden;
-    animation: openModal 1s normal;
 
 }
 
