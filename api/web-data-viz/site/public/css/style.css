@@ -11,7 +11,7 @@ a {
 
 @font-face {
     font-family: 'Poppins';
-    src: url(fonts/Poppins-Regular.ttf);
+    src: url(../assets/fonts/Poppins-Regular.ttf);
 }
 
 * {
@@ -41,7 +41,6 @@ a {
     position: absolute;
     justify-content: center;
     align-items: center;
-    v g
 }
 
 .containerGeral {
@@ -51,7 +50,7 @@ a {
 /*HOME HOME HOME HOME*/
 
 .containerGeralhome {
-    background-image: url(img/FundoPGInicial.jpeg);
+    background-image: url(../assets/img/FundoPGInicial.jpeg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: #5b6284;
@@ -705,7 +704,7 @@ body {
 }
 
 .containerCalculosGeral {
-    background-image: url(img/CalculadoraImgFundo.png);
+    background-image: url(../assets/img/CalculadoraImgFundo.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: #242c55cb;
@@ -1513,7 +1512,7 @@ body {
 
 .environments1 {
     align-items: end;
-    background-image: url(img/unsplash_jUOaONoXJQk.png);
+    background-image: url(../assets/img/unsplash_jUOaONoXJQk.png);
     font-weight: bold;
     justify-content: center;
     display: flex;
@@ -1571,7 +1570,7 @@ body {
 
 .imgLogin {
 
-    background-image: url(img/imgLoginBackground.png);
+    background-image: url(../assets/img/imgLoginBackground.png);
     background-size: cover;
     align-items: center;
     justify-content: left;
@@ -1716,7 +1715,7 @@ body {
 
 .topRegister {
     background-size: cover;
-    background-image: url(img/imgCadastro.png);
+    background-image: url(../assets/img/imgCadastro.png);
     display: flex;
     width: 100%;
     height: 30%;
@@ -1900,7 +1899,7 @@ body {
 }
 
 .topNovoAmbiente {
-    background-image: url(img/imgNovoAmbiente.jpg);
+    background-image: url(../assets/img/imgNovoAmbiente.jpg);
     display: flex;
     width: 100%;
     height: 30%;
@@ -2262,7 +2261,7 @@ body {
 
 .topCadastro {
     background-size: cover;
-    background-image: url(img/imgCadastro.png);
+    background-image: url(../assets/img/imgCadastro.png);
     display: flex;
     width: 100%;
     height: 25%;
@@ -2299,6 +2298,7 @@ body {
     font-size: 180%;
     color: #1F4662;
 }
+
 .clickSaveCadastro {
     color: white;
     align-items: center;
