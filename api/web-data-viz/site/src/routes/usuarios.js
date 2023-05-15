@@ -11,6 +11,10 @@ router.get("/listar", function (req, res) {
     usuarioController.listar(req, res);
 });
 
+router.get("/cadastrar", function (req, res) {
+    res.sendFile(__dirname + "/public/cadastro.html");
+});
+
 //Recebendo os dados do html e direcionando para a função cadastrar de usuarioController.js
 router.post("/cadastrar", function (req, res) {
     usuarioController.cadastrar(req, res);

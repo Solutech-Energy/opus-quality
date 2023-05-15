@@ -1,8 +1,16 @@
 -- DROP DATABASE OpusQuality;
+DROP DATABASE IF EXISTS OpusQuality;
 CREATE DATABASE OpusQuality;
 USE OpusQuality;
 
 -- CRIANDO TABELA EMPRESA
+
+DROP TABLE IF EXISTS Empresa;
+DROP  TABLE IF EXISTS Usuario;
+DROP  TABLE IF EXISTS Setor;
+DROP  TABLE IF EXISTS Sensores;
+DROP  TABLE IF EXISTS Registros;
+
 
 create table Empresa(
 idEmpresa int primary key auto_increment,
@@ -126,6 +134,7 @@ insert into Registros values
 
 
 select * from Empresa;
+USE OpusQuality;
 select * from usuario;
 select * from setor;
 select * from sensores;

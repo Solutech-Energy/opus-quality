@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepare": "cd ./api/web-data-viz && npm install",
-    "start": "nodemon /web-data-viz/site/app.js",
+    "start": "nodemon api/web-data-viz/site/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
