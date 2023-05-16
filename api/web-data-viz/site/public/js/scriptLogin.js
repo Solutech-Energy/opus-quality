@@ -1,4 +1,4 @@
-function entrar() {
+function login() {
 
     var emailVar = inputEmail.value;
     var senhaVar = inputSenha.value;
