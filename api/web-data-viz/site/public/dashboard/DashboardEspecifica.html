@@ -32,7 +32,9 @@
                     <span>Sair</span>
                 </div>
             </div>
+            <div style="width: 100%; height: 100%; background-color: aquamarine; display: none; position: absolute;">
 
+            </div>
             <div class="faixaAlertas">
 
                 <h2>Temperatura</h2>
@@ -136,136 +138,38 @@
                     </div>
                 </div>
 
-                <div class="buttonPlanta">
-                    <a href="plantalocal.html"><span>Planta Local</span></a>
-                </div> 
+                
             </div>
             
         </div>
 
         <div class="DashEspecificaRight">
 
-
-            <div class="Quadrantes">
-                <div class="QuadrantesTemp">
-
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span> Temperatura</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
+            <div class="plantaDashEspecifica">
+                <div class="Quadrantes123">
+                    <div class="QuadrantesBom" onclick="pintarQuadrante(1)" id="q1"></div>
+                    <div class="QuadrantesBom" id="q2" onclick="pintarQuadrante(2)"></div>
+                    <div class="QuadrantesBom" id="q3"></div>
                 </div>
 
-                <div class="QuadrantesTemp">
+                <div class="Quadrantes456">
+                    <div class="QuadrantesBom" ></div>
+                    <div class="QuadrantesBom"></div>
+                    <div class="QuadrantesBom"></div>
 
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span>Luminosidade</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="Quadrantes">
-                <div class="QuadrantesTemp">
-
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span> Temperatura</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
-                </div>
-
-
-                <div class="QuadrantesLum">
-                    <h3>Quadrante2</h3>
-                    <span>Luminosidade</span>
-                    <div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="Quadrantes">
-                <div class="QuadrantesTemp">
-
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span> Temperatura</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
-                </div>
-
-                <div class="QuadrantesLum">
-                    <h3>Quadrante3</h3>
-                    <span>Luminosidade</span>
-                </div>
-            </div>
-            <div class="Quadrantes">
-                <div class="QuadrantesTemp">
-
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span> Temperatura</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
-                </div>
-
-                <div class="QuadrantesLum">
-                    <h3>Quadrante4</h3>
-                    <span>Luminosidade</span>
-                </div>
-            </div>
-            <div class="Quadrantes">
-                <div class="QuadrantesTemp">
-
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span> Temperatura</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
-                </div>
-
-                <div class="QuadrantesLum">
-                    <h3>Quadrante5</h3>
-                    <span>Luminosidade</span>
-                </div>
-            </div>
-            <div class="Quadrantes">
-                <div class="QuadrantesTemp">
-
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span> Temperatura</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
-                </div>
-
-                <div class="QuadrantesLum">
-                    <h3>Quadrante6</h3>
-                    <span>Luminosidade</span>
                 </div>
             </div>
 
+            <script>
+
+            function pintarQuadrante(id) {
+                quadranteAtual = document.getElementById("q"+id);
+
+                quadranteAtual.classList.add("QuadrantesRuim");
+                }
+
+            </script>
+<!-- s
 
         </div>
 
