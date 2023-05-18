@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="img/logoFavicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="..img/logoFavicon.ico" type="image/x-icon">
     <title>Opus | Dashboard Específica</title>
 </head>
 
@@ -23,8 +23,9 @@
                         d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                 </svg>
 
-                <div class="buttonPlanta">
-                    <span>Planta Local</span>
+                <div class="nomeUsuario">Olá, <span>Luiz</span></div>
+                <div class="buttonLateral">
+                    <span>asasf</span>
                 </div>
 
                 <div class="buttonSair">
@@ -134,7 +135,12 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="buttonPlanta">
+                    <a href="plantalocal.html"><span>Planta Local</span></a>
+                </div> 
             </div>
+            
         </div>
 
         <div class="DashEspecificaRight">
@@ -142,52 +148,98 @@
 
             <div class="Quadrantes">
                 <div class="QuadrantesTemp">
-                    <h3>Quadrante1</h3>
+
+                    <div class="localGrafico">
+                    <h3>Quadrante1:</h3>
                     <span> Temperatura</span>
+                    </div>
+                    
+                    <div class="graficoSensor">
+                        <canvas id="graficoLM35"></canvas>
+                    </div>
                 </div>
 
-                <div class="QuadrantesLum">
-                    <h3>Quadrante1</h3>
-                    <span> Luminosidade</span>
+                <div class="QuadrantesTemp">
+
+                    <div class="localGrafico">
+                    <h3>Quadrante1:</h3>
+                    <span>Luminosidade</span>
+                    </div>
+                    
+                    <div class="graficoSensor">
+                        <canvas id="graficoLM35"></canvas>
+                    </div>
                 </div>
             </div>
             <div class="Quadrantes">
                 <div class="QuadrantesTemp">
+
+                    <div class="localGrafico">
+                    <h3>Quadrante1:</h3>
+                    <span> Temperatura</span>
+                    </div>
+                    
+                    <div class="graficoSensor">
+                        <canvas id="graficoLM35"></canvas>
+                    </div>
+                </div>
+
+
+                <div class="QuadrantesLum">
                     <h3>Quadrante2</h3>
-                    <span> Temperatura</span>
-                </div>
-
-                <div class="QuadrantesLum">
-                    <h3>Quadrante2</h3>
                     <span>Luminosidade</span>
+                    <div>
+
+                    </div>
                 </div>
             </div>
             <div class="Quadrantes">
                 <div class="QuadrantesTemp">
+
+                    <div class="localGrafico">
+                    <h3>Quadrante1:</h3>
+                    <span> Temperatura</span>
+                    </div>
+                    
+                    <div class="graficoSensor">
+                        <canvas id="graficoLM35"></canvas>
+                    </div>
+                </div>
+
+                <div class="QuadrantesLum">
                     <h3>Quadrante3</h3>
-                    <span> Temperatura</span>
-                </div>
-
-                <div class="QuadrantesLum">
-                    <h3>Quadrante3</h3>
                     <span>Luminosidade</span>
                 </div>
             </div>
             <div class="Quadrantes">
                 <div class="QuadrantesTemp">
+
+                    <div class="localGrafico">
+                    <h3>Quadrante1:</h3>
+                    <span> Temperatura</span>
+                    </div>
+                    
+                    <div class="graficoSensor">
+                        <canvas id="graficoLM35"></canvas>
+                    </div>
+                </div>
+
+                <div class="QuadrantesLum">
                     <h3>Quadrante4</h3>
-                    <span> Temperatura</span>
-                </div>
-
-                <div class="QuadrantesLum">
-                    <h3>Quadrante4</h3>
                     <span>Luminosidade</span>
                 </div>
             </div>
             <div class="Quadrantes">
                 <div class="QuadrantesTemp">
-                    <h3>Quadrante5</h3>
+
+                    <div class="localGrafico">
+                    <h3>Quadrante1:</h3>
                     <span> Temperatura</span>
+                    </div>
+                    
+                    <div class="graficoSensor">
+                        <canvas id="graficoLM35"></canvas>
+                    </div>
                 </div>
 
                 <div class="QuadrantesLum">
@@ -197,8 +249,15 @@
             </div>
             <div class="Quadrantes">
                 <div class="QuadrantesTemp">
-                    <h3>Quadrante6</h3>
+
+                    <div class="localGrafico">
+                    <h3>Quadrante1:</h3>
                     <span> Temperatura</span>
+                    </div>
+                    
+                    <div class="graficoSensor">
+                        <canvas id="graficoLM35"></canvas>
+                    </div>
                 </div>
 
                 <div class="QuadrantesLum">
@@ -214,6 +273,65 @@
 
     </div>
 
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </body>
 
 </html>
+
+<script>
+
+const ctx = document.getElementById('graficoLDR5');
+
+const graficoLuminosidade = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00'],
+    datasets: [{
+      label: 'Luminosidade (Lux)',
+      data: [12, 19, 3, 5, 2, 3],
+      borderWidth: 3,
+      borderColor: '#EF8A14',
+      backgroundColor: '#EF8A14',
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+
+
+const ctx2 = document.getElementById('graficoLM35');
+
+const graficoTemperatura = new Chart(ctx2, {
+  type: 'line',
+  data: {
+    labels: ['10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00'],
+    datasets: [
+      {
+        label: 'Temperatura',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 3,
+
+      }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+
+</script>

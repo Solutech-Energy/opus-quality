@@ -10,9 +10,7 @@ btnLogin.addEventListener("click", function () {
     abrirLogin();
 });
 
-registerNavLink.addEventListener("click", function () {
-    abrirRegister();
-});
+
 
 /*
 btnRegisterLink.addEventListener("click", () => {
