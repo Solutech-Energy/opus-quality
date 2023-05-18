@@ -1708,7 +1708,8 @@ body {
     height: 80vh;
     border-radius: 15px 15px 15px 15px;
     overflow: hidden;
-
+    display: none;
+    animation: openModal 1s normal;
 }
 
 .topRegister {
@@ -2316,8 +2317,6 @@ body {
     border-radius: 15px 15px 15px 15px;
     overflow: hidden;
     background-color: #D9D9D9;
-
-
 }
 
 .topCadastro {

@@ -12,10 +12,11 @@ btnLogin.addEventListener("click", function () {
 
 
 
-
+/*
 btnRegisterLink.addEventListener("click", () => {
     toggleLogin();
 })
+*/
 
 btnHaveAccount.addEventListener("click", () => {
     toggleLogin();
@@ -35,10 +36,10 @@ function abrirLogin() {
 function abrirRegister() {
     var modalLogin = document.getElementById("cardLogin");
     var modalRegister = document.getElementById("cardRegister");
-    toggleModal();
     if (modalRegister.style.display == "none" || modalRegister.style.display == "" || modalLogin.style.display == "flex") {
         toggleLogin();
     }
+    //toggleModal();
 };
 function toggleModal() {
     var modal = document.querySelector(".containerModal").style;
