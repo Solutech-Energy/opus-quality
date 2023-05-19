@@ -53,3 +53,13 @@ function fecharModal() {
     divModal.style.display = "none";
 }
 
+
+
+//Modal graficos Dash
+
+const button = document.querySelector("button")
+const modal = document.querySelector("dialog") 
+
+button.onclick = function () {
+    modal.showModal()
+}

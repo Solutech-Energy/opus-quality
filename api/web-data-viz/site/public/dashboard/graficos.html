@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <link rel="shortcut icon" href="img/logoFavicon.ico" type="image/x-icon">
+   <script src="js/funcoes.js"></script>
+   <title>Gráficos | Login</title>
+</head>
+
+<body class="bodyGraficos">
+
+
+<div class="sectionGraficosGeral">
+        <div class="titleSection">
+            <h2>Gráficos <span>Quadrante #</span></h2>
+            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ff7300"
+                class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path
+                   d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+             </svg></a>
+        </div>
+        <div class="titlesCards">
+            <span>Temperatura</span>
+            <span>Luminosidade</span>
+        </div>
+    <div class="cardGraficos">
+        <div class="cardGraficoDados">
+            <canvas id="graficoLM35"></canvas>
+        </div>
+        <div class="cardGraficoDados">
+            <canvas id="graficoLDR5"></canvas>
+        </div>
+    </div>
+   
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+
+</html>
+
+
+
+  <script>
+
+
+const ctx = document.getElementById('graficoLDR5');
+
+const graficoLuminosidade = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['10:00', '10:30', '11:00', '11:30', '12:00', '12:30'],
+    datasets: [{
+      label: 'Luminosidade (Lux)',
+      data: [12, 19, 3, 5, 2, 3],
+      borderWidth: 3,
+      borderColor: '#EF8A14',
+      backgroundColor: '#EF8A14',
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+
+
+const ctx2 = document.getElementById('graficoLM35');
+
+const graficoTemperatura = new Chart(ctx2, {
+  type: 'line',
+  data: {
+    labels: ['10:00', '10:30', '11:00', '11:30', '12:00', '12:30'],
+    datasets: [
+      {
+        label: 'Temperatura',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 3,
+
+      }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+
+
+  </script>

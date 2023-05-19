@@ -2138,14 +2138,13 @@ body {
 }
 
 .cardsEspecifica {
-    width: 90%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     padding-bottom: 5%;
     border-radius: 15px;
     background-color: #1F4662;
 }
-
 .titleAlert {
     width: 100%;
     display: flex;
@@ -2192,6 +2191,7 @@ body {
     background-size: cover;
     margin-top: 7%;
     flex-direction: column;
+    margin-right: 5%;
 
     
 }
@@ -2437,3 +2437,147 @@ body {
 .tituloPlantaLocal span {
     color: #ff7300;
 }
+
+
+/* Graficos */
+
+.bodyGraficos {
+    background-color: transparent;
+    display: flex;
+
+}
+
+.sectionGraficosGeral{
+    background-color: #D9D9D9;
+    margin: auto;
+    margin-top: 5%;
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    border-radius: 15px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 5;
+    
+}
+.titleSection {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5%;
+    justify-content: center;
+    color:black;
+}
+.titleSection h2 span {
+    color: #ff7300;
+}
+
+.titleSection a svg {
+    display: flex;
+    align-items: center;
+    margin-left: 1800%;
+    margin-top: 80%;
+}
+.titlesCards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: black;
+}
+
+.titlesCards span {
+    font-weight: bold;
+    font-size: 150%;
+    margin-bottom: 2%;
+}
+
+.cardGraficos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cardGraficoDados {
+    align-items: center;
+    display: flex;  
+    width: 45%;
+    height: 40vh;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+}
+
+#pop-up {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: 17%;
+    margin-top: 0.5%;
+    position: absolute;
+    z-index: 25;
+}
+
+
+
+
+/* Alertas */
+
+.cardAlertaGeral {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100vw;
+    height: 100vh;
+}
+
+.AlertaCard{
+    display: flex;
+    width: 30%;
+    height: 20vh;
+    background-color: white;
+    border-radius: 15px;
+    margin: 1%;
+    align-items: center;
+}
+
+.iconeAlert {
+    width: 20%;
+    height: 100%;   
+    display: flex;
+    align-items: center;
+    margin-left: 4%;
+
+}
+.AlertCard svg {
+    display: flex;
+}
+.sectionTexto {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.titleAlert {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.textoAlerta {
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    text-align: center;
+    font-size: 110%;
+
+
+}
+
+
