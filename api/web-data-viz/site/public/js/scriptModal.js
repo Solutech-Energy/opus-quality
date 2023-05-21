@@ -1,7 +1,7 @@
 btnLogin = document.getElementById("btnLogin");
 btnCloseModal = document.getElementById("btnCloseModal");
 containerMain = document.getElementById("containerMain").style;
-btnRegisterLink = document.getElementById("RegisterLink");
+btnRegisterLink = document.getElementById("registerNavLink");
 btnHaveAccount = document.getElementById("haveAccount");
 registerNavLink = document.getElementById("registerNavLink");
 
@@ -12,11 +12,11 @@ btnLogin.addEventListener("click", function () {
 
 
 
-/*
 btnRegisterLink.addEventListener("click", () => {
+    console.log("Listener ativado");
     toggleLogin();
 })
-*/
+
 
 btnHaveAccount.addEventListener("click", () => {
     toggleLogin();

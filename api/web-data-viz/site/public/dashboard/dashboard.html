@@ -46,7 +46,7 @@
         </div>
 
         <div class="cardGraficoLDR5">
-          <canvas id="graficoLDR5"></canvas>
+          <canvas id="q1"></canvas>
         </div>
 
       </div>
@@ -58,7 +58,7 @@
           Total de Sensores: 31<br><br>
           Irregulares:<br> 0
         </div>
-
+        <div id="avisoCaptura1"></div>
         <div class="cardGraficoLM35">
           <canvas id="graficoLM35"></canvas>
         </div>
@@ -96,7 +96,11 @@
 
 </html>
 
+<script src="../js/atualizarGraficos.js"></script>
+
 <script>
+
+
 
   const ctx = document.getElementById('graficoLDR5');
 
@@ -152,7 +156,7 @@
 
   function obterDados(grafico, endpoint) {
     var http = new XMLHttpRequest();
-    http.open('GET', 'http://localhost:3300/sensores/' + endpoint, false);
+    http.open('GET', 'http://localhost:3300/', false);
     http.send(null);
     var valores = JSON.parse(http.responseText);
     if (paginacao[endpoint] == null) {
@@ -185,8 +189,8 @@
 
   setInterval(() => {
 
-    obterDados(graficoLuminosidade, 'luminosidade');
-    obterDados(graficoTemperatura, 'lm35/temperatura');
+    //obterDados(graficoLuminosidade, 'luminosidade');
+    //obterDados(graficoTemperatura, 'lm35/temperatura');
 
   }, 2000);
 
