@@ -11,6 +11,34 @@
 </head>
 
 <body>
+
+<div id="pop-up">
+    <div class="sectionGraficosGeral">
+        <div class="titleSection">
+            <h2>Gráficos <span>Quadrante #</span></h2>
+            <a href="" onclick="fecharPopUp"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black"
+                class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path
+                   d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+             </svg></a>
+        </div>
+        <div class="titlesCards">
+            <span>Temperatura</span>
+            <span>Luminosidade</span>
+        </div>
+    <div class="cardGraficos">
+        <div class="cardGraficoDados">
+            <canvas id="graficoLM35"></canvas>
+        </div>
+        <div class="cardGraficoDados">
+            <canvas id="graficoLDR5"></canvas>
+        </div>
+    </div>
+   
+</div>
+</div>
+
+
     <div class="containerGeralDashEspecifica">
 
         <div class="DashEspecificaLeft">
@@ -25,14 +53,16 @@
 
                 <div class="nomeUsuario">Olá, <span>Luiz</span></div>
                 <div class="buttonLateral">
-                    <span>asasf</span>
+                    <span><a href="dashGeral.html">Dashboard Geral</a></span>
                 </div>
 
                 <div class="buttonSair">
                     <span>Sair</span>
                 </div>
             </div>
+            <div style="width: 100%; height: 100%; background-color: aquamarine; display: none; position: absolute;">
 
+            </div>
             <div class="faixaAlertas">
 
                 <h2>Temperatura</h2>
@@ -136,135 +166,32 @@
                     </div>
                 </div>
 
-                <div class="buttonPlanta">
-                    <a href="plantalocal.html"><span>Planta Local</span></a>
-                </div> 
+                
             </div>
-            
+        
         </div>
 
         <div class="DashEspecificaRight">
 
+            <div class="plantaDashEspecifica">
+                <div class="Quadrantes123">
 
-            <div class="Quadrantes">
-                <div class="QuadrantesTemp">
+                    <div class="QuadrantesBom" onclick="aparecerPopUp()"></div>                    
+                    <div class="QuadrantesBom" onclick="aparecerPopUp()"></div>
+                    <div class="QuadrantesBom" onclick="aparecerPopUp()"></div>
 
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span> Temperatura</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
                 </div>
 
-                <div class="QuadrantesTemp">
+                <div class="Quadrantes456"> 
+                    <div class="QuadrantesBom" onclick="aparecerPopUp()"></div>
+                    <div class="QuadrantesBom" onclick="aparecerPopUp()"></div>
+                    <div class="QuadrantesBom" onclick="aparecerPopUp()"></div>
 
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span>Luminosidade</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
+
                 </div>
             </div>
-            <div class="Quadrantes">
-                <div class="QuadrantesTemp">
 
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span> Temperatura</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
-                </div>
-
-
-                <div class="QuadrantesLum">
-                    <h3>Quadrante2</h3>
-                    <span>Luminosidade</span>
-                    <div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="Quadrantes">
-                <div class="QuadrantesTemp">
-
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span> Temperatura</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
-                </div>
-
-                <div class="QuadrantesLum">
-                    <h3>Quadrante3</h3>
-                    <span>Luminosidade</span>
-                </div>
-            </div>
-            <div class="Quadrantes">
-                <div class="QuadrantesTemp">
-
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span> Temperatura</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
-                </div>
-
-                <div class="QuadrantesLum">
-                    <h3>Quadrante4</h3>
-                    <span>Luminosidade</span>
-                </div>
-            </div>
-            <div class="Quadrantes">
-                <div class="QuadrantesTemp">
-
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span> Temperatura</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
-                </div>
-
-                <div class="QuadrantesLum">
-                    <h3>Quadrante5</h3>
-                    <span>Luminosidade</span>
-                </div>
-            </div>
-            <div class="Quadrantes">
-                <div class="QuadrantesTemp">
-
-                    <div class="localGrafico">
-                    <h3>Quadrante1:</h3>
-                    <span> Temperatura</span>
-                    </div>
-                    
-                    <div class="graficoSensor">
-                        <canvas id="graficoLM35"></canvas>
-                    </div>
-                </div>
-
-                <div class="QuadrantesLum">
-                    <h3>Quadrante6</h3>
-                    <span>Luminosidade</span>
-                </div>
-            </div>
+            
 
 
         </div>
@@ -285,6 +212,16 @@
 
 <script>
 
+function aparecerPopUp() {
+    var popUp = document.getElementById(`pop-up`);
+    popUp.style.display = "flex"
+}
+
+
+function fecharPopUp () {
+    var popUp = document.getElementById(`pop-up`);
+    popUp.style.display = "none"
+}
 const ctx = document.getElementById('graficoLDR5');
 
 const graficoLuminosidade = new Chart(ctx, {
@@ -335,3 +272,6 @@ const graficoTemperatura = new Chart(ctx2, {
 
 
 </script>
+
+
+
