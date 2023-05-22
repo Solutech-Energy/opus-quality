@@ -68,6 +68,7 @@ tipo varchar(20),
 modelo varchar(20),
 dtInstalacao date,
 sensorStatus tinyint,
+quadrante char(2),
 fkSetor int,
 constraint fkSetorSensores foreign key (fkSetor) references Setor(idSetor),
 constraint pkComposta primary key (idSensores, fkSetor)
