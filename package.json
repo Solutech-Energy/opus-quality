@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "arduino": "cd api/dat-aqcu-ino/ && npm i & nodemon main.js",
     "start": "nodemon api/web-data-viz/site/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
