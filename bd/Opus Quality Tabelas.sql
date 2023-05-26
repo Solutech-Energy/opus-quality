@@ -1,5 +1,5 @@
 -- DROP DATABASE OpusQuality;
-DROP DATABASE IF EXISTS OpusQuality;
+
 CREATE DATABASE OpusQuality;
 USE OpusQuality;
 
@@ -62,29 +62,32 @@ desc Setor;
 
 -- CRIANDO TABELA SENSORES
 
-create table Sensores(
-idSensores int auto_increment,
+create table Sensor(
+idSensor int auto_increment,
 tipo varchar(20),
 modelo varchar(20),
 dtInstalacao date,
 sensorStatus tinyint,
 fkSetor int,
-constraint fkSetorSensores foreign key (fkSetor) references Setor(idSetor),
-constraint pkComposta primary key (idSensores, fkSetor)
+constraint fkSetorSensor foreign key (fkSetor) references Setor(idSetor),
+constraint pkComposta primary key (idSensor, fkSetor)
 );
-desc Sensores;
+desc Sensor;
 -- drop table Sensores;
 
 -- CRIANDO TABELA REGISTROS
 
-create table Registros(
-idRegistro int auto_increment,
-valor decimal(6,2),
+create table Registro(
+idRegistro int auto_increment primary key,
+Temperatura decimal(6,2),
+Luminosidade int,
 dataHora datetime,
-fkSensores int,
-constraint fkSensoresRegistro foreign key (fkSensores) references Sensores(idSensores),
-constraint pkCoposta primary key (idRegistro, fkSensores)
+fkTemperatura int,
+fkLuminosidade int,
+constraint fkTemperatura foreign key (fkTemperatura) references Sensor(idSensor),
+constraint fkLuminosidade foreign key (fkluminosidade) references Sensor(idSensor)
 ); 
+
 desc Registros;
 -- drop table Registros;
 
@@ -113,7 +116,7 @@ insert into Setor values
 (null, 'Setor2', '500', '1000', 20, 27, '1');
 
 
-insert into Sensores values
+insert into Sensor values
 (null, 'luminosidade', 'LDR5', '2022-10-10', '1', '1'),
 (null, 'temperatura', 'LM35', '2022-10-11', '0', '1'),
 (null, 'temperatura', 'LM35', '2022-05-11', '1', '2'),
@@ -123,13 +126,9 @@ insert into Sensores values
 (null, 'temperatura', 'LM35', '2022-06-11', '1', '5'),
 (null, 'temperatura', 'LM35', '2022-12-02', '1', '6');
 
-insert into Registros values
-(null, '1000', '2023-11-11 09:15:02', '1'),
-(null, '24.55', '2023-12-12 08:15:02', '2'),
-(null, '20', '2023-10-12 07:15:02', '3'),
-(null, '21', '2023-09-12 06:15:02', '4'),
-(null, '500', '2023-08-12 05:15:02', '5'),
-(null, '750', '2023-07-12 04:15:02', '6');
+insert into Registro values
+(null, '23.20', '500', '2023-11-11 09:15:02', 2 , 1),
+(null, '24.55', '800', '2023-12-12 08:15:02', 2, 1);
 
 
 
@@ -137,8 +136,8 @@ select * from Empresa;
 USE OpusQuality;
 select * from usuario;
 select * from setor;
-select * from sensores;
-select * from registros;
+select * from sensor;
+select * from registro;
 select * from usuario join empresa on fkempresa = idempresa;
 select * from usuario join empresa on fkempresa = idempresa where nomeFantasia = 'Sptech';
 select * from setor join empresa on fkempresa = idempresa;
@@ -160,3 +159,12 @@ select usuario.nome as Nome_Usuario,
        join sensores on sensores.fksetor = setor.idsetor
        join registros on registros.fksensores = sensores.idsensores;
        
+select * from registro;
+desc registros;
+
+select registro.Temperatura, registro.Luminosidade, registro.dataHora, DATE_FORMAT(dataHora,'%H:%i:%s') as momento_grafico
+ from registro join sensor on registro.fkTemperatura = sensor.idSensor join setor on sensor.fkSetor = Setor.idSetor;
+
+
+select registro.Temperatura, registro.Luminosidade, registro.dataHora, DATE_FORMAT(dataHora,'%H:%i:%s') as momento_grafico
+ from registro;
