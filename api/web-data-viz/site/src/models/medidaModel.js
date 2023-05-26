@@ -12,8 +12,9 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
                         FORMAT(momento, 'HH:mm:ss') as momento_grafico
                     from medida
                     where fk_aquario = ${idAquario}
-                    order by id desc`;
+                    order by idRegistro desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+<<<<<<< HEAD
 
         instrucaoSql = `select registros.valor as Temperatura , registros.dataHora, 
         DATE_FORMAT(dataHora,'%H:%i:%s') as momento_grafico
@@ -27,6 +28,15 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
         where tipo = 'luminosidade';`;
 
 
+=======
+        instrucaoSql = `select 
+        valor as temperatura, 
+                        dataHora,
+                        DATE_FORMAT(dataHora,'%H:%i:%s') as momento_grafico
+                    from Registros
+                    where fkSensores = ${idAquario}
+                    order by idRegistro desc limit ${limite_linhas}`;
+>>>>>>> 927cb04ca2579e9d8773c58ee896292d0edd0ddd
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -47,16 +57,15 @@ function buscarMedidasEmTempoReal(idAquario) {
                         CONVERT(varchar, momento, 108) as momento_grafico, 
                         fk_aquario 
                         from medida where fk_aquario = ${idAquario} 
-                    order by id desc`;
+                    order by idRegistro desc`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select 
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico, 
-                        fk_aquario 
-                        from medida where fk_aquario = ${idAquario} 
-                    order by id desc limit 1`;
+        valor as temperatura,
+                        DATE_FORMAT(dataHora,'%H:%i:%s') as momento_grafico, 
+                        fkSensores
+                        from Registros where fkSensores = 1 
+                    order by idRegistro desc limit 1`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
