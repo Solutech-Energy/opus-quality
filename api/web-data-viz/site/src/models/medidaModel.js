@@ -14,7 +14,6 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
                     where fk_aquario = ${idAquario}
                     order by idRegistro desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-<<<<<<< HEAD
 
         instrucaoSql = `select registros.valor as Temperatura , registros.dataHora, 
         DATE_FORMAT(dataHora,'%H:%i:%s') as momento_grafico
@@ -28,15 +27,6 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
         where tipo = 'luminosidade';`;
 
 
-=======
-        instrucaoSql = `select 
-        valor as temperatura, 
-                        dataHora,
-                        DATE_FORMAT(dataHora,'%H:%i:%s') as momento_grafico
-                    from Registros
-                    where fkSensores = ${idAquario}
-                    order by idRegistro desc limit ${limite_linhas}`;
->>>>>>> 927cb04ca2579e9d8773c58ee896292d0edd0ddd
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -75,8 +65,26 @@ function buscarMedidasEmTempoReal(idAquario) {
     return database.executar(instrucaoSql);
 }
 
+function buscarDadosSetor(idSetor) {
+    instrucaoSql = `select 
+                       *
+                    from setor
+                    where idSetor = ${idSetor}`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function buscarDadosQuadrante(id) {
+    instrucaoSql = `select s.tipo, s.quadrante, r.valor, r.dataHora from sensor s join registro r on s.idSensor = r.fkSensor where s.fkSetor = ${id} order by r.dataHora desc;`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
 
 module.exports = {
     buscarUltimasMedidas,
-    buscarMedidasEmTempoReal
+    buscarMedidasEmTempoReal,
+    buscarDadosSetor,
+    buscarDadosQuadrante
 }
