@@ -28,9 +28,9 @@
             </div>
             <div class="alerta_erro">
                <div class="card_erro" id="cardErro">
-                   <span id="mensagem_erro"></span>
+                  <span id="mensagem_erro"></span>
                </div>
-           </div>
+            </div>
             <div class="textLogin">
                <h2>Login</h2>
             </div>
@@ -73,9 +73,9 @@
             </div>
             <div id="div_aguardar" class="loading-div">
                <img src="./assets/circle-loading.gif" id="loading-gif">
-           </div>
-      
-           <div id="div_erros_login"></div>
+            </div>
+
+            <div id="div_erros_login"></div>
          </div>
       </div>
    </div>
@@ -88,71 +88,71 @@
 
 
    function entrar() {
-       aguardar();
+      aguardar();
 
-       var emailVar = inputEmail.value;
-       var senhaVar = inputSenha.value;
+      var emailVar = inputEmail.value;
+      var senhaVar = inputSenha.value;
 
-       if (emailVar == "" || senhaVar == "") {
-           cardErro.style.display = "block"
-           mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-           finalizarAguardar();
-           return false;
-       }
-       else {
-           setInterval(sumirMensagem, 5000)
-       }
+      if (emailVar == "" || senhaVar == "") {
+         cardErro.style.display = "block"
+         mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+         finalizarAguardar();
+         return false;
+      }
+      else {
+         setInterval(sumirMensagem, 5000)
+      }
 
-       console.log("FORM LOGIN: ", emailVar);
-       console.log("FORM SENHA: ", senhaVar);
+      console.log("FORM LOGIN: ", emailVar);
+      console.log("FORM SENHA: ", senhaVar);
 
-       fetch("/usuarios/autenticar", {
-           method: "POST",
-           headers: {
-               "Content-Type": "application/json"
-           },
-           body: JSON.stringify({
-               emailServer: emailVar,
-               senhaServer: senhaVar
-           })
-       }).then(function (resposta) {
-           console.log("ESTOU NO THEN DO entrar()!")
+      fetch("/usuarios/autenticar", {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json"
+         },
+         body: JSON.stringify({
+            emailServer: emailVar,
+            senhaServer: senhaVar
+         })
+      }).then(function (resposta) {
+         console.log("ESTOU NO THEN DO entrar()!")
 
-           if (resposta.ok) {
-               console.log(resposta);
+         if (resposta.ok) {
+            console.log(resposta);
 
-               resposta.json().then(json => {
-                   console.log(json);
-                   console.log(JSON.stringify(json));
+            resposta.json().then(json => {
+               console.log(json);
+               console.log(JSON.stringify(json));
 
-                   sessionStorage.EMAIL_USUARIO = json.email;
-                   sessionStorage.NOME_USUARIO = json.nome
+               sessionStorage.EMAIL_USUARIO = json.email;
+               sessionStorage.NOME_USUARIO = json.nome
 
-                   setTimeout(function () {
-                       window.location = "./dashboard/DashboardGeral.html";
-                   }, 1000); // apenas para exibir o loading
+               setTimeout(function () {
+                  window.location = "./dashboard/DashGeral.html";
+               }, 1000); // apenas para exibir o loading
 
-               });
+            });
 
-           } else {
+         } else {
 
-               console.log("Houve um erro ao tentar realizar o login!");
+            console.log("Houve um erro ao tentar realizar o login!");
 
-               resposta.text().then(texto => {
-                   console.error(texto);
-                   finalizarAguardar(texto);
-               });
-           }
+            resposta.text().then(texto => {
+               console.error(texto);
+               finalizarAguardar(texto);
+            });
+         }
 
-       }).catch(function (erro) {
-           console.log(erro);
-       })
+      }).catch(function (erro) {
+         console.log(erro);
+      })
 
-       return false;
+      return false;
    }
 
    function sumirMensagem() {
-       cardErro.style.display = "none"
+      cardErro.style.display = "none"
    }
 
 </script>

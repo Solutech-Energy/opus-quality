@@ -19,4 +19,8 @@ router.get("/dadosQuadrante/:id", function (req, res) {
     medidaController.buscarDadosQuadrante(req, res);
 })
 
+router.get("/buscarSetores/:id", function (req, res) {
+    medidaController.buscarSetores(req, res);
+});
+
 module.exports = router;

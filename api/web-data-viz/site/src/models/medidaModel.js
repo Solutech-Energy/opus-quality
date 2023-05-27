@@ -82,9 +82,17 @@ function buscarDadosQuadrante(id) {
     return database.executar(instrucaoSql);
 }
 
+function buscarSetores(id) {
+    instrucaoSql = `select * from setor where fkEmpresa = ${id};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     buscarUltimasMedidas,
     buscarMedidasEmTempoReal,
     buscarDadosSetor,
-    buscarDadosQuadrante
+    buscarDadosQuadrante,
+    buscarSetores
 }

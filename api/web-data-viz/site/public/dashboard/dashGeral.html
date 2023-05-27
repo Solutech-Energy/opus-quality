@@ -128,7 +128,7 @@
 
 
          <div class="environmentisGeneral ">
-            <div class="environmentisLine1">
+            <div class="environmentisLine1" id="containerSetores">
                <div class="environments1" onclick="window.location.assign('DashboardEspecifica.html')">
                   <div class="textEnvironmentsL1"><a href="../dashboard/DashboardEspecifica.html">Sala Aula 1º Andar</a>
                   </div>
@@ -191,6 +191,24 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
+
+
+   fetch("/medidas/buscarSetores/1")
+      .then(response => response.json())
+      .then(data => {
+         console.log(data)
+         containerSetores.innerHTML = "";
+         data.forEach(element => {
+            containerSetores.innerHTML += `
+               <div class="environments1" onclick="window.location.assign('DashboardEspecifica.html')">
+                  <div class="textEnvironmentsL1"><a href="../dashboard/DashboardEspecifica.html">${element.apelido}</a>
+                  </div>
+               </div>
+           
+            `;
+         });
+      })
+      .catch(err => console.log(err));
 
 
    const ctx = document.getElementById('graficoAbsenteismo');
