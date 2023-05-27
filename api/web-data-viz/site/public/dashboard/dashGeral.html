@@ -200,8 +200,8 @@
          containerSetores.innerHTML = "";
          data.forEach(element => {
             containerSetores.innerHTML += `
-               <div class="environments1" onclick="window.location.assign('DashboardEspecifica.html')">
-                  <div class="textEnvironmentsL1"><a href="../dashboard/DashboardEspecifica.html">${element.apelido}</a>
+               <div class="environments1" onclick="abrirSetor(${element.idSetor})">
+                  <div class="textEnvironmentsL1"><a href="/dashboard/setor">${element.apelido}</a>
                   </div>
                </div>
            
@@ -209,6 +209,11 @@
          });
       })
       .catch(err => console.log(err));
+
+   function abrirSetor(idSetor) {
+      sessionStorage.idSetor = idSetor;
+      window.location.assign(`/dashboard/setor`);
+   }
 
 
    const ctx = document.getElementById('graficoAbsenteismo');

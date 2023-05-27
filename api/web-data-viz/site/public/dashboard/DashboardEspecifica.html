@@ -218,12 +218,12 @@
 
 
 
-    fetch('/medidas/dadosSetor/1')
+    fetch(`/medidas/dadosSetor/${sessionStorage.idSetor}`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
             document.getElementById('apelidoSetor').innerHTML = data[0].apelido;
-            buscarQuadrante(1)
+            buscarQuadrante(data[0].idSetor)
         })
         .catch(error => console.log(error));
 

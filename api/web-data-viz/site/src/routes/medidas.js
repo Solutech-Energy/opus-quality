@@ -23,4 +23,8 @@ router.get("/buscarSetores/:id", function (req, res) {
     medidaController.buscarSetores(req, res);
 });
 
+router.get("/setor/:id", function (req, res) {
+    res.sendFile(path.join(__dirname + '/src/v.html'));
+});
+
 module.exports = router;
