@@ -15,12 +15,12 @@
     <div id="pop-up">
         <div class="sectionGraficosGeral">
             <div class="titleSection">
-                <h2>Gráficos <span>Quadrante #</span></h2>
-                <a href="" onclick="fecharPopUp"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                        fill="black" class="bi bi-x-lg" viewBox="0 0 16 16">
-                        <path
-                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-                    </svg></a>
+                <h2>Gráficos Quadrante <span id="nomeQuadrante">Quadrante #</span></h2>
+                <svg xmlns="http://www.w3.org/2000/svg" onclick="fecharPopUp()" width="25" height="25" fill="black"
+                    class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                </svg>
             </div>
             <div class="titlesCards">
                 <span>Temperatura</span>
@@ -180,16 +180,16 @@
             <div class="plantaDashEspecifica">
                 <div class="Quadrantes123">
 
-                    <div class="QuadrantesBom" onclick="aparecerPopUp()"></div>
-                    <div class="QuadrantesBom" onclick="aparecerPopUp()"></div>
-                    <div class="QuadrantesBom" onclick="aparecerPopUp()"></div>
+                    <div class="QuadrantesBom" onclick="aparecerPopUp(0)"></div>
+                    <div class="QuadrantesBom" onclick="aparecerPopUp(1)"></div>
+                    <div class="QuadrantesBom" onclick="aparecerPopUp(2)"></div>
 
                 </div>
 
                 <div class="Quadrantes456">
-                    <div class="QuadrantesBom" onclick="aparecerPopUp()"></div>
-                    <div class="QuadrantesBom" onclick="aparecerPopUp()"></div>
-                    <div class="QuadrantesBom" onclick="aparecerPopUp()"></div>
+                    <div class="QuadrantesBom" onclick="aparecerPopUp(3)"></div>
+                    <div class="QuadrantesBom" onclick="aparecerPopUp(4)"></div>
+                    <div class="QuadrantesBom" onclick="aparecerPopUp(5)"></div>
 
 
                 </div>
@@ -204,10 +204,6 @@
 
     </div>
 
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </body>
@@ -216,7 +212,7 @@
 
 <script>
 
-
+    var quadrantes;
 
     fetch(`/medidas/dadosSetor/${sessionStorage.idSetor}`)
         .then(response => response.json())
@@ -232,19 +228,33 @@
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-                data.forEach(element => {
-                    resultado.innerHTML += `
-                 <li>${element.tipo}</li
-                 <li>${element.quadrante}</li>
-                                    `
-                });
-
+                quadrantes = data;
             })
             .catch(error => console.log(error));
     }
 
 
-    function aparecerPopUp() {
+    function aparecerPopUp(id) {
+        console.log("quadrantes: ", quadrantes);
+
+        if (quadrantes[id].tipo == "luminosidade") {
+            graficoLuminosidade.data.datasets[0].data.shift();
+            graficoLuminosidade.data.datasets[0].data.push(quadrantes[id].valor);
+        } else {
+            graficoTemperatura.data.datasets[0].data.shift();
+            graficoTemperatura.data.datasets[0].data.push(quadrantes[id].valor);
+        }
+
+        if (quadrantes[id + 6].tipo == "luminosidade") {
+            graficoLuminosidade.data.datasets[0].data.push(quadrantes[id].valor);
+            graficoLuminosidade.data.datasets[0].data.shift();
+        } else {
+            graficoTemperatura.data.datasets[0].data.push(quadrantes[id].valor);
+            graficoTemperatura.data.datasets[0].data.shift();
+        }
+        graficoLuminosidade.update();
+        graficoTemperatura.update();
+        nomeQuadrante.innerHTML = quadrantes[id].quadrante;
         var popUp = document.getElementById(`pop-up`);
         popUp.style.display = "flex"
     }
@@ -259,7 +269,7 @@
     const graficoLuminosidade = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00'],
+            labels: ['10:00', '10:30', '11:00', '11:30', '12:00', '12:30'],
             datasets: [{
                 label: 'Luminosidade (Lux)',
                 data: [12, 19, 3, 5, 2, 3],
@@ -284,7 +294,7 @@
     const graficoTemperatura = new Chart(ctx2, {
         type: 'line',
         data: {
-            labels: ['10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00'],
+            labels: ['10:00', '10:30', '11:00', '11:30', '12:00', '12:30'],
             datasets: [
                 {
                     label: 'Temperatura',
