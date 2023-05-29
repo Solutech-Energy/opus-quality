@@ -49,18 +49,18 @@ a {
 
 /* Botão Flutuante do Help Desk */
 .pipefy {
-	position: fixed;
-	width: 60px;
-	height: 60px;
-	bottom: 40px;
-	right: 40px;
-	background-color:#EF8A14;
-	color:#fff;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #EF8A14;
+    color: #fff;
     font-weight: bold;
     font-size: 1.8em;
-	border-radius:50px;
-	text-align:center;
-	box-shadow: 2px 2px 3px #D9D9D9;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #D9D9D9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1470,14 +1470,15 @@ body {
     justify-content: space-around;
 }
 
-.environmentisLine1 {
-
+.environmentisLine {
     display: flex;
     flex-direction: row;
     padding-top: 2%;
+    flex-wrap: wrap;
     width: 100%;
     height: 20%;
-    justify-content: space-around;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .environmentisLine2 {
@@ -1513,23 +1514,26 @@ body {
     padding-top: 2%;
     width: 100%;
     height: 100%;
-    justify-content: space-around;
+
     margin-bottom: 90px;
 }
 
-.environments1 {
+.environments {
     align-items: end;
     background-image: url(../assets/img/unsplash_jUOaONoXJQk.png);
     font-weight: bold;
     justify-content: center;
     display: flex;
     width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 3%;
     height: 15vh;
     border-radius: 15%;
     cursor: pointer;
 }
 
-.environments1:hover .textEnvironmentsL1 {
+.environments:hover .textEnvironmentsL1 {
     background-color: #ff7300;
 }
 
@@ -2091,7 +2095,8 @@ body {
     margin-top: 15%;
 
 }
-.nomeUsuario{
+
+.nomeUsuario {
     font-size: 150%;
     margin-top: 15%;
 }
@@ -2104,7 +2109,7 @@ body {
     display: flex;
     width: 70%;
     height: 5%;
-    background-color: #070D25 ;
+    background-color: #070D25;
     color: white;
     border-radius: 15px;
     align-items: center;
@@ -2140,6 +2145,7 @@ body {
     border-radius: 15px;
     background-color: #1F4662;
 }
+
 .titleAlert {
     width: 100%;
     display: flex;
@@ -2188,7 +2194,7 @@ body {
     flex-direction: column;
     margin-right: 5%;
 
-    
+
 }
 
 
@@ -2222,6 +2228,7 @@ body {
     border-radius: 15px;
     margin-top: 5%;
 }
+
 .QuadrantesTemp h3 {
     display: flex;
     justify-content: center;
@@ -2262,14 +2269,14 @@ body {
     align-items: center;
 }
 
-.Quadrantes123{
+.Quadrantes123 {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 50%;
 }
 
-.Quadrantes456{
+.Quadrantes456 {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -2300,6 +2307,7 @@ body {
     cursor: pointer;
 
 }
+
 /* Cadastro */
 
 .cardCadastro {
@@ -2372,12 +2380,12 @@ body {
 
 
 
-.alerta_erro{
+.alerta_erro {
     display: flex;
     justify-content: flex-end;
-  }
-  
-  .card_erro {
+}
+
+.card_erro {
     display: none;
     background-color: #fff;
     color: black;
@@ -2387,23 +2395,23 @@ body {
     border: #e6005a 3px solid;
     padding: 10px;
     margin-right: 10%;
-  }
-  
-  .card_erro #mensagem_erro{
+}
+
+.card_erro #mensagem_erro {
     font-weight: 500;
     font-size: 20px;
-  }
+}
 
 
 
 
 
-  /* Planta Local*/
+/* Planta Local*/
 
 
 
 
-  .cardPlantaLocal {
+.cardPlantaLocal {
     font-family: 'Poppins';
     border-radius: 15px 15px 0 0;
     margin: auto;
@@ -2442,7 +2450,7 @@ body {
 
 }
 
-.sectionGraficosGeral{
+.sectionGraficosGeral {
     background-color: #D9D9D9;
     margin: auto;
     margin-top: 5%;
@@ -2455,8 +2463,9 @@ body {
     justify-content: center;
     flex-direction: column;
     z-index: 5;
-    
+
 }
+
 .titleSection {
     width: 100%;
     height: 10%;
@@ -2465,8 +2474,9 @@ body {
     font-weight: bold;
     margin-bottom: 5%;
     justify-content: center;
-    color:black;
+    color: black;
 }
+
 .titleSection h2 span {
     color: #ff7300;
 }
@@ -2477,6 +2487,7 @@ body {
     margin-left: 1800%;
     margin-top: 80%;
 }
+
 .titlesCards {
     width: 100%;
     display: flex;
@@ -2491,7 +2502,7 @@ body {
     margin-bottom: 2%;
 }
 
-.cardGraficos{
+.cardGraficos {
     width: 100%;
     height: 100%;
     display: flex;
@@ -2501,7 +2512,7 @@ body {
 
 .cardGraficoDados {
     align-items: center;
-    display: flex;  
+    display: flex;
     width: 45%;
     height: 40vh;
     background-color: #D9D9D9;
@@ -2531,7 +2542,7 @@ body {
     height: 100vh;
 }
 
-.AlertaCard{
+.AlertaCard {
     display: flex;
     width: 30%;
     height: 20vh;
@@ -2543,21 +2554,24 @@ body {
 
 .iconeAlert {
     width: 20%;
-    height: 100%;   
+    height: 100%;
     display: flex;
     align-items: center;
     margin-left: 4%;
 
 }
+
 .AlertCard svg {
     display: flex;
 }
+
 .sectionTexto {
     width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
+
 .titleAlert {
     width: 100%;
     height: 10%;
@@ -2565,6 +2579,7 @@ body {
     text-align: center;
     justify-content: center;
 }
+
 .textoAlerta {
     display: flex;
     align-items: center;
@@ -2614,7 +2629,8 @@ body {
     margin-top: 15%;
 
 }
-.nomeUsuarioGeral{
+
+.nomeUsuarioGeral {
     font-size: 150%;
     margin-top: 15%;
 }
@@ -2627,7 +2643,7 @@ body {
     display: flex;
     width: 60%;
     height: 5%;
-    background-color: #070D25 ;
+    background-color: #070D25;
     color: white;
     border-radius: 15px;
     align-items: center;
@@ -2659,6 +2675,7 @@ body {
     align-items: center;
     background-color: #0F1631;
 }
+
 .sectionGeralAvisos h2 {
     display: flex;
     margin-right: 14%;
@@ -2733,7 +2750,7 @@ body {
 
 }
 
-.cardSensor  {
+.cardSensor {
     width: 40%;
     height: 18vh;
     background-color: #1F4662;
@@ -2818,6 +2835,7 @@ body {
     margin-left: 65%;
     margin-top: 2%;
 }
+
 .sectionGraficosAbsenteismo {
     z-index: 500;
     color: white;
@@ -2836,7 +2854,7 @@ body {
 }
 
 
-.legendaGraficoAbsenteismo{
+.legendaGraficoAbsenteismo {
     height: 15vh;
     margin-top: 3%;
     margin-left: 1%;
@@ -2854,6 +2872,7 @@ body {
     margin-right: 3%;
 
 }
+
 .legendaLeft h2 {
     margin-top: -5%;
     margin-right: 8%;
@@ -2865,6 +2884,7 @@ body {
     border-radius: 10px;
     padding: 3%;
 }
+
 .legendaRight {
     width: 50%;
     display: flex;
@@ -2874,10 +2894,12 @@ body {
     margin-left: 3%;
 
 }
+
 .legendaRight h2 {
     margin-top: -5%;
     margin-left: 15%;
 }
+
 .legendaRight h3 {
     background-color: #911313;
     border-radius: 10px;

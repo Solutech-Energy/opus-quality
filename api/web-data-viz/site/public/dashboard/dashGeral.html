@@ -128,55 +128,17 @@
 
 
          <div class="environmentisGeneral ">
-            <div class="environmentisLine1" id="containerSetores">
-               <div class="environments1" onclick="window.location.assign('DashboardEspecifica.html')">
+            <div class="environmentisLine" id="containerSetores">
+               <div class="environments" onclick="window.location.assign('DashboardEspecifica.html')">
                   <div class="textEnvironmentsL1"><a href="../dashboard/DashboardEspecifica.html">Sala Aula 1º Andar</a>
                   </div>
                </div>
-               <div class="environments1">
+               <div class="environments">
                   <div class="textEnvironmentsL1"><a href="../dashboard/DashboardEspecifica.html">Sala Técnica</div></a>
                </div>
             </div>
 
-            <div class="environmentisLine2 ">
-               <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="../dashboard/DashboardEspecifica.html">Sala Aula 2º Andar
-                  </div></a>
-               </div>
-               <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="../dashboard/DashboardEspecifica.html">Sala Técnica</div></a>
-               </div>
-            </div>
 
-            <div class="environmentisLine3 ">
-               <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="../dashboard/DashboardEspecifica.html">Sala Aula 3º Andar
-                  </div></a>
-               </div>
-               <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="../dashboard/DashboardEspecifica.html">Sala Técnica</div></a>
-               </div>
-            </div>
-
-            <div class="environmentisLine4 ">
-               <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="../dashboard/DashboardEspecifica.html">Sala Aula 4º Andar
-                  </div></a>
-               </div>
-               <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="../dashboard/DashboardEspecifica.html">Sala Técnica</div></a>
-               </div>
-            </div>
-
-            <div class="environmentisLine5 ">
-               <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="../dashboard/DashboardEspecifica.html">Sala Aula 5º Andar
-                  </div></a>
-               </div>
-               <div class="environments1">
-                  <div class="textEnvironmentsL1"><a href="../dashboard/DashboardEspecifica.html">Sala Técnica</div></a>
-               </div>
-            </div>
 
 
          </div>
@@ -192,6 +154,9 @@
 
 <script>
 
+   if (sessionStorage.idSetor == undefined) {
+      sessionStorage.idSetor = 1;
+   }
 
    fetch("/medidas/buscarSetores/1")
       .then(response => response.json())
@@ -200,7 +165,7 @@
          containerSetores.innerHTML = "";
          data.forEach(element => {
             containerSetores.innerHTML += `
-               <div class="environments1" onclick="abrirSetor(${element.idSetor})">
+               <div class="environments" onclick="abrirSetor(${element.idSetor})">
                   <div class="textEnvironmentsL1"><a href="/dashboard/setor">${element.apelido}</a>
                   </div>
                </div>
