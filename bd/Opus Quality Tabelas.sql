@@ -430,6 +430,8 @@ select * from sensor;
 
 select * from usuario join empresa on fkempresa = idempresa;
 
+select * from setor where fkEmpresa = 1;
+
 select *
 from usuario
     join empresa on fkempresa = idempresa
@@ -523,3 +525,7 @@ VALUES (
         27,
         '1'
     );
+
+SELECT * from Setor where fkEmpresa = 7;
+
+SELECT fkEmpresa from Setor where id = 7;

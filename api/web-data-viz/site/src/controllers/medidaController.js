@@ -79,7 +79,7 @@ function buscarDadosQuadrante(req, res) {
 function buscarSetores(req, res) {
     medidaModel.buscarSetores(req.params.id).then(function (resultado) {
         if (resultado.length > 0) {
-            console.log(resultado);
+            console.log("Resultados dos setores do usuario com fkEmpresa", resultado);
             res.status(200).json(resultado);
         } else {
             res.status(204).send("Nenhum resultado encontrado!")
