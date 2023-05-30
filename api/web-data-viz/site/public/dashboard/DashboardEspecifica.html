@@ -180,7 +180,7 @@
             <div class="plantaDashEspecifica">
                 <div class="Quadrantes123">
 
-                    <div class="QuadrantesBom" onclick="aparecerPopUp(0)"></div>
+                    <div class="QuadrantesBom" id="quadranteA1" onclick="aparecerPopUp(0)"> 26,6º<br>177</div>
                     <div class="QuadrantesBom" onclick="aparecerPopUp(1)"></div>
                     <div class="QuadrantesBom" onclick="aparecerPopUp(2)"></div>
 
@@ -216,49 +216,75 @@
     }
 
 
-    var quadrantes;
+    var valoresTemperatura = {
+        A1: [],
+        A2: [],
+        A3: [],
+        A4: [],
+        A5: [],
+        A6: []
+    }
+    var valoresLuminosidade = {
+        A1: [],
+        A2: [],
+        A3: [],
+        A4: [],
+        A5: [],
+        A6: []
+    };
+    var quadranteAtual = 'A1';
 
-    fetch(`/medidas/dadosSetor/${sessionStorage.idSetor}`)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            document.getElementById('apelidoSetor').innerHTML = data[0].apelido;
-            buscarQuadrante(data[0].idSetor)
-        })
-        .catch(error => console.log(error));
+    function atualizarGrafico() {
+        fetch(`/medidas/dadosSetor/${sessionStorage.idSetor}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                document.getElementById('apelidoSetor').innerHTML = data[0].apelido;
+                buscarQuadrante(data[0].idSetor, quadranteAtual);
+            })
+            .catch(error => console.log(error));
+    }
+    atualizarGrafico();
 
-    function buscarQuadrante(id) {
-        fetch('/medidas/dadosQuadrante/' + id)
+    setInterval(() => {
+        atualizarGrafico();
+    }, 1000);
+
+    function buscarQuadrante(setor, quadrante) {
+        fetch('/medidas/dadosQuadrante/' + setor + '/' + quadrante)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
                 quadrantes = data;
+                valoresTemperatura[quadranteAtual] = [];
+                valoresLuminosidade[quadranteAtual] = [];
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i].tipo == "luminosidade") {
+                        valoresLuminosidade[quadranteAtual].push(data[i].valor);
+
+                    } else {
+                        valoresTemperatura[quadranteAtual].push(data[i].valor);
+                    }
+                }
+                console.log(valoresLuminosidade), "Valores Luminosidade";
+                console.log(valoresTemperatura), "Valores Temperatura";
+                valoresLuminosidade[quadranteAtual].reverse();
+                valoresTemperatura[quadranteAtual].reverse();
+                graficoLuminosidade.data.datasets[0].data = valoresLuminosidade[quadranteAtual];
+                graficoTemperatura.data.datasets[0].data = valoresTemperatura[quadranteAtual];
+                graficoLuminosidade.update();
+                graficoTemperatura.update();
+                quadranteA1.innerHTML = `${valoresTemperatura[quadranteAtual][0]}º<br>${valoresLuminosidade[quadranteAtual][0]} Lux`;
             })
             .catch(error => console.log(error));
     }
 
 
     function aparecerPopUp(id) {
-        console.log("quadrantes: ", quadrantes);
-
-        if (quadrantes[id].tipo == "luminosidade") {
-            graficoLuminosidade.data.datasets[0].data.shift();
-            graficoLuminosidade.data.datasets[0].data.push(quadrantes[id].valor);
-        } else {
-            graficoTemperatura.data.datasets[0].data.shift();
-            graficoTemperatura.data.datasets[0].data.push(quadrantes[id].valor);
-        }
-
-        if (quadrantes[id + 6].tipo == "luminosidade") {
-            graficoLuminosidade.data.datasets[0].data.push(quadrantes[id].valor);
-            graficoLuminosidade.data.datasets[0].data.shift();
-        } else {
-            graficoTemperatura.data.datasets[0].data.push(quadrantes[id].valor);
-            graficoTemperatura.data.datasets[0].data.shift();
-        }
-        graficoLuminosidade.update();
-        graficoTemperatura.update();
-        nomeQuadrante.innerHTML = quadrantes[id].quadrante;
+        quadranteAtual = 'A' + (id + 1);
+        console.log("quadranteAtual: ", quadranteAtual);
+        // console.log("quadrantes: ", quadrantes);
+        nomeQuadrante.innerHTML = quadranteAtual;
         var popUp = document.getElementById(`pop-up`);
         popUp.style.display = "flex"
     }

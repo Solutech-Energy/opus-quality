@@ -75,8 +75,13 @@ function buscarDadosSetor(idSetor) {
     return database.executar(instrucaoSql);
 }
 
-function buscarDadosQuadrante(id) {
-    instrucaoSql = `select s.tipo, s.quadrante, r.valor, r.dataHora from sensor s join registro r on s.idSensor = r.fkSensor where s.fkSetor = ${id} order by r.dataHora desc;`;
+function buscarDadosQuadrante(setor, idQuadrante) {
+    instrucaoSql = `SELECT valor, dataHora, tipo
+from registro r
+    join sensor s on r.fkSensor = s.idSensor
+where s.quadrante = '${idQuadrante}' AND s.fkSetor = '${setor}'
+order by dataHora desc
+limit 12;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

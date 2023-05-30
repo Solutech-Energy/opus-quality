@@ -62,7 +62,7 @@ function buscarDadosSetor(req, res) {
 }
 
 function buscarDadosQuadrante(req, res) {
-    medidaModel.buscarDadosQuadrante(req.params.id).then(function (resultado) {
+    medidaModel.buscarDadosQuadrante(req.params.setor, req.params.quadrante).then(function (resultado) {
         if (resultado.length > 0) {
             console.log(resultado);
             res.status(200).json(resultado);
