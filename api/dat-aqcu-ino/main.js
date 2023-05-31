@@ -60,8 +60,8 @@ const serial = async (
     arduino.pipe(new serialport.ReadlineParser({ delimiter: '\r\n' })).on('data', async (data) => {
         //console.log(data);
         const valores = data.split(';');
-        const temperatura = parseFloat(valores[0]);
-        const luminosidade = parseFloat(valores[1]);
+        var temperatura = parseFloat(valores[1]);
+        var luminosidade = parseFloat(valores[0]);
 
 
 
@@ -98,15 +98,42 @@ const serial = async (
                 // -> altere nome da tabela e colunas se necessário
                 // Este insert irá inserir dados de fk_aquario id=1 (fixo no comando do insert abaixo)
                 // >> você deve ter o aquario de id 1 cadastrado.
-                await poolBancoDados.execute(
-                    'INSERT INTO registro (valor, dataHora, fkSensor) VALUES (?, now(), 3)',
-                    [luminosidade]
-                );
-                await poolBancoDados.execute(
-                    'INSERT INTO registro (valor, dataHora, fkSensor) VALUES (?, now(), 4)',
-                    [temperatura]
-                );
-                console.log("valores inseridos no banco: ", temperatura + ", " + luminosidade)
+                var c = 1;
+                var sl = 1;
+                var st = 2;
+                var l = 0;
+
+                // Lista de valores para luminosidade
+                var listaLuminosidade = [7, 3, 90, 10];
+
+                // Lista de valores para temperatura
+                var listaTemperatura = [15, 25, 35, 17];
+                listaTemperatura.reverse();
+
+
+
+
+                while (c < 6) {
+
+
+                    if (l == 3) {
+                        l = 0;
+                    }
+                    l++;
+                    console.log("valores inseridos no banco: ", temperatura + ", " + luminosidade);
+                    await poolBancoDados.execute(
+                        `INSERT INTO registro (valor, dataHora, fkSensor) VALUES (?, now(), ${sl})`,
+                        [(parseFloat(luminosidade * listaLuminosidade[l]) / 100).toFixed(2)]
+                    );
+                    await poolBancoDados.execute(
+                        `INSERT INTO registro (valor, dataHora, fkSensor) VALUES (?, now(), ${st})`,
+                        [(parseFloat(temperatura * listaTemperatura[l]) / 100).toFixed(2)]
+                    );
+                    sl += 2;
+                    st += 2;
+                    c++;
+                }
+
 
             } else {
                 throw new Error('Ambiente não configurado. Verifique o arquivo "main.js" e tente novamente.');

@@ -181,15 +181,15 @@
                 <div class="Quadrantes123">
 
                     <div class="QuadrantesBom" id="quadranteA1" onclick="aparecerPopUp(0)"> 26,6º<br>177</div>
-                    <div class="QuadrantesBom" onclick="aparecerPopUp(1)"></div>
-                    <div class="QuadrantesBom" onclick="aparecerPopUp(2)"></div>
+                    <div class="QuadrantesBom" id="quadranteA2" onclick="aparecerPopUp(1)"></div>
+                    <div class="QuadrantesBom" id="quadranteA3" onclick="aparecerPopUp(2)"></div>
 
                 </div>
 
                 <div class="Quadrantes456">
-                    <div class="QuadrantesBom" onclick="aparecerPopUp(3)"></div>
-                    <div class="QuadrantesBom" onclick="aparecerPopUp(4)"></div>
-                    <div class="QuadrantesBom" onclick="aparecerPopUp(5)"></div>
+                    <div class="QuadrantesBom" id="quadranteA4" onclick="aparecerPopUp(3)"></div>
+                    <div class="QuadrantesBom" id="quadranteA5" onclick="aparecerPopUp(4)"></div>
+                    <div class="QuadrantesBom" id="quadranteA6" onclick="aparecerPopUp(5)"></div>
 
 
                 </div>
@@ -259,11 +259,12 @@
                 valoresTemperatura[quadranteAtual] = [];
                 valoresLuminosidade[quadranteAtual] = [];
                 for (let i = 0; i < data.length; i++) {
-                    if (data[i].tipo == "luminosidade") {
+                    if (data[i].tipo != "luminosidade") {
                         valoresLuminosidade[quadranteAtual].push(data[i].valor);
 
                     } else {
                         valoresTemperatura[quadranteAtual].push(data[i].valor);
+
                     }
                 }
                 console.log(valoresLuminosidade), "Valores Luminosidade";
@@ -274,7 +275,13 @@
                 graficoTemperatura.data.datasets[0].data = valoresTemperatura[quadranteAtual];
                 graficoLuminosidade.update();
                 graficoTemperatura.update();
-                quadranteA1.innerHTML = `${valoresTemperatura[quadranteAtual][0]}º<br>${valoresLuminosidade[quadranteAtual][0]} Lux`;
+                quadranteA1.innerHTML = `${valoresTemperatura.A1[0]}º <br>${valoresLuminosidade.A1[0]} Lux`;
+                quadranteA2.innerHTML = `${valoresTemperatura.A2[1]}º <br>${valoresLuminosidade.A2[1]} Lux`;
+                quadranteA3.innerHTML = `${valoresTemperatura.A3[2]}º <br>${valoresLuminosidade.A3[2]} Lux`;
+                quadranteA4.innerHTML = `${valoresTemperatura.A4[3]}º <br>${valoresLuminosidade.A4[3]} Lux`;
+                quadranteA5.innerHTML = `${valoresTemperatura.A5[4]}º <br>${valoresLuminosidade.A5[4]} Lux`;
+                quadranteA6.innerHTML = `${valoresTemperatura.A6[5]}º <br>${valoresLuminosidade.A6[5]} Lux`;
+
             })
             .catch(error => console.log(error));
     }
