@@ -31,6 +31,15 @@ a {
     border-radius: 50px;
 }
 
+
+.AlertaCard {
+    align-self: center;
+    z-index: 1000;
+    position: fixed;
+    margin: 0 auto;
+
+}
+
 .containerModal {
 
     width: 100vw;
