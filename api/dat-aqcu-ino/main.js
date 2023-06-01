@@ -30,9 +30,9 @@ const serial = async (
             {
                 // altere!
                 // CREDENCIAIS DO BANCO LOCAL - MYSQL WORKBENCH
-                host: 'localhost',
-                user: 'root',
-                password: '25169970',
+                host: '10.18.34.6',
+                user: 'insertOpusQuality',
+                password: 'monitora',
                 database: 'OpusQuality'
             }
         ).promise();
@@ -120,7 +120,6 @@ const serial = async (
                         l = 0;
                     }
                     l++;
-                    console.log("valores inseridos no banco: ", temperatura + ", " + luminosidade);
                     await poolBancoDados.execute(
                         `INSERT INTO registro (valor, dataHora, fkSensor) VALUES (?, now(), ${sl})`,
                         [(parseFloat(luminosidade * listaLuminosidade[l]) / 100).toFixed(2)]
@@ -129,6 +128,7 @@ const serial = async (
                         `INSERT INTO registro (valor, dataHora, fkSensor) VALUES (?, now(), ${st})`,
                         [(parseFloat(temperatura * listaTemperatura[l]) / 100).toFixed(2)]
                     );
+                    console.log("valores inseridos no banco: ", temperatura + ", " + luminosidade);
                     sl += 2;
                     st += 2;
                     c++;
