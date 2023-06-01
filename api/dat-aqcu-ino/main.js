@@ -30,9 +30,9 @@ const serial = async (
             {
                 // altere!
                 // CREDENCIAIS DO BANCO LOCAL - MYSQL WORKBENCH
-                host: 'localhost',
-                user: 'root',
-                password: '25169970',
+                host: '10.18.34.6',
+                user: 'insertOpusQuality',
+                password: 'monitora',
                 database: 'OpusQuality'
             }
         ).promise();
@@ -109,13 +109,7 @@ const serial = async (
                 // Lista de valores para temperatura
                 var listaTemperatura = [15, 25, 35, 17];
                 listaTemperatura.reverse();
-
-
-
-
                 while (c < 6) {
-
-
                     if (l == 3) {
                         l = 0;
                     }
@@ -133,8 +127,6 @@ const serial = async (
                     st += 2;
                     c++;
                 }
-
-
             } else {
                 throw new Error('Ambiente não configurado. Verifique o arquivo "main.js" e tente novamente.');
             }
@@ -162,22 +154,17 @@ const servidor = (
         console.log(`API executada com sucesso na porta ${SERVIDOR_PORTA}`);
     });
 
-
     app.get('/sensores/luminosidade', (_, response) => {
         return response.json(valoresLuminosidade);
     });
     app.get('/sensores/lm35/temperatura', (_, response) => {
         return response.json(valoresLm35Temperatura);
     });
-
 }
 
 (async () => {
-
     const valoresLuminosidade = [];
     const valoresLm35Temperatura = [];
-
     await serial(valoresLuminosidade, valoresLm35Temperatura);
-
     servidor(valoresLuminosidade, valoresLm35Temperatura,);
 })();

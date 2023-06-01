@@ -9,9 +9,6 @@ void setup()
   //Iniciando o Serial na velocidade de 9600
   Serial.begin(9600);
   //Ajustando a porta A3 do 
-pinMode(lm35_pin, INPUT);
-pinMode(ldr_pin, INPUT);
-
 }
  
 void loop() 
@@ -23,8 +20,7 @@ void loop()
 
   Serial.print(temperatura);
   Serial.print(";");
-  Serial.print(luminosidade);
-  Serial.println();
+  Serial.println(luminosidade);
   
 //Espera  1 segundo para rodar o código denovo
  delay(1000);
