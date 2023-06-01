@@ -56,7 +56,7 @@
 
                 <div class="titleAlert">
 
-                    <h4>Essa Merda</h4>
+                    <h4>Muito Quente</h4>
                 </div>
 
                 <div class="textoAlerta">
@@ -295,46 +295,51 @@
         A6: []
     };
     var quadranteAtual = 'A1';
-
-    function atualizarGrafico() {
+    var setor;
+    function atualizarGrafico(quadrante) {
         fetch(`/medidas/dadosSetor/${sessionStorage.idSetor}`)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+                //  console.log(data);
+                setor = data;
                 document.getElementById('apelidoSetor').innerHTML = data[0].apelido;
-                buscarQuadrante(data[0].idSetor, quadranteAtual);
+                buscarQuadrante(data[0].idSetor, quadrante);
             })
             .catch(error => console.log(error));
     }
-    atualizarGrafico();
 
     setInterval(() => {
-        atualizarGrafico();
-    }, 1000);
+        atualizarGrafico("A1");
+        atualizarGrafico("A2");
+        atualizarGrafico("A3");
+        atualizarGrafico("A4");
+        atualizarGrafico("A5");
+        atualizarGrafico("A6");
+
+    }, 3000);
 
     function buscarQuadrante(setor, quadrante) {
         fetch('/medidas/dadosQuadrante/' + setor + '/' + quadrante)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+                //  console.log(data);
                 quadrantes = data;
-                valoresTemperatura[quadranteAtual] = [];
-                valoresLuminosidade[quadranteAtual] = [];
+                valoresTemperatura[quadrante] = [];
+                valoresLuminosidade[quadrante] = [];
                 for (let i = 0; i < data.length; i++) {
                     if (data[i].tipo != "luminosidade") {
-                        valoresLuminosidade[quadranteAtual].push(data[i].valor);
-
+                        valoresLuminosidade[quadrante].push(data[i].valor);
                     } else {
-                        valoresTemperatura[quadranteAtual].push(data[i].valor);
-
+                        valoresTemperatura[quadrante].push(data[i].valor);
                     }
                 }
-                console.log(valoresLuminosidade), "Valores Luminosidade";
-                console.log(valoresTemperatura), "Valores Temperatura";
-                valoresLuminosidade[quadranteAtual].reverse();
-                valoresTemperatura[quadranteAtual].reverse();
-                graficoLuminosidade.data.datasets[0].data = valoresLuminosidade[quadranteAtual];
-                graficoTemperatura.data.datasets[0].data = valoresTemperatura[quadranteAtual];
+                //      console.log(valoresLuminosidade), "Valores Luminosidade";
+                //   console.log(valoresTemperatura), "Valores Temperatura";
+
+                validarLimites(valoresLuminosidade[quadrante], valoresTemperatura[quadrante]);
+
+                graficoLuminosidade.data.datasets[0].data = valoresLuminosidade[quadrante];
+                graficoTemperatura.data.datasets[0].data = valoresTemperatura[quadrante];
                 graficoLuminosidade.update();
                 graficoTemperatura.update();
                 quadranteA1.innerHTML = `${valoresTemperatura.A1[0]}º <br>${valoresLuminosidade.A1[0]} Lux`;
@@ -386,8 +391,6 @@
         }
     });
 
-
-
     const ctx2 = document.getElementById('graficoLM35');
 
     const graficoTemperatura = new Chart(ctx2, {
@@ -412,4 +415,83 @@
     });
 
 
+    alertas = []
+
+
+    function exibirAlertas(array) {
+        var containerAlertas = document.getElementById("containerAlertas");
+
+        for (var i = 0;
+            i < array.length;
+            i++) {
+            var item = array[i];
+            var medida = "";
+            if (item.nome == "temperatura") {
+                medida = "ºC"
+            } else if (item.nome == "luminosidade") {
+                medida = "Lux"
+            }
+            containerAlertas.innerHTML += `
+                 <div class="AlertaCard">
+            <div class="iconeAlert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill=""
+                    class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                </svg>
+
+            </div>
+
+            <div class="sectionTexto">
+
+
+                <div class="titleAlert">
+
+                    <h4>${item.nome}</h4>
+                </div>
+
+                <div class="textoAlerta">
+                    <span id="">O <span style="color: red;">${item.setor}</span> está com ${item.valor} ${medida} no <span
+                            style="color: red;">${item.quadrante}</span></span>
+                </div>
+            </div>
+        </div>
+                `
+
+        }
+
+    }
+
+
+
+    function validarLimites(luz, temp) {
+        // console.log("Entramos na validacao, este é  setor: ", setor);
+        alertas = []
+        for (var i = 0; i < luz.length; i++) {
+            if (luz[i] < setor[0].minLuminosidade || luz[i] > setor[0].maxLuminosidade) {
+                alertas.push({
+                    nome: "Luminosidade",
+                    setor: setor[0].apelido,
+                    quadrante: "Quadrante " + (i + 1),
+                    valor: luz[i],
+                })
+            }
+        }
+        for (var i = 0; i < temp.length; i++) {
+            // console.log("Entramos no for, os minimos são ", setor[0].minTemperatura, " e os maximos são ", setor[0].maxTemperatura);
+            if (temp[i] > Number(setor[0].maxTemperatura) || temp[i] < Number(setor[0].minTemperatura)) {
+                alertas.push({
+                    nome: "Temperatura",
+                    setor: setor[0].apelido,
+                    quadrante: "Quadrante " + (i + 1),
+                    valor: temp[i],
+                })
+            }
+        }
+
+    }
+    setInterval(() => {
+
+        exibirAlertas(alertas);
+    }, 3000);
 </script>
