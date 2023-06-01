@@ -99,8 +99,8 @@ const serial = async (
                 // Este insert irá inserir dados de fk_aquario id=1 (fixo no comando do insert abaixo)
                 // >> você deve ter o aquario de id 1 cadastrado.
                 var c = 1;
-                var sl = 1;
-                var st = 2;
+                var sl = 2;
+                var st = 1;
                 var l = 0;
 
                 // Lista de valores para luminosidade
@@ -116,11 +116,11 @@ const serial = async (
                     l++;
                     await poolBancoDados.execute(
                         `INSERT INTO registro (valor, dataHora, fkSensor) VALUES (?, now(), ${sl})`,
-                        [(parseFloat(luminosidade * listaLuminosidade[l]) / 100).toFixed(2)]
+                        [luminosidade]
                     );
                     await poolBancoDados.execute(
                         `INSERT INTO registro (valor, dataHora, fkSensor) VALUES (?, now(), ${st})`,
-                        [(parseFloat(temperatura * listaTemperatura[l]) / 100).toFixed(2)]
+                        [temperatura]
                     );
                     console.log("valores inseridos no banco: ", temperatura + ", " + luminosidade);
                     sl += 2;
