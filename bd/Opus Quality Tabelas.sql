@@ -255,7 +255,7 @@ values (
 insert into Sensor
 values (
         null,
-        'luminosidade',
+        'temperatura',
         'LDR5',
         '2022-10-10',
         '1',
@@ -263,7 +263,7 @@ values (
         '1'
     ), (
         null,
-        'temperatura',
+        'luminosidade',
         'LM35',
         '2022-10-11',
         '0',
