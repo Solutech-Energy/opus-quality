@@ -14,4 +14,12 @@ router.get("/dashboard/setor", function (req, res) {
     res.sendFile(path.join(__dirname + '../../../public/dashboard/DashboardEspecifica.html'));
 });
 
+router.get("/login", function (req, res) {
+    res.sendFile(path.join(__dirname + '../../../public/login.html'));
+});
+
+router.get("/cadastro", function (req, res) {
+    res.sendFile(path.join(__dirname + '../../../public/cadastro.html'));
+});
+
 module.exports = router;

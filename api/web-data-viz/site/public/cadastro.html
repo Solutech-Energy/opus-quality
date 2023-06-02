@@ -2,59 +2,59 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./css/style.css">
-   <link rel="shortcut icon" href="img/logoFavicon.ico" type="image/x-icon">
-   <script src="js/funcoes.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="img/logoFavicon.ico" type="image/x-icon">
+    <script src="js/funcoes.js"></script>
 
-   <title> Opus | Cadastro </title>
+    <title> Opus | Cadastro </title>
 </head>
 
 <body>
 
-   <div class="cardCadastro">
+    <div class="cardCadastro">
 
-      <div class="topCadastro">
+        <div class="topCadastro">
 
-         <div class="imgCadastro"></div>
+            <div class="imgCadastro"></div>
 
-         <div class="buttonCloseCadastro">
-            <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#0F1631" class="bi bi-x-lg"
-                  viewBox="0 0 16 16">
-                  <path
-                     d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-               </svg></a>
-         </div>
-      </div>
-
-      <div class="sectionCadastro">
-         <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
+            <div class="buttonCloseCadastro">
+                <a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#0F1631"
+                        class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path
+                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                    </svg></a>
             </div>
         </div>
-         <span>Cadastro</span>
 
-         <input type="text" placeholder="Nome" id="inputNome" class="inputsBig">
-         <input type="text" placeholder="CPF" id="inputCpf" class="inputsBig">
-         <input type="text" placeholder="Email" id="inputEmail" class="inputsBig">
-         <input type="text" placeholder="Senha" id="inputSenha" class="inputsBig">
-         <input type="text" placeholder="ID Empresa" id="inputEmpresa" class="inputsBig">
-      </div>
+        <div class="sectionCadastro">
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
+            <span>Cadastro</span>
 
-      <div class="clickSaveCadastro" onclick="cadastrar()">Salvar</div>
+            <input type="text" placeholder="Nome" id="inputNome" class="inputsBig">
+            <input type="text" placeholder="CPF" id="inputCpf" class="inputsBig">
+            <input type="text" placeholder="Email" id="inputEmail" class="inputsBig">
+            <input type="text" placeholder="Senha" id="inputSenha" class="inputsBig">
+            <input type="text" placeholder="ID Empresa" id="inputEmpresa" class="inputsBig">
+        </div>
 
-      <div id="div_aguardar" class="loading-div">
-         <img src="./assets/circle-loading.gif" id="loading-gif">
-     </div>
+        <div class="clickSaveCadastro" onclick="cadastrar()">Salvar</div>
 
-     <div id="div_erros_login"></div>
+        <div id="div_aguardar" class="loading-div">
+            <img src="./assets/circle-loading.gif" id="loading-gif">
+        </div>
+
+        <div id="div_erros_login"></div>
 
 
-   </div>
-   <script src="js/scriptCadastro.js"></script>
+    </div>
+    <script src="js/scriptCadastro.js"></script>
 </body>
 
 
@@ -63,71 +63,71 @@
 
 
 <script>
-   function cadastrar() {
-       aguardar();
+    function cadastrar() {
+        aguardar();
 
-       //Recupere o valor da nova input pelo nome do id
-       // Agora vá para o método fetch logo abaixo
-       var nomeVar = inputNome.value;
-       var cpfVar = inputCpf.value;
-       var emailVar = inputEmail.value;
-       var senhaVar = inputSenha.value;
-       var empresaVar = inputEmpresa.value;
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = inputNome.value;
+        var cpfVar = inputCpf.value;
+        var emailVar = inputEmail.value;
+        var senhaVar = inputSenha.value;
+        var empresaVar = inputEmpresa.value;
 
-       if (nomeVar == "" || emailVar == "" || senhaVar == "" || cpfVar == "" || empresaVar == "") {
-           cardErro.style.display = "block"
-           mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || cpfVar == "" || empresaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
-           finalizarAguardar();
-           return false;
-       }
-       else {
-           setInterval(sumirMensagem, 5000)
-       }
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
 
-       // Enviando o valor da nova input
-       fetch("/usuarios/cadastrar", {
-           method: "POST",
-           headers: {
-               "Content-Type": "application/json"
-           },
-           body: JSON.stringify({
-               // crie um atributo que recebe o valor recuperado aqui
-               // Agora vá para o arquivo routes/usuario.js
-               nomeServer: nomeVar,
-               emailServer: emailVar,
-               senhaServer: senhaVar,
-               cpfServer: cpfVar,
-               empresaServer: empresaVar
-           })
-       }).then(function (resposta) {
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                cpfServer: cpfVar,
+                empresaServer: empresaVar
+            })
+        }).then(function (resposta) {
 
-           console.log("resposta: ", resposta);
+            console.log("resposta: ", resposta);
 
-           if (resposta.ok) {
-               cardErro.style.display = "block";
+            if (resposta.ok) {
+                cardErro.style.display = "block";
 
-               mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-               setTimeout(() => {
-                   window.location = "login.html";
-               }, "2000")
+                setTimeout(() => {
+                    window.location = "/login";
+                }, "2000")
 
-               limparFormulario();
-               finalizarAguardar();
-           } else {
-               throw ("Houve um erro ao tentar realizar o cadastro!");
-           }
-       }).catch(function (resposta) {
-           console.log(`#ERRO: ${resposta}`);
-           finalizarAguardar();
-       });
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
 
-       return false;
-   }
+        return false;
+    }
 
-   function sumirMensagem() {
-       cardErro.style.display = "none"
-   }
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
 
 </script>
