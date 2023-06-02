@@ -262,6 +262,8 @@
             .catch(error => console.log(error));
     }
 
+    containerAlertas.style.display = "none"
+
     setInterval(() => {
         atualizarGrafico("A1");
         atualizarGrafico("A2");
@@ -375,6 +377,14 @@
     function exibirAlertas(array) {
         console.log("Entramos na funcao exibirAlertas, este é o array: ", array);
         var containerAlertas = document.getElementById("containerAlertas");
+        //  alert =(!array)
+        if (array == []) {
+            containerAlertas.style.display = 'none'
+            return false;
+        } else {
+            containerAlertas.style.display = 'block'
+        }
+
         containerAlertas.innerHTML = "";
         for (var i = 0; i < array.length; i++) {
             var item = array[i];
@@ -385,7 +395,7 @@
                 medida = "Lux"
             }
             containerAlertas.innerHTML += `
-                 <div class="AlertaCard">
+                 <div class="AlertaCard" style="margin-top: ${i * 22}vh">
         <div class="iconeAlert">
             <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="${item.cor}"
                 class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
@@ -416,7 +426,7 @@
     }
 
 
-
+    exibirAlertas(alertas)
     function validarLimites(luz, temp) {
         //console.log("antigo: ", alertas);
         // console.log("Entramos na validacao, este é  setor: ", setor);

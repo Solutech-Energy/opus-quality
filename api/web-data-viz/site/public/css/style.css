@@ -2551,11 +2551,12 @@ body {
 /* Alertas */
 
 .cardAlertaGeral {
-    position: absolute;
+    position: fixed;
     width: 30%;
     height: 100vh;
     z-index: 1500;
     overflow-y: scroll;
+    display: none;
 }
 
 .cardAlertaGeral svg1 {
@@ -2564,6 +2565,7 @@ body {
 }
 
 .AlertaCard {
+    position: absolute;
     display: flex;
     width: 97%;
     height: 20vh;
