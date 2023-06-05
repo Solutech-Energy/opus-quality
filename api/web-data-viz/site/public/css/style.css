@@ -2784,16 +2784,19 @@ body {
 
 
 .leftGrafico {
-    width: 50%;
+    width: 70%;
     height: 100%;
 }
 
 .rightGrafico {
-    width: 50%;
+    width: 30%;
     height: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
+}
+.rightGrafico h1 {
+    font-size: 300%;
 }
 
 .textPorTemp {
@@ -2810,7 +2813,7 @@ body {
     height: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 }
 
 .porcTemp {
@@ -2825,7 +2828,6 @@ body {
     width: 100%;
     height: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
 
 }

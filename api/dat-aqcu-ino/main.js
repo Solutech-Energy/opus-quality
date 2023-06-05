@@ -109,7 +109,7 @@ const serial = async (
                 // Lista de valores para temperatura
                 var listaTemperatura = [15, 25, 35, 17];
                 listaTemperatura.reverse();
-                while (c < 6) {
+                while (c < 7) {
                     if (l == 3) {
                         l = 0;
                     }
