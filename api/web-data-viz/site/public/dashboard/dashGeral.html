@@ -81,7 +81,9 @@
                   </div>
 
                </div>
-               <div class="rightGrafico"><h1>5</h1></div>
+               <div class="rightGrafico">
+                  <h1 id="indiceTemperatura">5</h1>
+               </div>
             </div>
 
 
@@ -97,7 +99,9 @@
                   </div>
 
                </div>
-               <div class="rightGrafico"><h1>5</h1></div>
+               <div class="rightGrafico">
+                  <h1 id="indiceLuminosidade">5</h1>
+               </div>
 
             </div>
 
@@ -254,6 +258,7 @@
             buscarQuadrante(data[0].idSetor, quadrante);
          })
          .catch(error => console.log(error));
+
    }
 
    containerAlertas.style.display = "none"
@@ -281,7 +286,7 @@
 
 
    function exibirAlertas(array) {
-      console.log("Entramos na funcao exibirAlertas, este é o array: ", array);
+      // console.log("Entramos na funcao exibirAlertas, este é o array: ", array);
       var containerAlertas = document.getElementById("containerAlertas");
       //  alert =(!array)
       if (array == []) {
@@ -291,15 +296,20 @@
          containerAlertas.style.display = 'block'
       }
 
-      containerAlertas.innerHTML = "";
+      var counterLuminosidade = 0;
+      var counterTemperatura = 0;
       for (var i = 0; i < array.length; i++) {
+         // console.log(array[i]);
          var item = array[i];
          var medida = "";
-         if (item.nome == "temperatura") {
+         if (item.nome == "Temperatura") {
+            counterTemperatura++;
             medida = "ºC"
-         } else if (item.nome == "luminosidade") {
+         } else if (item.nome == "Luminosidade") {
+            counterLuminosidade++;
             medida = "Lux"
          }
+
          containerAlertas.innerHTML += `
                  <div class="AlertaCard" style="margin-top: ${i * 22}vh">
         <div class="iconeAlert">
@@ -328,7 +338,10 @@
                 `
 
       }
-      console.log("Alertas: ", alertas);
+      // console.log("counterLuminosidade: ", counterLuminosidade);
+      indiceLuminosidade.innerHTML = counterLuminosidade;
+      indiceTemperatura.innerHTML = counterTemperatura
+      // console.log("Alertas: ", alertas);
    }
 
    console.log("FK EMPRESA: " + sessionStorage.fkEmpresa);
@@ -385,68 +398,6 @@
 
 
 
-   const ctx1 = document.getElementById('graficoLDR5');
-
-   const graficoTemperatura = new Chart(ctx1, {
-      type: 'doughnut',
-      data: {
-         datasets: [{
-            backgroundColor: ['#5220f5', '#911313'],
-            labels: 'Temperatura (ºC))',
-            data: [97, 3],
-            borderWidth: 1
-         },
-         ]
-      },
-      options: {
-         Plugins: {
-            legend: {
-               display: false
-            },
-            title: {
-               display: false,
-            }
-         },
-         scales: {
-            display: false,
-         }
-      }
-   });
-
-
-
-
-
-   const ctx2 = document.getElementById('graficoLM35');
-
-   const graficoLuminosidade = new Chart(ctx2, {
-      type: 'doughnut',
-      data: {
-
-         datasets: [{
-            backgroundColor: ['#a39010', '#911313'],
-            labels: 'Luminosidade (Lux)',
-            data: [92, 8],
-            borderWidth: 1
-         },
-         ]
-      },
-      options: {
-         Plugins: {
-            legend: {
-               display: false
-            },
-            title: {
-               display: false,
-            }
-         },
-         scales: {
-            display: false,
-         }
-      }
-   });
-
-
 
    setInterval(() => {
       atualizarGrafico("A1");
@@ -456,6 +407,6 @@
       atualizarGrafico("A5");
       atualizarGrafico("A6");
 
-   }, 3000);
+   }, 5000);
 
 </script>

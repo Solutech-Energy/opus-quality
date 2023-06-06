@@ -378,14 +378,14 @@
         console.log("Entramos na funcao exibirAlertas, este é o array: ", array);
         var containerAlertas = document.getElementById("containerAlertas");
         //  alert =(!array)
-        if (array == []) {
+        containerAlertas.innerHTML = "";
+        if (array[0] == undefined) {
             containerAlertas.style.display = 'none'
             return false;
         } else {
             containerAlertas.style.display = 'block'
         }
 
-        containerAlertas.innerHTML = "";
         for (var i = 0; i < array.length; i++) {
             var item = array[i];
             var medida = "";
@@ -433,37 +433,44 @@
         alertas = []
         var cor;
         for (var i = 0; i < luz.length; i++) {
-            if (luz[i] < setor[0].minLuminosidade || luz[i] > setor[0].maxLuminosidade) {
+            if (luz[i] > setor[0].minLuminosidade || luz[i] < setor[0].maxLuminosidade) {
+
                 if (luz[i] < 500) {
                     cor = 'purple';
                 } else if (luz[i] < 530) {
                     cor = 'blue';
                 } else if (luz[i] < 987) {
-                    cor = 'green';
-                } else if (luz[i] < 1000) {
+                    cor = false;
+                } else if (luz[i] <= 1000) {
                     cor = 'yellow';
                 } else if (luz[i] > 1000) {
                     cor = 'red';
                 }
-                alertas.push({
-                    nome: "Luminosidade",
-                    setor: setor[0].apelido,
-                    quadrante: "Quadrante " + (i + 1),
-                    valor: luz[i],
-                    cor: cor
-                })
+
+                if (cor != false) {
+                    alertas.push({
+                        nome: "Luminosidade",
+                        setor: setor[0].apelido,
+                        quadrante: "Quadrante " + (i + 1),
+                        valor: luz[i],
+                        cor: cor
+                    })
+                }
             }
         }
         for (var i = 0; i < temp.length; i++) {
             // console.log("Entramos no for, os minimos são ", setor[0].minTemperatura, " e os maximos são ", setor[0].maxTemperatura);
-            if (temp[i] > Number(setor[0].maxTemperatura) || temp[i] < Number(setor[0].minTemperatura)) {
+            console.log("temp[i]: ", temp[i]);
+            console.log((temp[i] > 27 || temp[i] < 20.5));
+            if (temp[i] < 27 || temp[i] > 20.5) {
+                console.log("IRREGULAAR");
                 if (temp[i] < 20.5) {
                     cor = 'purple'
                 } else if (temp[i] < 22) {
                     cor = 'blue'
                 } else if (temp[i] < 24.5) {
-                    cor = 'green'
-                } else if (temp[i] < 27) {
+                    cor = false
+                } else if (temp[i] <= 27) {
                     cor = 'yellow'
                 } else if (temp[i] > 27) {
                     cor = 'red'
@@ -471,13 +478,15 @@
 
 
 
-                alertas.push({
-                    nome: "Temperatura",
-                    setor: setor[0].apelido,
-                    quadrante: "Quadrante " + (i + 1),
-                    valor: temp[i],
-                    cor: cor
-                })
+                if (cor != false) {
+                    alertas.push({
+                        nome: "Temperatura",
+                        setor: setor[0].apelido,
+                        quadrante: "Quadrante " + (i + 1),
+                        valor: temp[i],
+                        cor: cor
+                    })
+                }
             }
         }
         // console.log("novo: ", alertas);

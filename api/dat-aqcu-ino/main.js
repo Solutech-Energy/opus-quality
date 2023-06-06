@@ -115,12 +115,10 @@ const serial = async (
                     }
                     l++;
                     await poolBancoDados.execute(
-                        `INSERT INTO registro (valor, dataHora, fkSensor) VALUES (?, now(), ${sl})`,
-                        [luminosidade]
+                        `INSERT INTO registro (valor, dataHora, fkSensor) VALUES (23, now(), ${sl})`
                     );
                     await poolBancoDados.execute(
-                        `INSERT INTO registro (valor, dataHora, fkSensor) VALUES (?, now(), ${st})`,
-                        [temperatura]
+                        `INSERT INTO registro (valor, dataHora, fkSensor) VALUES (600, now(), ${st})`
                     );
                     console.log("valores inseridos no banco: ", temperatura + ", " + luminosidade);
                     sl += 2;

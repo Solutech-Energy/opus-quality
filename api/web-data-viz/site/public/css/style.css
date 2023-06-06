@@ -2500,7 +2500,7 @@ body {
 .titleSection a svg {
     display: flex;
     align-items: center;
-    margin-left: 1800%;
+    margin-left: 3000%;
     margin-top: 80%;
 }
 
@@ -2795,6 +2795,7 @@ body {
     justify-content: center;
     display: flex;
 }
+
 .rightGrafico h1 {
     font-size: 300%;
 }
